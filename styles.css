@@ -228,7 +228,133 @@
 
 
 /* Section-6(Explore Coursera)  section start */
+.vis_grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+    border: 1px solid;
+    
+    
+}
+.vis_cardall img{
+    width: 80px;
+    min-width: 80px;
+}
+.vis_cardall{
+    height: auto;
+   
+    height: 80px;
+    border: 1px solid;
+    /* box-shadow: 1px ; */
+    /* border: 10px solid teal; */
+    display: flex;
+   
+}
+.vis_cardall:hover{
+    transform: scale(1); 
+}
+#vis_emage{
+    /* border: 10px solid teal; */
+    width: auto;
+}
+#vis_subpart{
+    /* border: 10px solid khaki; */
+    width: auto;
+    height: auto;
+    /* padding: 10px; */
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+#vis_subpart p:nth-child(1){
+    /* border: 1px solid darkblue; */
+    text-overflow: ellipsis;
+    width: 160px;
+    white-space: nowrap;
+    overflow: hidden;
+    /* margin-top: 10px; */
+}
 
+#vis_subpart p:nth-child(2){
+    /* border: 1px solid lawngreen; */
+    margin-bottom: 5px;
+}
+
+.vis_mid{
+    display: flex;
+    height: auto;
+    border: 1px solid red;
+}
+.vis_mid>div:nth-child(1){
+    width: 50%;
+    background-color:
+    #ebf3ff;
+    /* border: 10px solid darkcyan; */
+    height: 100%;
+}
+.vis_mid>div:nth-child(2){
+    width: 60%;
+    background-color: rgb(235,243,255);
+    height: auto;
+   
+}
+.vis_mid div:nth-child(1) img{
+  height: 30em;
+  width: 40em;
+}
+
+.vis_statictext{
+   box-sizing: border-box;
+    width: auto;
+}
+.vis_statictext1{
+   width: auto;
+   margin: auto;
+   margin-top: 25%;
+   margin-left: 15%;
+}
+.vis_statictext2{
+    width: auto;
+    margin: auto;
+    margin-left: 15%;
+ }
+ .vis_statictext2 button{
+    width: 100px;
+ }
+.vis_statictext3 button:hover{
+    background-color: blue;
+    color: white;
+}
+.vis_statictext1 p{
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+}
+.vis_statictext2 {
+   font: var(--cds-typography-body-primary);
+    letter-spacing: var(--cds-letter-spacing-0);
+    color: var(--cds-color-neutral-primary);
+    font-weight: 600;
+}
+.vis_statictext3{
+    width: auto;
+    margin: auto;
+    margin-left: 15%;
+ }
+/* ************************************************** */
+.vis_foot{
+    height: auto;
+    width: 100%;
+    background-color: navajowhite;
+}
+.vis_karousel img{
+    height: 100px;
+}
+#mainvs{
+     display: flex;
+}
+.container{
+    max-width: 1440px;
+}
 
 
 /* Section-6(Explore Coursera)  section ends */
