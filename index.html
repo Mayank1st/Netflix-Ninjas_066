@@ -1,16 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coursera-Clone</title>
     <link rel="stylesheet" href="./styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </head>
+
 <body>
     <!----------Navbar section start-------------->
 
+    <div class="navbar-main">
+        <div class="navbar-banner container-fluid">
+            <div id="navbar-banner-inner-div" class="container ">
+                <div>
+                    <a href="https://www.coursera.org/en-IN"><span>For</span> Individuals</a>
+                </div>
+                <div>
+                    <a
+                        href="https://www.coursera.org/business?utm_content=corp-to-home-for-enterprise&utm_campaign=website&utm_medium=coursera&utm_source=header&utm_term=b-out"><span>For</span>
+                        Business</a>
+                </div>
+                <div>
+                    <a href="https://www.coursera.org/campus"><span>For</span> University</a>
+                </div>
+                <div>
+                    <a href="https://www.coursera.org/government"><span>For</span> Government</a>
+                </div>
+            </div>
+        </div>
 
-            
+
+        <div class="nav-outer-div container-fluid">
+            <nav class="container navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img width="120" height="120"
+                            src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjIuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZpZXdCb3g9IjAgMCAxMTU1IDE2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjIiPjxwYXRoIGQ9Ik0xNTkuNzUgODEuNTRjMC00NC40OSAzNi42My04MC40NyA4Mi40My04MC40NyA0Ni4xMiAwIDgyLjc2IDM2IDgyLjc2IDgwLjQ3IDAgNDQuMTYtMzYuNjQgODAuOC04Mi43NiA4MC44LTQ1LjggMC04Mi40My0zNi42OC04Mi40My04MC44em0xMjUuNjEgMGMwLTIyLjI0LTE5LjMtNDEuODctNDMuMTgtNDEuODctMjMuNTUgMC00Mi44NSAxOS42My00Mi44NSA0MS44NyAwIDIyLjU3IDE5LjMgNDIuMiA0Mi44NSA0Mi4yIDIzLjkyIDAgNDMuMTgtMTkuNjMgNDMuMTgtNDIuMnptNzA1LjYzIDEuMzFjMC00OC43NCAzOS41OC04MS43OCA3NS41Ny04MS43OCAyNC41MyAwIDM4LjYgNy41MiA0OC4wOCAyMS45MmwzLjc3LTE5aDM2Ljc5djE1NS40aC0zNi43OWwtNC43NS0xNmMtMTAuNzkgMTEuNzgtMjQuMjEgMTktNDcuMSAxOS0zNS4zMy0uMDUtNzUuNTctMzEuMTMtNzUuNTctNzkuNTR6bTEyNS42MS0uMzNjLS4wOS0yMy41MjctMTkuNDctNDIuODM1LTQzLTQyLjgzNS0yMy41OSAwLTQzIDE5LjQxMS00MyA0M3YuMTY1YzAgMjEuNTkgMTkuMyA0MC44OSA0Mi44NiA0MC44OSAyMy44NSAwIDQzLjE0LTE5LjMgNDMuMTQtNDEuMjJ6TTk0NS43OCAyMlY0aC00MC4yM3YxNTUuMzloNDAuMjNWNzUuNjZjMC0yNS4xOSAxMi40NC0zOC4yNyAzNC0zOC4yNyAxLjQzIDAgMi43OS4xIDQuMTIuMjNMOTkxLjM2LjExYy0yMC45Ny4xMS0zNi4xNyA3LjMtNDUuNTggMjEuODl6bS00MDQuMjcuMDF2LTE4bC00MC4yMy4wOS4zNCAxNTUuMzcgNDAuMjMtLjA5LS4yMi04My43MmMtLjA2LTI1LjE4IDEyLjM1LTM4LjI5IDMzLjkzLTM4LjM0IDEuMzc2LjAwNCAyLjc1Mi4wODEgNC4xMi4yM0w1ODcuMSAwYy0yMSAuMTctMzYuMjIgNy4zOS00NS41OSAyMi4wMXpNMzM4Ljg4IDk5LjJWNC4wMWg0MC4yMlY5NC4zYzAgMTkuOTUgMTEuMTIgMzEuNzMgMzAuNDIgMzEuNzMgMjEuNTkgMCAzNC0xMy4wOSAzNC0zOC4yOFY0LjAxaDQwLjI0djE1NS4zOGgtNDAuMjF2LTE4Yy05LjQ4IDE0LjcyLTI0Ljg2IDIxLjkyLTQ2LjEyIDIxLjkyLTM1Ljk4LjAxLTU4LjU1LTI2LjE2LTU4LjU1LTY0LjExem0zOTEuNzQtMTcuNDhjLjA5LTQzLjUxIDMxLjIzLTgwLjc0IDgwLjYyLTgwLjY1IDQ1LjguMDkgNzguMTEgMzYuNzggNzggODAgLjAxIDQuMjczLS4zMyA4LjU0LTEgMTIuNzZsLTExOC40MS0uMjJjNC41NCAxOC42NSAxOS44OSAzMi4wOSA0My4xMiAzMi4xNCAxNC4wNiAwIDI5LjEyLTUuMTggMzguMy0xNi45NGwyNy40NCAyMmMtMTQuMTEgMTkuOTMtMzkgMzEuNjYtNjUuNDggMzEuNjEtNDYuNzUtLjE2LTgyLjY3LTM1LjIzLTgyLjU5LTgwLjd6bTExOC4xMi0xNi4xNGMtMi4yNi0xNS43LTE4LjU5LTI3Ljg0LTM3Ljg5LTI3Ljg3LTE4LjY1IDAtMzMuNzEgMTEuMDYtMzkuNjMgMjcuNzNsNzcuNTIuMTR6bS0yNjEuNCA1OS45NGwzNS43Ni0xOC43MmM1LjkxIDEyLjgxIDE3LjczIDIwLjM2IDM0LjQ4IDIwLjM2IDE1LjQzIDAgMjEuMzQtNC45MiAyMS4zNC0xMS44MiAwLTI1LTg0LjcxLTkuODUtODQuNzEtNjcgMC0zMS41MiAyNy41OC00OC4yNiA2MS43Mi00OC4yNiAyNS45NCAwIDQ4LjkyIDExLjQ5IDYxLjQgMzIuODNsLTM1LjQ0IDE4Ljc1Yy01LjI1LTEwLjUxLTE1LjEtMTYuNDItMjcuNTgtMTYuNDItMTIuMTQgMC0xOC4wNiA0LjI3LTE4LjA2IDExLjQ5IDAgMjQuMyA4NC43MSA4Ljg3IDg0LjcxIDY3IDAgMzAuMjEtMjQuNjIgNDguNTktNjQuMzUgNDguNTktMzMuODItLjAzLTU3LjQ2LTExLjE5LTY5LjI3LTM2Ljh6TTAgODEuNTRDMCAzNi43MyAzNi42My43NCA4Mi40My43NGMyNy45NDctLjE5NiA1NC4xODIgMTMuNzM3IDY5LjY3IDM3bC0zNC4zNCAxOS45MmE0Mi45NzIgNDIuOTcyIDAgMDAtMzUuMzMtMTguMzJjLTIzLjU1IDAtNDIuODUgMTkuNjMtNDIuODUgNDIuMiAwIDIyLjU3IDE5LjMgNDIuMiA0Mi44NSA0Mi4yYTQyLjUwMiA0Mi41MDIgMCAwMDM2LjMxLTIwbDM0IDIwLjI4Yy0xNS4zMDcgMjMuOTU1LTQxLjkwMiAzOC40MzEtNzAuMzMgMzguMjhDMzYuNjMgMTYyLjM0IDAgMTI1LjY2IDAgODEuNTR6IiBmaWxsPSIjMDA1NkQyIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48L3N2Zz4="
+                            alt="Bootstrap">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class=" d-flex gap-3 navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-dropdown-left nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Explore
+                                </a>
+                                <ul class="navbar-dropdown-left-ul dropdown-menu">
+                                    <li>
+                                        <h4 class="dropdown-header">Goals</h4>
+                                        <a class="dropdown-item" href="#">Take a free course</a>
+                                        <a class="dropdown-item" href="#">Earn a Degree</a>
+                                        <a class="dropdown-item" href="#">Earn a Certificate</a>
+                                        <a class="dropdown-item" href="#">Find your new career</a>
+                                    </li>
+                                    <hr class="dropdown-divider">
+                                    <li>
+                                        <h4 class="dropdown-header">Subjects</h4>
+                                        <a class="dropdown-item" href="#">Data Science</a>
+                                        <a class="dropdown-item" href="#">Business</a>
+                                        <a class="dropdown-item" href="#">Computer Science</a>
+                                        <a class="dropdown-item" href="#">Information Technology</a>
+                                        <a class="dropdown-item" href="#">Language Learning</a>
+                                        <a class="dropdown-item" href="#">Health</a>
+                                        <a class="dropdown-item" href="#">Personal Development</a>
+                                        <a class="dropdown-item" href="#">Physical Science and Engineering</a>
+                                        <a class="dropdown-item" href="#">Social Sciences</a>
+                                        <a class="dropdown-item" href="#">Arts and Humanities</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <form class="d-flex" role="search">
+                                    <input class="navbar-searchbox form-control me-2" type="search"
+                                        placeholder="What do you want to learn?" aria-label="Search">
+                                    <button class="navbar-search-btn btn btn-outline-success" type="submit"><i
+                                            class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
+                                </form>
+                            </li>
+                        </ul>
+
+                        <!-- Navbar right side -->
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
+                            <li class="nav-item dropdown">
+                                <a class="nav-dropdown-right nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Online Degrees
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.coursera.org/career-academy/?trk_ref=globalnav"
+                                    style="color: black;">Find your New Career</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="navbar-right-btn-group btn-group" role="group"
+                                    aria-label="Basic outlined example">
+                                    <button type="button" class="btn btn-outline-primary">Sign In</button>
+                                    <button type="button" class="btn btn-outline-primary">Join for Free</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
 
     <!----------Navbar section ends-------------->
 
@@ -20,14 +133,29 @@
 
 
     <!----------Expand your horizons section start-------------->
-
-
-
+    <header id="header-section">
+        <div class="header-container container">
+            <div>
+                <p>Expand your horizons with Coursera Plus</p>
+                <p>Unlock job ready skills from industry leaders like Google, IBM, Meta, and IIM Ahmedabad for INR 7999.
+                    You can also save on Coursera for Teams.</p>
+                <div class="header-container-div1-btn">
+                    <button type="button" class="btn btn-primary">Save on Coursers Plus <i
+                            class="fa-solid fa-arrow-right" style="color: #fcf7f7;"></i></button>
+                    <button type="button" class="btn btn-primary">Get 50% off Teams <i class="fa-solid fa-arrow-right"
+                            style="color: #0056d2;"></i></button>
+                </div>
+            </div>
+            <div><img
+                    src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/3ofsZsKwiGcXFHENh18ngG/23c741906132d0e538cfc7f2a29ce04c/BC-2466_LOHP_take_over_Promo2_India.jpg?auto=format%2Ccompress&dpr=1&w=660&q=40"
+                    class="img-fluid" alt="..."></div>
+        </div>
+    </header>
     <!----------Expand your horizons section ends-------------->
 
 
 
-    
+
     <!----------Section1(We collaborate with ) section start-------------->
 
 
@@ -37,7 +165,7 @@
 
 
 
-    
+
     <!----------Section-2(Launch a new career) section start-------------->
 
 
@@ -46,7 +174,7 @@
     <!----------Section-2(Launch a new career) section ends-------------->
 
 
-   
+
     <!---------- section-3(Degree Programs) section start-------------->
 
 
@@ -55,7 +183,7 @@
 
 
 
-    
+
     <!---------- section-4(Courses and Professional Certificates) section start-------------->
 
 
@@ -64,7 +192,7 @@
 
 
 
-    
+
     <!---------- section-5(100% Free) section start-------------->
 
 
@@ -72,14 +200,14 @@
     <!---------- section-5(100% Free) section ends--------------->
 
 
-    
+
     <!---------- Section-6(Explore Coursera)  section start-------------->
 
 
 
     <!---------- Section-6(Explore Coursera)  section ends--------------->
 
-    
+
 
 
     <!---------- section-7(World-class learning)  section start-------------->
@@ -98,7 +226,7 @@
 
 
 
-    
+
     <!---------- section-9(The ideal solution for your business)  section start-------------->
 
 
@@ -113,14 +241,13 @@
 
 
 
-     <!---------- section-11(Footer)  section start-------------->
+    <!---------- section-11(Footer)  section start-------------->
 
 
     <!---------- section-11(Footer)  section ends--------------->
 
 </body>
 <!-- Java script file -->
-<script src="./script.js">
-
-</script>
+<script src="./script.js"></script>
+<script src="https://kit.fontawesome.com/a89a1bd747.js" crossorigin="anonymous"></script>
 </html>
