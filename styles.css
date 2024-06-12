@@ -1,6 +1,105 @@
 /* Navbar section start */
 
+* {
+    margin: 0;
+    padding: 0;
+}
 
+.navbar-banner {
+    height: auto;
+    background-color: black;
+    padding: 8px;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+#navbar-banner-inner-div {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    justify-content: left;
+}
+
+#navbar-banner-inner-div>div>a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 8px;
+    height: 100%;
+}
+
+#navbar-banner-inner-div>div>a>span {
+    color: #e5e7e8;
+}
+
+#navbar-banner-inner-div>div>a:hover {
+    background-color: #fff;
+    color: black;
+}
+
+.nav-outer-div {
+    background-color: #fff;
+    padding: 5px !important;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    position: sticky;
+    top: calc(4vh + 8px);
+    z-index: 30;
+}
+
+.navbar {
+    background-color: #fff !important;
+    height: 8vh !important;
+}
+
+.nav-dropdown-left {
+    border: 1px solid #0056d2;
+    border-radius: 5px;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    color: #0056d2;
+}
+
+.navbar-dropdown-left-ul>li>h4 {
+    font-size: 20px;
+    color: black;
+}
+
+.navbar-searchbox {
+    width: 25vw !important;
+    border: solid rgb(43, 41, 41) 1px !important;
+}
+
+.navbar-search-btn {
+    background-color: #0056d2;
+    border: none;
+}
+
+.navbar-search-btn:hover {
+    background-color: #0056d2;
+}
+
+/* Navbar right section */
+.nav-dropdown-right {
+    color: black;
+}
+
+.navbar-right-btn-group>button {
+    /* width: 30px; */
+    border: solid #0056d2 1px;
+}
+
+.navbar-right-btn-group>button:nth-of-type(2) {
+    background-color: #0056d2;
+    color: #fff;
+    font-weight: 500;
+}
+
+.navbar-right-btn-group>button:hover {
+    background-color: #0056d2;
+}
 
 
 /* Navbar section ends */
@@ -9,6 +108,72 @@
 
 
 /* Expand your horizons section start */
+
+.header-container {
+    height: auto;
+    width: 100%;
+    display: flex;
+}
+
+.header-container>div {
+    width: 100%;
+}
+
+.header-container>div:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    padding: 15px;
+    margin-top: 6%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.header-container>div:nth-of-type(1)>p:nth-of-type(1) {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    padding: 10px;
+    font-size: 3.2rem;
+    line-height: 1.2;
+    color: #373a3c;
+}
+
+.header-container>div:nth-of-type(1)>p:nth-of-type(2) {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    padding: 10px;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    color: #373a3c;
+}
+
+.header-container-div1-btn {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 20px;
+    padding: 10px;
+}
+
+/* .header-container>button {} */
+
+.header-container-div1-btn>button:nth-of-type(1) {
+    padding: 8px 20px;
+    font-size: 18px;
+    border-radius: 3px;
+    background-color: #0056d2;
+    font-weight: 500;
+}
+
+.header-container-div1-btn>button:nth-of-type(2) {
+    padding: 8px 20px;
+    font-size: 18px;
+    border-radius: 3px;
+    background-color: transparent;
+    color: #0056d2;
+    font-weight: 500;
+}
 
 
 
