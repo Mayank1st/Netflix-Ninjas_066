@@ -63,6 +63,38 @@
 
 
 /* Section-6(Explore Coursera)  section start */
+let vis_grid=document.querySelector(".vis_grid")
+let gridgetdata=async()=>{
+    let data= await fetch("https://jsonplaceholder.typicode.com/photos")
+    let ndata=await data.json();
+    console.log(ndata)
+    showdata(ndata)
+    
+
+}
+gridgetdata()
+let showdata=(arr)=>{
+    vis_grid.innerHTML=null
+    arr.forEach(ele => {
+        let card=document.createElement("div")
+        card.className="vis_cardall"
+        card.style.border="1px solid red"
+        card.innerHTML=`
+        <div id="vis_emage">
+        <img src="${ele.thumbnailUrl}">
+        </div>
+        
+        <div id="vis_subpart">
+        <p>${ele.title}</p>
+        <p>${ele.id}</p>
+        </div>
+        `
+        vis_grid.append(card)
+    });
+   
+
+}
+
 
 
 
