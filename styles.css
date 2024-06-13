@@ -256,61 +256,100 @@
 
 
 /* Section-6(Explore Coursera)  section start */
+
 .vis_grid{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap: 30px;
-    border: 1px solid;
+    gap: 20px;
+    /* border: 10px solid purple; */
+    /* padding: 5px; */
+    width: auto;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    /* height: 70px; */
     
     
+}
+.vis_exp{
+    margin-bottom: 50px;
 }
 .vis_cardall img{
     width: 80px;
     min-width: 80px;
+    height: 70px;
+
 }
 .vis_cardall{
     height: auto;
-   
-    height: 80px;
-    border: 1px solid;
+    box-sizing: border-box;
+ /* n    height: 80px; */
+    /* border: 10px solid; */
     /* box-shadow: 1px ; */
     /* border: 10px solid teal; */
+    /* background-color: plum; */
     display: flex;
+    width: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: transform 0.3s ease;
+    /* width: auto; */
    
 }
 .vis_cardall:hover{
-    transform: scale(1); 
+    transform: scale(1.02); 
 }
-#vis_emage{
+.vis_emage{
     /* border: 10px solid teal; */
     width: auto;
+    /* padding: 2px; */
+    /* box-sizing: border-box; */
 }
-#vis_subpart{
+.vis_subpart{
     /* border: 10px solid khaki; */
     width: auto;
     height: auto;
-    /* padding: 10px; */
-    padding-top: 30px;
-    box-sizing: border-box;
+    /* background-color: indigo; */
+    padding: 5px;
+    /* padding-top: 30px; */
+    box-sizing:border-box;
 }
-#vis_subpart p:nth-child(1){
+.vis_subpart>div:nth-child(1)>span:nth-child(1){
     /* border: 1px solid darkblue; */
     text-overflow: ellipsis;
-    width: 160px;
+    box-sizing: border-box;
+    width: 208px;
+    height: 20px;
     white-space: nowrap;
+    /* background-color: yellow; */
+    font-weight:bold;
+    font-size: 10px;
+    color: black;
     overflow: hidden;
     /* margin-top: 10px; */
+    box-sizing: border-box;
 }
 
-#vis_subpart p:nth-child(2){
+.vis_subpart>div:nth-child(1)>p{
     /* border: 1px solid lawngreen; */
-    margin-bottom: 5px;
+    text-align: left;
+    /* margin-bottom: 15px; */
+    width: 208px;
+    height: 20px;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-weight: bold;
+    color: rgb(67, 60, 60);
+    /* background-color:#888888; */
 }
-
+.vis_part2{
+    margin-top: 100px;
+}
+/* section2 */
 .vis_mid{
     display: flex;
     height: auto;
-    border: 1px solid red;
+    background-color:
+    #ebf3ff;
+    /* border: 1px solid red; */
 }
 .vis_mid>div:nth-child(1){
     width: 50%;
@@ -321,7 +360,7 @@
 }
 .vis_mid>div:nth-child(2){
     width: 60%;
-    background-color: rgb(235,243,255);
+    /* background-color: rgb(235,243,255); */
     height: auto;
    
 }
@@ -329,23 +368,33 @@
   height: 30em;
   width: 40em;
 }
-
+/* world class learning */
 .vis_statictext{
    box-sizing: border-box;
     width: auto;
+    /* border: 1px solid; */
 }
 .vis_statictext1{
    width: auto;
-   margin: auto;
+  
    margin-top: 25%;
-   margin-left: 15%;
+   margin-left: 10%;
+   /* border: 1px solid; */
+}
+.vis_statictext1 span>:nth-of-type(1){
+    /* font-weight: bold; */
+    margin-bottom: 30px;
+    /* font-size: 44px; */
 }
 .vis_statictext2{
     width: auto;
-    margin: auto;
-    margin-left: 15%;
+   
+    /* margin-left: ; */
+    /* border: 1px solid; */
+    margin-left: 10%;
  }
- .vis_statictext2 button{
+
+ .vis_statictext3 button{
     width: 100px;
  }
 .vis_statictext3 button:hover{
@@ -356,33 +405,137 @@
     font-family: 'Source Sans Pro', Arial, sans-serif;
     font-size: 20px;
     line-height: 28px;
+    text-align: left;
+    margin-top: 30px;
 }
 .vis_statictext2 {
    font: var(--cds-typography-body-primary);
     letter-spacing: var(--cds-letter-spacing-0);
     color: var(--cds-color-neutral-primary);
     font-weight: 600;
+    font-size: 20px;
+   
+}
+.vis_statictext2 p{
+    text-align: left;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 15px;
+
 }
 .vis_statictext3{
     width: auto;
-    margin: auto;
-    margin-left: 15%;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    margin-left: 10%;
+    /* border: 1px solid; */
  }
 /* ************************************************** */
 .vis_foot{
     height: auto;
     width: 100%;
-    background-color: navajowhite;
+    background-color:white;
+    margin-top: 100px;
+    /* display: flex; */
+    margin: 50px;
 }
-.vis_karousel img{
-    height: 100px;
-}
-#mainvs{
-     display: flex;
-}
-.container{
+
+
+/* .container{
     max-width: 1440px;
+} */
+/*  */
+.vis_foot1 h2,p{
+    text-align: center;
+
+  }
+
+  .vis_card2{
+    height: auto;
+    /* border-radius: 100%; */
+    background-color:white;
+    width: 250px;
+    /* margin-left: 20%; */
+    padding: 10px;
+   
+  
+  }
+  .vis_card2 img{
+    border-radius: 100%;
+    height: 200px;
+    width: 200px;
+  }
+.par{
+    display: flex;
+    justify-content: space-evenly;
 }
+
+/* textcontent */
+.vis_textcontent h2{
+    text-align: center;
+    /* background-color: pink; */
+}
+.vis_textcontent{
+    margin-top: 20px;
+}
+.span-1{
+    margin-left: 10px;
+}
+.umaspan2{
+    margin-left: 80px;
+}
+.umspan-3{
+    margin-left: 100px;
+
+}
+.chspan-1{
+    margin-left: 10px;
+}
+.chspan-2{
+    margin-left: 30px;
+}
+.chspan-3{
+    margin-left: 90px;
+}
+.manspan-1{
+    margin-left: 30px;
+}
+.manspan-2{
+    margin-left: 70px;
+}
+.manspan-3{
+    margin-left: 80px;
+}
+.bhspan-1{
+    margin-left: 10px;
+    
+}
+.bhspan-2{
+    margin-left: 0px;
+    background-color: red;
+    
+}
+.bhspan-3{
+    margin-left: 80px;
+    
+}
+.vis_prev{
+    height: 200px;
+    border: 1px solid;
+}
+.vis_next{
+    height: 200px;
+    border: 1px solid;
+}
+hr{
+    color: blue;
+}
+
+
+
+
+
+/* ************************************************** */
+
+
 
 
 /* Section-6(Explore Coursera)  section ends */
