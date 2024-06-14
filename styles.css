@@ -1,106 +1,271 @@
 /* Navbar section start */
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-banner {
-    height: auto;
-    background-color: black;
-    padding: 8px;
-    position: sticky;
-    top: 0;
-    z-index: 20;
+  height: auto;
+  background-color: black;
+  padding: 8px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
 }
 
 #navbar-banner-inner-div {
-    display: flex;
-    gap: 18px;
-    align-items: center;
-    justify-content: left;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: left;
 }
 
 #navbar-banner-inner-div>div>a {
-    text-decoration: none;
-    color: #fff;
-    display: block;
-    padding: 8px;
-    height: 100%;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 8px;
+  height: 100%;
 }
 
 #navbar-banner-inner-div>div>a>span {
-    color: #e5e7e8;
+  color: #e5e7e8;
 }
 
 #navbar-banner-inner-div>div>a:hover {
-    background-color: #fff;
-    color: black;
+  background-color: #fff;
+  color: black;
 }
 
 .nav-outer-div {
-    background-color: #fff;
-    padding: 5px !important;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    position: sticky;
-    top: calc(4vh + 8px);
-    z-index: 30;
+  background-color: #fff;
+  padding: 5px !important;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  position: sticky;
+  top: calc(4vh + 8px);
+  z-index: 30;
 }
 
 .navbar {
-    background-color: #fff !important;
-    height: 8vh !important;
+  background-color: #fff !important;
+  height: 8vh !important;
 }
 
 .nav-dropdown-left {
-    border: 1px solid #0056d2;
-    border-radius: 5px;
-    padding-top: 5px !important;
-    padding-bottom: 5px !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-    color: #0056d2;
+  border: 1px solid #0056d2;
+  border-radius: 5px;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  color: #0056d2;
 }
 
+
 .navbar-dropdown-left-ul>li>h4 {
-    font-size: 20px;
-    color: black;
+  font-size: 20px;
+  color: black;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  display: none;
+}
+
+.overlay-content {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 15;
+  display: none;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.overlay-content.show {
+  display: block;
+}
+
+
+.dropdown-menu.custom-dropdown {
+  position: relative;
+  z-index: 20;
+}
+
+.dropdown-menu .dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-menu .dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+  display: none;
+  position: absolute;
+}
+
+.dropdown-menu .dropdown-submenu:hover .dropdown-menu {
+  display: block;
+}
+
+.custom-dropdown-menu {
+  position: absolute;
+  transform: translate(-150px, 15px);
+  width: 25vw;
 }
 
 .navbar-searchbox {
-    width: 25vw !important;
-    border: solid rgb(43, 41, 41) 1px !important;
+  width: 25vw !important;
+  border: solid rgb(43, 41, 41) 1px !important;
 }
 
 .navbar-search-btn {
-    background-color: #0056d2;
-    border: none;
+  background-color: #0056d2;
+  border: none;
 }
 
 .navbar-search-btn:hover {
-    background-color: #0056d2;
+  background-color: #0056d2;
 }
 
 /* Navbar right section */
 .nav-dropdown-right {
-    color: black;
+  color: black;
 }
 
 .navbar-right-btn-group>button {
-    /* width: 30px; */
-    border: solid #0056d2 1px;
+  /* width: 30px; */
+  border: solid #0056d2 1px;
 }
 
 .navbar-right-btn-group>button:nth-of-type(2) {
-    background-color: #0056d2;
-    color: #fff;
-    font-weight: 500;
+  background-color: #0056d2;
+  color: #fff;
+  font-weight: 500;
 }
 
 .navbar-right-btn-group>button:hover {
-    background-color: #0056d2;
+  background-color: #0056d2;
 }
 
+/* Popup Modal SignUp */
+/* Center the title and the lead paragraph */
+.modal-header .text-center {
+  width: 100%;
+  text-align: center;
+}
+
+/* Ensure the close button is in the right top corner */
+.modal-header .btn-close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.lead {
+  font-size: 18px !important;
+  max-width: 300px !important;
+  margin: auto;
+  line-height: 1.3;
+  color: black;
+}
+
+
+#sign-up-div {
+  padding: 20px !important;
+}
+
+
+.signUpBtnSubmit {
+  width: 100%;
+  background-color: #0056d2 !important;
+  font-weight: 500 !important;
+}
+
+.alredyOnCoursera {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 15px !important;
+}
+
+#orgSignUpLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orgSignUpLink {
+  text-align: center !important;
+  margin: auto !important;
+}
+
+
+
+/* Sign in section */
+#sign-in-div {
+  padding: 20px !important;
+}
+
+.signInBtnSubmit {
+  width: 100%;
+  background-color: #0056d2 !important;
+  font-weight: 500 !important;
+}
+
+.notOnCoursera {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 15px !important;
+}
+
+.orgSignUpLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orgSignUpLink {
+  text-align: center !important;
+  margin: auto !important;
+}
+
+.termAndConditions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 30px;
+  line-height: 1.7;
+}
+
+
+/* Forgot password section */
+#forgotPassword-div {
+  padding: 20px !important;
+}
+
+.forgotPasswordBtnSubmit {
+  width: 100%;
+  background-color: #0056d2 !important;
+  font-weight: 500 !important;
+}
+
+.forgotPasswordBackToLogin {
+  text-align: center !important;
+  margin: auto !important;
+  margin-top: 10px !important;
+}
 
 /* Navbar section ends */
 

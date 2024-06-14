@@ -2,831 +2,949 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coursera-Clone</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coursera-Clone</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.js"></script>
+
+  <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
-    <!----------Navbar section start-------------->
-
-    <div class="navbar-main">
-        <div class="navbar-banner container-fluid">
-            <div id="navbar-banner-inner-div" class="container ">
-                <div>
-                    <a href="https://www.coursera.org/en-IN"><span>For</span> Individuals</a>
-                </div>
-                <div>
-                    <a
-                        href="https://www.coursera.org/business?utm_content=corp-to-home-for-enterprise&utm_campaign=website&utm_medium=coursera&utm_source=header&utm_term=b-out"><span>For</span>
-                        Business</a>
-                </div>
-                <div>
-                    <a href="https://www.coursera.org/campus"><span>For</span> University</a>
-                </div>
-                <div>
-                    <a href="https://www.coursera.org/government"><span>For</span> Government</a>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="nav-outer-div container-fluid">
-            <nav class="container navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
-                        <img width="120" height="120"
-                            src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjIuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZpZXdCb3g9IjAgMCAxMTU1IDE2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjIiPjxwYXRoIGQ9Ik0xNTkuNzUgODEuNTRjMC00NC40OSAzNi42My04MC40NyA4Mi40My04MC40NyA0Ni4xMiAwIDgyLjc2IDM2IDgyLjc2IDgwLjQ3IDAgNDQuMTYtMzYuNjQgODAuOC04Mi43NiA4MC44LTQ1LjggMC04Mi40My0zNi42OC04Mi40My04MC44em0xMjUuNjEgMGMwLTIyLjI0LTE5LjMtNDEuODctNDMuMTgtNDEuODctMjMuNTUgMC00Mi44NSAxOS42My00Mi44NSA0MS44NyAwIDIyLjU3IDE5LjMgNDIuMiA0Mi44NSA0Mi4yIDIzLjkyIDAgNDMuMTgtMTkuNjMgNDMuMTgtNDIuMnptNzA1LjYzIDEuMzFjMC00OC43NCAzOS41OC04MS43OCA3NS41Ny04MS43OCAyNC41MyAwIDM4LjYgNy41MiA0OC4wOCAyMS45MmwzLjc3LTE5aDM2Ljc5djE1NS40aC0zNi43OWwtNC43NS0xNmMtMTAuNzkgMTEuNzgtMjQuMjEgMTktNDcuMSAxOS0zNS4zMy0uMDUtNzUuNTctMzEuMTMtNzUuNTctNzkuNTR6bTEyNS42MS0uMzNjLS4wOS0yMy41MjctMTkuNDctNDIuODM1LTQzLTQyLjgzNS0yMy41OSAwLTQzIDE5LjQxMS00MyA0M3YuMTY1YzAgMjEuNTkgMTkuMyA0MC44OSA0Mi44NiA0MC44OSAyMy44NSAwIDQzLjE0LTE5LjMgNDMuMTQtNDEuMjJ6TTk0NS43OCAyMlY0aC00MC4yM3YxNTUuMzloNDAuMjNWNzUuNjZjMC0yNS4xOSAxMi40NC0zOC4yNyAzNC0zOC4yNyAxLjQzIDAgMi43OS4xIDQuMTIuMjNMOTkxLjM2LjExYy0yMC45Ny4xMS0zNi4xNyA3LjMtNDUuNTggMjEuODl6bS00MDQuMjcuMDF2LTE4bC00MC4yMy4wOS4zNCAxNTUuMzcgNDAuMjMtLjA5LS4yMi04My43MmMtLjA2LTI1LjE4IDEyLjM1LTM4LjI5IDMzLjkzLTM4LjM0IDEuMzc2LjAwNCAyLjc1Mi4wODEgNC4xMi4yM0w1ODcuMSAwYy0yMSAuMTctMzYuMjIgNy4zOS00NS41OSAyMi4wMXpNMzM4Ljg4IDk5LjJWNC4wMWg0MC4yMlY5NC4zYzAgMTkuOTUgMTEuMTIgMzEuNzMgMzAuNDIgMzEuNzMgMjEuNTkgMCAzNC0xMy4wOSAzNC0zOC4yOFY0LjAxaDQwLjI0djE1NS4zOGgtNDAuMjF2LTE4Yy05LjQ4IDE0LjcyLTI0Ljg2IDIxLjkyLTQ2LjEyIDIxLjkyLTM1Ljk4LjAxLTU4LjU1LTI2LjE2LTU4LjU1LTY0LjExem0zOTEuNzQtMTcuNDhjLjA5LTQzLjUxIDMxLjIzLTgwLjc0IDgwLjYyLTgwLjY1IDQ1LjguMDkgNzguMTEgMzYuNzggNzggODAgLjAxIDQuMjczLS4zMyA4LjU0LTEgMTIuNzZsLTExOC40MS0uMjJjNC41NCAxOC42NSAxOS44OSAzMi4wOSA0My4xMiAzMi4xNCAxNC4wNiAwIDI5LjEyLTUuMTggMzguMy0xNi45NGwyNy40NCAyMmMtMTQuMTEgMTkuOTMtMzkgMzEuNjYtNjUuNDggMzEuNjEtNDYuNzUtLjE2LTgyLjY3LTM1LjIzLTgyLjU5LTgwLjd6bTExOC4xMi0xNi4xNGMtMi4yNi0xNS43LTE4LjU5LTI3Ljg0LTM3Ljg5LTI3Ljg3LTE4LjY1IDAtMzMuNzEgMTEuMDYtMzkuNjMgMjcuNzNsNzcuNTIuMTR6bS0yNjEuNCA1OS45NGwzNS43Ni0xOC43MmM1LjkxIDEyLjgxIDE3LjczIDIwLjM2IDM0LjQ4IDIwLjM2IDE1LjQzIDAgMjEuMzQtNC45MiAyMS4zNC0xMS44MiAwLTI1LTg0LjcxLTkuODUtODQuNzEtNjcgMC0zMS41MiAyNy41OC00OC4yNiA2MS43Mi00OC4yNiAyNS45NCAwIDQ4LjkyIDExLjQ5IDYxLjQgMzIuODNsLTM1LjQ0IDE4Ljc1Yy01LjI1LTEwLjUxLTE1LjEtMTYuNDItMjcuNTgtMTYuNDItMTIuMTQgMC0xOC4wNiA0LjI3LTE4LjA2IDExLjQ5IDAgMjQuMyA4NC43MSA4Ljg3IDg0LjcxIDY3IDAgMzAuMjEtMjQuNjIgNDguNTktNjQuMzUgNDguNTktMzMuODItLjAzLTU3LjQ2LTExLjE5LTY5LjI3LTM2Ljh6TTAgODEuNTRDMCAzNi43MyAzNi42My43NCA4Mi40My43NGMyNy45NDctLjE5NiA1NC4xODIgMTMuNzM3IDY5LjY3IDM3bC0zNC4zNCAxOS45MmE0Mi45NzIgNDIuOTcyIDAgMDAtMzUuMzMtMTguMzJjLTIzLjU1IDAtNDIuODUgMTkuNjMtNDIuODUgNDIuMiAwIDIyLjU3IDE5LjMgNDIuMiA0Mi44NSA0Mi4yYTQyLjUwMiA0Mi41MDIgMCAwMDM2LjMxLTIwbDM0IDIwLjI4Yy0xNS4zMDcgMjMuOTU1LTQxLjkwMiAzOC40MzEtNzAuMzMgMzguMjhDMzYuNjMgMTYyLjM0IDAgMTI1LjY2IDAgODEuNTR6IiBmaWxsPSIjMDA1NkQyIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48L3N2Zz4="
-                            alt="Bootstrap">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class=" d-flex gap-3 navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item dropdown">
-                                <a class="nav-dropdown-left nav-link dropdown-toggle" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Explore
-                                </a>
-                                <ul class="navbar-dropdown-left-ul dropdown-menu">
-                                    <li>
-                                        <h4 class="dropdown-header">Goals</h4>
-                                        <a class="dropdown-item" href="#">Take a free course</a>
-                                        <a class="dropdown-item" href="#">Earn a Degree</a>
-                                        <a class="dropdown-item" href="#">Earn a Certificate</a>
-                                        <a class="dropdown-item" href="#">Find your new career</a>
-                                    </li>
-                                    <hr class="dropdown-divider">
-                                    <li>
-                                        <h4 class="dropdown-header">Subjects</h4>
-                                        <a class="dropdown-item" href="#">Data Science</a>
-                                        <a class="dropdown-item" href="#">Business</a>
-                                        <a class="dropdown-item" href="#">Computer Science</a>
-                                        <a class="dropdown-item" href="#">Information Technology</a>
-                                        <a class="dropdown-item" href="#">Language Learning</a>
-                                        <a class="dropdown-item" href="#">Health</a>
-                                        <a class="dropdown-item" href="#">Personal Development</a>
-                                        <a class="dropdown-item" href="#">Physical Science and Engineering</a>
-                                        <a class="dropdown-item" href="#">Social Sciences</a>
-                                        <a class="dropdown-item" href="#">Arts and Humanities</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <form class="d-flex" role="search">
-                                    <input class="navbar-searchbox form-control me-2" type="search"
-                                        placeholder="What do you want to learn?" aria-label="Search">
-                                    <button class="navbar-search-btn btn btn-outline-success" type="submit"><i
-                                            class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
-                                </form>
-                            </li>
-                        </ul>
-
-                        <!-- Navbar right side -->
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
-                            <li class="nav-item dropdown">
-                                <a class="nav-dropdown-right nav-link dropdown-toggle" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Online Degrees
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://www.coursera.org/career-academy/?trk_ref=globalnav"
-                                    style="color: black;">Find your New Career</a>
-                            </li>
-                            <li class="nav-item">
-                                <div class="navbar-right-btn-group btn-group" role="group"
-                                    aria-label="Basic outlined example">
-                                    <button type="button" class="btn btn-outline-primary">Sign In</button>
-                                    <button type="button" class="btn btn-outline-primary">Join for Free</button>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
-
-    <!----------Navbar section ends-------------->
-
-
-
-
-
-
-    <!----------Expand your horizons section start-------------->
-    <header id="header-section">
-        <div class="header-container container">
-            <div>
-                <p>Expand your horizons with Coursera Plus</p>
-                <p>Unlock job ready skills from industry leaders like Google, IBM, Meta, and IIM Ahmedabad for INR 7999.
-                    You can also save on Coursera for Teams.</p>
-                <div class="header-container-div1-btn">
-                    <button type="button" class="btn btn-primary">Save on Coursers Plus <i
-                            class="fa-solid fa-arrow-right" style="color: #fcf7f7;"></i></button>
-                    <button type="button" class="btn btn-primary">Get 50% off Teams <i class="fa-solid fa-arrow-right"
-                            style="color: #0056d2;"></i></button>
-                </div>
-            </div>
-            <div><img
-                    src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/3ofsZsKwiGcXFHENh18ngG/23c741906132d0e538cfc7f2a29ce04c/BC-2466_LOHP_take_over_Promo2_India.jpg?auto=format%2Ccompress&dpr=1&w=660&q=40"
-                    class="img-fluid" alt="..."></div>
-        </div>
-    </header>
-    <!----------Expand your horizons section ends-------------->
-
-
-
-
-    <!----------Section1(We collaborate with ) section start-------------->
-
-    <div class="container-company">
-        <a href="https://www.coursera.org/about/partners">
-            <div>We collaborate with <span id="leading-uni" style="color: rgb(0, 86, 210);">+325 leading universities and companies</span></div>
-        </a>
-        <div class="companiesLogo">
-            <a href="https://www.coursera.org/iima"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/683LGuhO9ccmkKjeW46JYY/bf296880a503ab5dea00c02590e1c066/IIM-A.png?auto=format%2Ccompress&dpr=1&h=37" alt="IIM-A"></a>
-            <a href="https://www.coursera.org/iitb"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2kfn3889F093jtkEHjlB8P/9e41903a726e520c1996e88a82fdd9a1/IIT-_B.png?auto=format%2Ccompress&dpr=1&h=37" alt="IIT-B"></a>
-            <a href="https://www.coursera.org/google-career-certificates"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/1c6RjBHi3Lqb9QpWxje7iA/b529f909c5230af3210ba2d47d149620/google.png?auto=format%2Ccompress&dpr=1&h=37" alt="Google"></a>
-            <a href="https://www.coursera.org/ibm-skills-network"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/3toC4I7jbWxiedfxiyNjtT/735faeaf976a9692f425f8c3a7d125dc/1000px-IBM_logo.svg.png?auto=format%2Ccompress&dpr=1&h=37" alt="IBM"></a>
-            <a href="https://www.coursera.org/deeplearning-ai"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/3FSgsKvZzrTJ8MFjvFASbV/c069e703f813d6298a91d9682f0077c5/Deep_Learning.png?auto=format%2Ccompress&dpr=1&h=37" alt="Deep Learning"></a>
-            <a href="https://www.coursera.org/meta"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/3bmmVE1BHvDQUFldOXgDQe/75409a97cfd2ee95178b05d475eaaf04/meta.png?auto=format%2Ccompress&dpr=1&h=37" alt="Meta"></a>
-            <a href="https://www.coursera.org/microsoft"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/0iCRr2Ac4lfTS1a2UMYle/bd99b2018b66d9b0a7d5db80bf03bcd5/Microsoft.png?auto=format%2Ccompress&dpr=1&h=37" alt="Microsoft"></a>
-            <a href="https://www.coursera.org/isb"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/9V0ZHPEeFBPLlhvvCnS0x/0310b67e486733af9c9b1ba8be8d072b/ISB_transparent_logo.png?auto=format%2Ccompress&dpr=1&h=37" alt="ISB"></a>
-            <a href="https://www.coursera.org/stanford"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4FSFmNXuDIzTvFb7n0v4mK/704ae9e0a7981fb6415f4cb4609bbbb3/stanford.svg?auto=format%2Ccompress&dpr=1&h=27" alt="Stanford"></a>
-        </div>
-    </div>
-
-
-    <!----------Section1(We collaborate with ) section ends-------------->
-
-
-
-
-    <!----------Section-2(Launch a new career) section start-------------->
-
-
-
-
-    <!----------Section-2(Launch a new career) section ends-------------->
-
-
-
-    <!---------- section-3(Degree Programs) section start-------------->
-
-    <div class="MK container">
-      <div class="K1Container">
-        <p><b>Degree Programs</b></p>
-        <h4>Get a head start on a degree today</h4>
-        <p>
-          With these programs, you can build valuable skills, earn career
-          credentials, and make progress toward a degree before you even enroll.
-        </p>
-        <div class="K1Cards">
-          <div class="K1Card">
-             <div class="example12"></div>
-            <div class="uni">
-              <img
-                src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
-                alt=""
-              />
-              <p>University of Illinois at Urbana</p>
-            </div>
-            <p style="margin-bottom: 10px">
-              <b>Master of Business Administration (iMBA)</b>
-            </p>
-            <div class="earnDegree">
-              <link
-                rel="stylesheet"
-                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0"
-              />
-              <span class="material-symbols-outlined"> school </span>
-              <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
-            </div>
-
-            <p>Degree</p>
-          </div>
-          <div class="K1Card">
-             <div class="example12"></div>
-            <div class="uni">
-              <img
-                src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
-                alt=""
-              />
-              <p>University of Illinois at Urbana</p>
-            </div>
-            <p style="margin-bottom: 10px">
-              <b>Master of Business Administration (iMBA)</b>
-            </p>
-            <div class="earnDegree">
-              <link
-                rel="stylesheet"
-                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0"
-              />
-              <span class="material-symbols-outlined"> school </span>
-              <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
-            </div>
-
-            <p>Degree</p>
-          </div>
-          <div class="K1Card">
-            <div class="example12"></div>
-           <div class="uni">
-             <img
-               src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
-               alt=""
-             />
-             <p>University of Illinois at Urbana</p>
-           </div>
-           <p style="margin-bottom: 10px">
-             <b>Master of Business Administration (iMBA)</b>
-           </p>
-           <div class="earnDegree">
-             <link
-               rel="stylesheet"
-               href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0"
-             />
-             <span class="material-symbols-outlined"> school </span>
-             <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
-           </div>
-
-           <p>Degree</p>
-         </div>
-         <div class="K1Card">
-            <div class="example12"></div>
-           <div class="uni">
-             <img
-               src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
-               alt=""
-             />
-             <p>University of Illinois at Urbana</p>
-           </div>
-           <p style="margin-bottom: 10px">
-             <b>Master of Business Administration (iMBA)</b>
-           </p>
-           <div class="earnDegree">
-             <link
-               rel="stylesheet"
-               href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0"
-             />
-             <span class="material-symbols-outlined"> school </span>
-             <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
-           </div>
-
-           <p>Degree</p>
-         </div>
-         
-        </div>
-        <div class="K1Buttons">
-          <button>Show 8 more</button>
-          <button style="display: flex; ;align-items: center;"><p style="margin: 0px;">Explore Degrees</p>
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
-            <span class="material-symbols-outlined">
-              arrow_forward
-              </span>
-          </button>
-        </div>
-      </div>
-
-      <div class="K1Container">
-        <p><b>Degree Programs</b></p>
-        <h4>Find a top degree that fits your life</h4>
-        <p>
-          Breakthrough pricing on 100% online degrees from top universities.
-        </p>
-        <div class="K1Cards"><div class="K1Card">
-          <div class="example12"></div>
-         <div class="uni">
-           <img
-             src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
-             alt=""
-           />
-           <p>University of Illinois at Urbana</p>
-         </div>
-         <p style="margin-bottom: 10px">
-           <b>Master of Business Administration (iMBA)</b>
-         </p>
-         <div class="earnDegree">
-           <link
-             rel="stylesheet"
-             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0"
-           />
-           <span class="material-symbols-outlined"> school </span>
-           <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
-         </div>
-
-         <p>Degree</p>
-       </div>
-       <div class="K1Card">
-          <div class="example12"></div>
-         <div class="uni">
-           <img
-             src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
-             alt=""
-           />
-           <p>University of Illinois at Urbana</p>
-         </div>
-         <p style="margin-bottom: 10px">
-           <b>Master of Business Administration (iMBA)</b>
-         </p>
-         <div class="earnDegree">
-           <link
-             rel="stylesheet"
-             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0"
-           />
-           <span class="material-symbols-outlined"> school </span>
-           <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
-         </div>
-
-         <p>Degree</p>
-       </div>
-       <div class="K1Card">
-         <div class="example12"></div>
-        <div class="uni">
-          <img
-            src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
-            alt=""
-          />
-          <p>University of Illinois at Urbana</p>
-        </div>
-        <p style="margin-bottom: 10px">
-          <b>Master of Business Administration (iMBA)</b>
-        </p>
-        <div class="earnDegree">
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0"
-          />
-          <span class="material-symbols-outlined"> school </span>
-          <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
-        </div>
-
-        <p>Degree</p>
-      </div>
-      <div class="K1Card">
-         <div class="example12"></div>
-        <div class="uni">
-          <img
-            src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
-            alt=""
-          />
-          <p>University of Illinois at Urbana</p>
-        </div>
-        <p style="margin-bottom: 10px">
-          <b>Master of Business Administration (iMBA)</b>
-        </p>
-        <div class="earnDegree">
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0"
-          />
-          <span class="material-symbols-outlined"> school </span>
-          <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
-        </div>
-
-        <p>Degree</p>
-      </div></div>
-        <div class="K1Buttons">
-          <button>Show 8 more</button>
-          <button>Explore Degrees</button>
-        </div>
-      </div>
-
-      <div class="K1Container">
-        <p><b>Courses and Professional Certificates</b></p>
-        <h4>New on Coursera</h4>
-        <p>
-          Explore our newest programs, focused on delivering in-demand skills.
-        </p>
-        <div class="K1Cards"><div class="K1Card">
-          <div class="example12"></div>
-         <div class="uni">
-           <img
-             src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
-             alt=""
-           />
-           <p>University of Illinois at Urbana</p>
-         </div>
-         <p style="margin-bottom: 10px">
-           <b>Master of Business Administration (iMBA)</b>
-         </p>
-         <div class="earnDegree">
-           <link
-             rel="stylesheet"
-             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0"
-           />
-           <span class="material-symbols-outlined"> school </span>
-           <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
-         </div>
-
-         <p>Degree</p>
-       </div>
-       <div class="K1Card">
-          <div class="example12"></div>
-         <div class="uni">
-           <img
-             src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
-             alt=""
-           />
-           <p>University of Illinois at Urbana</p>
-         </div>
-         <p style="margin-bottom: 10px">
-           <b>Master of Business Administration (iMBA)</b>
-         </p>
-         <div class="earnDegree">
-           <link
-             rel="stylesheet"
-             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0"
-           />
-           <span class="material-symbols-outlined"> school </span>
-           <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
-         </div>
-
-         <p>Degree</p>
-       </div>
-       <div class="K1Card">
-         <div class="example12"></div>
-        <div class="uni">
-          <img
-            src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
-            alt=""
-          />
-          <p>University of Illinois at Urbana</p>
-        </div>
-        <p style="margin-bottom: 10px">
-          <b>Master of Business Administration (iMBA)</b>
-        </p>
-        <div class="earnDegree">
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0"
-          />
-          <span class="material-symbols-outlined"> school </span>
-          <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
-        </div>
-
-        <p>Degree</p>
-      </div>
-      <div class="K1Card">
-         <div class="example12"></div>
-        <div class="uni">
-          <img
-            src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
-            alt=""
-          />
-          <p>University of Illinois at Urbana</p>
-        </div>
-        <p style="margin-bottom: 10px">
-          <b>Master of Business Administration (iMBA)</b>
-        </p>
-        <div class="earnDegree">
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0"
-          />
-          <span class="material-symbols-outlined"> school </span>
-          <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
-        </div>
-
-        <p>Degree</p>
-      </div></div>
-        <div class="K1Buttons">
-          <button>Show 8 more</button>
-          <button>Explore Degrees</button>
-        </div>
-      </div>
-
-      <div class="K1Container">
-        <p><b>100% Free</b></p>
-        <h4>Start learning with free courses</h4>
-        <p>
-          Explore free online courses from the world's top universities and
-          companies.
-        </p>
-        <div class="K1Cards"><div class="K1Card">
-          <div class="example12"></div>
-         <div class="uni">
-           <img
-             src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
-             alt=""
-           />
-           <p>University of Illinois at Urbana</p>
-         </div>
-         <p style="margin-bottom: 10px">
-           <b>Master of Business Administration (iMBA)</b>
-         </p>
-         <div class="earnDegree">
-           <link
-             rel="stylesheet"
-             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0"
-           />
-           <span class="material-symbols-outlined"> school </span>
-           <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
-         </div>
-
-         <p>Degree</p>
-       </div>
-       <div class="K1Card">
-          <div class="example12"></div>
-         <div class="uni">
-           <img
-             src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
-             alt=""
-           />
-           <p>University of Illinois at Urbana</p>
-         </div>
-         <p style="margin-bottom: 10px">
-           <b>Master of Business Administration (iMBA)</b>
-         </p>
-         <div class="earnDegree">
-           <link
-             rel="stylesheet"
-             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0"
-           />
-           <span class="material-symbols-outlined"> school </span>
-           <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
-         </div>
-
-         <p>Degree</p>
-       </div>
-       <div class="K1Card">
-         <div class="example12"></div>
-        <div class="uni">
-          <img
-            src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
-            alt=""
-          />
-          <p>University of Illinois at Urbana</p>
-        </div>
-        <p style="margin-bottom: 10px">
-          <b>Master of Business Administration (iMBA)</b>
-        </p>
-        <div class="earnDegree">
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0"
-          />
-          <span class="material-symbols-outlined"> school </span>
-          <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
-        </div>
-
-        <p>Degree</p>
-      </div>
-      <div class="K1Card">
-         <div class="example12"></div>
-        <div class="uni">
-          <img
-            src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
-            alt=""
-          />
-          <p>University of Illinois at Urbana</p>
-        </div>
-        <p style="margin-bottom: 10px">
-          <b>Master of Business Administration (iMBA)</b>
-        </p>
-        <div class="earnDegree">
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0"
-          />
-          <span class="material-symbols-outlined"> school </span>
-          <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
-        </div>
-
-        <p>Degree</p>
-      </div></div>
-        <div class="K1Buttons">
-          <button>Show 8 more</button>
-          <button>Explore Degrees</button>
-        </div>
-      </div>
-
-      <p>
-        ¹Each university determines admission and the number of pre-approved
-        prior learning credits that may count toward the degree requirements
-        according to institutional policies, which may consider any existing
-        credits you may have.
-      </p>
-    </div>
-
-    <!---------- section-3(Degree Programs) section ends--------------->
-
-
-
-
-    <!---------- section-4(Courses and Professional Certificates) section start-------------->
-
-
-
-    <!---------- section-4(Courses and Professional Certificates) section ends---------------->
-
-
-
-
-    <!---------- section-5(100% Free) section start-------------->
-
-
-
-    <!---------- section-5(100% Free) section ends--------------->
-
-
-
-    <!---------- Section-6(Explore Coursera)  section start-------------->
-    <div class="container mt-5 ">
-      <!-- <section >1</section> -->
-      <section class="vis_part1">
+  <!----------Navbar section start-------------->
+
+  <div class="navbar-main">
+    <div class="navbar-banner container-fluid">
+      <div id="navbar-banner-inner-div" class="container ">
         <div>
-          <div class="vis_exp">
-            <h2>Explore Coursera</h2>
-          </div>
-          <div class="vis_grid">
-                <div class="vis_cardall">
-                  <div class="vis_emage">
-                      <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/browse/domains/data_science.png?auto=format%2Ccompress&dpr=1&fit=crop&h=100" alt="">
-                  </div>
-                  <div class="vis_subpart">
-                    <div>
-                      <span>DATA SCIENCE</span>
-                      <p>425 COURSES</p>
-                    </div>
-                    
-                  </div>
-                </div>
-                <div class="vis_cardall">
-                  <div class="vis_emage">
-                      <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/browse/domains/business.png?auto=format%2Ccompress&dpr=1&fit=crop&h=100" alt="">
-                  </div>
-                  <div class="vis_subpart">
-                    <div>
-                      <span>BUSINESS</span>
-                      <p>1095 COURSES</p>
-                    </div>
-                    
-                  </div>
-                </div>
-                <div class="vis_cardall">
-                  <div class="vis_emage">
-                      <img src="https://images.unsplash.com/photo-1628784230353-5bee16e2f005?q=80&w=2235&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                  </div>
-                  <div class="vis_subpart">
-                    <div>
-                      <span>COMPUTER SCIENCE</span>
-                      <p>668 COURSES</p>
-                    </div>
-                    
-                  </div>
-                </div>
-                <div class="vis_cardall">
-                  <div class="vis_emage">
-                      <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/browse/domains/computer_science.png?auto=format%2Ccompress&dpr=1&fit=crop&h=100" alt="">
-                  </div>
-                  <div class="vis_subpart">
-                    <div>
-                      <span>HEALTH</span>
-                      <p>471 COURSES</p>
-                    </div>
-                    
-                  </div>
-                </div>
-                <div class="vis_cardall">
-                  <div class="vis_emage">
-                      <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/browse/domains/health.png?auto=format%2Ccompress&dpr=1&fit=crop&h=100" alt="">
-                  </div>
-                  <div class="vis_subpart">
-                    <div>
-                      <span>SOCIAL SCIENCE</span>
-                      <p>401 COURSES</p>
-                    </div>
-                    
-                  </div>
-                </div>
-                <div class="vis_cardall">
-                  <div class="vis_emage">
-                      <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/browse/domains/social_sciences.png?auto=format%2Ccompress&dpr=1&fit=crop&h=100" alt="">
-                  </div>
-                  <div class="vis_subpart">
-                    <div>
-                      <span>PERSONAL DEVELOPMENT</span>
-                      <p>137 COURSES</p>
-                    </div>
-                    
-                  </div>
-                </div>
-                <div class="vis_cardall">
-                  <div class="vis_emage">
-                      <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/browse/domains/personal_development.png?auto=format%2Ccompress&dpr=1&fit=crop&h=100" alt="">
-                  </div>
-                  <div class="vis_subpart">
-                    <div>
-                      <span>ARTS AND HUMANITIES</span>
-                      <p>338 COURSES</p>
-                    </div>
-                   
-                  </div>
-                </div>
-                <div class="vis_cardall">
-                  <div class="vis_emage">
-                      <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/browse/domains/arts_and_humanities.png?auto=format%2Ccompress&dpr=1&fit=crop&h=100" alt="">
-                  </div>
-                  <div class="vis_subpart">
-                    <div>
-                      <span>PHYSICAL SCIENCE AND ENGINEERING </span>
-                      <p>413 COURSES</p>
-                    </div>
-                  
-                  </div>
-                </div>
-                <div class="vis_cardall">
-                  <div class="vis_emage">
-                      <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/browse/domains/physical_science_and_engineering.png?auto=format%2Ccompress&dpr=1&fit=crop&h=100" alt="">
-                  </div>
-                  <div class="vis_subpart">
-                    <div>
-                      <span>LANGUAGE LEARNING</span>
-                        <p>150 COURSES</p>
-                    </div>
-                   
-                  </div>
-                </div>
-                <div class="vis_cardall">
-                  <div class="vis_emage">
-                      <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/browse/domains/language_learning.png?auto=format%2Ccompress&dpr=1&fit=crop&h=100" alt="">
-                  </div>
-                  <div class="vis_subpart">
-                    <div>
-                      <span>INFORMATION TECHNOLOGY</span>
-                      <p>145 COURSES</p>
-                    </div>
-                    
-                  </div>
-                </div>
-                <div class="vis_cardall">
-                  <div class="vis_emage">
-                      <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/browse/domains/math_and_logic.png?auto=format%2Ccompress&dpr=1&fit=crop&h=100" alt="">
-                  </div>
-                  <div class="vis_subpart">
-                    <div>
-                      <span>MATH AND LOGIC</span>
-                      <p>70 COURSES</p>
-                    </div>
-                    
-                  </div>
-                </div>
-                
+          <a href="https://www.coursera.org/en-IN"><span>For</span> Individuals</a>
+        </div>
+        <div>
+          <a
+            href="https://www.coursera.org/business?utm_content=corp-to-home-for-enterprise&utm_campaign=website&utm_medium=coursera&utm_source=header&utm_term=b-out"><span>For</span>
+            Business</a>
+        </div>
+        <div>
+          <a href="https://www.coursera.org/campus"><span>For</span> University</a>
+        </div>
+        <div>
+          <a href="https://www.coursera.org/government"><span>For</span> Government</a>
+        </div>
+      </div>
+    </div>
 
-             
+
+    <div class="nav-outer-div container-fluid">
+      <nav class="container navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img width="120" height="120"
+              src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjIuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZpZXdCb3g9IjAgMCAxMTU1IDE2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjIiPjxwYXRoIGQ9Ik0xNTkuNzUgODEuNTRjMC00NC40OSAzNi42My04MC40NyA4Mi40My04MC40NyA0Ni4xMiAwIDgyLjc2IDM2IDgyLjc2IDgwLjQ3IDAgNDQuMTYtMzYuNjQgODAuOC04Mi43NiA4MC44LTQ1LjggMC04Mi40My0zNi42OC04Mi40My04MC44em0xMjUuNjEgMGMwLTIyLjI0LTE5LjMtNDEuODctNDMuMTgtNDEuODctMjMuNTUgMC00Mi44NSAxOS42My00Mi44NSA0MS44NyAwIDIyLjU3IDE5LjMgNDIuMiA0Mi44NSA0Mi4yIDIzLjkyIDAgNDMuMTgtMTkuNjMgNDMuMTgtNDIuMnptNzA1LjYzIDEuMzFjMC00OC43NCAzOS41OC04MS43OCA3NS41Ny04MS43OCAyNC41MyAwIDM4LjYgNy41MiA0OC4wOCAyMS45MmwzLjc3LTE5aDM2Ljc5djE1NS40aC0zNi43OWwtNC43NS0xNmMtMTAuNzkgMTEuNzgtMjQuMjEgMTktNDcuMSAxOS0zNS4zMy0uMDUtNzUuNTctMzEuMTMtNzUuNTctNzkuNTR6bTEyNS42MS0uMzNjLS4wOS0yMy41MjctMTkuNDctNDIuODM1LTQzLTQyLjgzNS0yMy41OSAwLTQzIDE5LjQxMS00MyA0M3YuMTY1YzAgMjEuNTkgMTkuMyA0MC44OSA0Mi44NiA0MC44OSAyMy44NSAwIDQzLjE0LTE5LjMgNDMuMTQtNDEuMjJ6TTk0NS43OCAyMlY0aC00MC4yM3YxNTUuMzloNDAuMjNWNzUuNjZjMC0yNS4xOSAxMi40NC0zOC4yNyAzNC0zOC4yNyAxLjQzIDAgMi43OS4xIDQuMTIuMjNMOTkxLjM2LjExYy0yMC45Ny4xMS0zNi4xNyA3LjMtNDUuNTggMjEuODl6bS00MDQuMjcuMDF2LTE4bC00MC4yMy4wOS4zNCAxNTUuMzcgNDAuMjMtLjA5LS4yMi04My43MmMtLjA2LTI1LjE4IDEyLjM1LTM4LjI5IDMzLjkzLTM4LjM0IDEuMzc2LjAwNCAyLjc1Mi4wODEgNC4xMi4yM0w1ODcuMSAwYy0yMSAuMTctMzYuMjIgNy4zOS00NS41OSAyMi4wMXpNMzM4Ljg4IDk5LjJWNC4wMWg0MC4yMlY5NC4zYzAgMTkuOTUgMTEuMTIgMzEuNzMgMzAuNDIgMzEuNzMgMjEuNTkgMCAzNC0xMy4wOSAzNC0zOC4yOFY0LjAxaDQwLjI0djE1NS4zOGgtNDAuMjF2LTE4Yy05LjQ4IDE0LjcyLTI0Ljg2IDIxLjkyLTQ2LjEyIDIxLjkyLTM1Ljk4LjAxLTU4LjU1LTI2LjE2LTU4LjU1LTY0LjExem0zOTEuNzQtMTcuNDhjLjA5LTQzLjUxIDMxLjIzLTgwLjc0IDgwLjYyLTgwLjY1IDQ1LjguMDkgNzguMTEgMzYuNzggNzggODAgLjAxIDQuMjczLS4zMyA4LjU0LTEgMTIuNzZsLTExOC40MS0uMjJjNC41NCAxOC42NSAxOS44OSAzMi4wOSA0My4xMiAzMi4xNCAxNC4wNiAwIDI5LjEyLTUuMTggMzguMy0xNi45NGwyNy40NCAyMmMtMTQuMTEgMTkuOTMtMzkgMzEuNjYtNjUuNDggMzEuNjEtNDYuNzUtLjE2LTgyLjY3LTM1LjIzLTgyLjU5LTgwLjd6bTExOC4xMi0xNi4xNGMtMi4yNi0xNS43LTE4LjU5LTI3Ljg0LTM3Ljg5LTI3Ljg3LTE4LjY1IDAtMzMuNzEgMTEuMDYtMzkuNjMgMjcuNzNsNzcuNTIuMTR6bS0yNjEuNCA1OS45NGwzNS43Ni0xOC43MmM1LjkxIDEyLjgxIDE3LjczIDIwLjM2IDM0LjQ4IDIwLjM2IDE1LjQzIDAgMjEuMzQtNC45MiAyMS4zNC0xMS44MiAwLTI1LTg0LjcxLTkuODUtODQuNzEtNjcgMC0zMS41MiAyNy41OC00OC4yNiA2MS43Mi00OC4yNiAyNS45NCAwIDQ4LjkyIDExLjQ5IDYxLjQgMzIuODNsLTM1LjQ0IDE4Ljc1Yy01LjI1LTEwLjUxLTE1LjEtMTYuNDItMjcuNTgtMTYuNDItMTIuMTQgMC0xOC4wNiA0LjI3LTE4LjA2IDExLjQ5IDAgMjQuMyA4NC43MSA4Ljg3IDg0LjcxIDY3IDAgMzAuMjEtMjQuNjIgNDguNTktNjQuMzUgNDguNTktMzMuODItLjAzLTU3LjQ2LTExLjE5LTY5LjI3LTM2Ljh6TTAgODEuNTRDMCAzNi43MyAzNi42My43NCA4Mi40My43NGMyNy45NDctLjE5NiA1NC4xODIgMTMuNzM3IDY5LjY3IDM3bC0zNC4zNCAxOS45MmE0Mi45NzIgNDIuOTcyIDAgMDAtMzUuMzMtMTguMzJjLTIzLjU1IDAtNDIuODUgMTkuNjMtNDIuODUgNDIuMiAwIDIyLjU3IDE5LjMgNDIuMiA0Mi44NSA0Mi4yYTQyLjUwMiA0Mi41MDIgMCAwMDM2LjMxLTIwbDM0IDIwLjI4Yy0xNS4zMDcgMjMuOTU1LTQxLjkwMiAzOC40MzEtNzAuMzMgMzguMjhDMzYuNjMgMTYyLjM0IDAgMTI1LjY2IDAgODEuNTR6IiBmaWxsPSIjMDA1NkQyIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48L3N2Zz4="
+              alt="Bootstrap">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class=" d-flex gap-3 navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-dropdown-left nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Explore
+                </a>
+                <ul class="navbar-dropdown-left-ul dropdown-menu custom-dropdown">
+                  <li>
+                    <h4 class="dropdown-header">Goals</h4>
+                    <a class="dropdown-item" href="#" id="free-course-option">Take a free course</a>
+                    <div id="free-course-content" class="overlay-content">
+                      <!-- Content related to "Take a free course" -->
+                      <h3>Take a free course</h3>
+                      <p>Content related to taking a free course goes here...</p>
+                    </div>
+                    <a class="dropdown-item" href="#">Earn a Degree</a>
+                    <a class="dropdown-item" href="#">Earn a Certificate</a>
+                    <a class="dropdown-item" href="#">Find your new career</a>
+                  </li>
+                  <hr class="dropdown-divider">
+                  <li>
+                    <h4 class="dropdown-header">Subjects</h4>
+                    <a class="dropdown-item" href="#">Data Science</a>
+                    <a class="dropdown-item" href="#">Business</a>
+                    <a class="dropdown-item" href="#">Computer Science</a>
+                    <a class="dropdown-item" href="#">Information Technology</a>
+                    <a class="dropdown-item" href="#">Language Learning</a>
+                    <a class="dropdown-item" href="#">Health</a>
+                    <a class="dropdown-item" href="#">Personal Development</a>
+                    <a class="dropdown-item" href="#">Physical Science and Engineering</a>
+                    <a class="dropdown-item" href="#">Social Sciences</a>
+                    <a class="dropdown-item" href="#">Arts and Humanities</a>
+                  </li>
+                </ul>
+                <div class="overlay" id="overlay"></div>
+              </li>
+              <li class="nav-item">
+                <form class="d-flex" role="search">
+                  <input class="navbar-searchbox form-control me-2" type="search"
+                    placeholder="What do you want to learn?" aria-label="Search">
+                  <button class="navbar-search-btn btn btn-outline-success" type="submit"><i
+                      class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
+                </form>
+              </li>
+            </ul>
+
+            <!-- Navbar right side -->
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
+              <li class="nav-item dropdown">
+                <a class="nav-dropdown-right nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Online Degrees
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.coursera.org/career-academy/?trk_ref=globalnav"
+                  style="color: black;">Find your New Career</a>
+              </li>
+              <li class="nav-item">
+                <div class="navbar-right-btn-group btn-group" role="group" aria-label="Basic outlined example">
+                  <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                    data-bs-target="#signInBtn">Sign In</button>
+                  <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                    data-bs-target="#signUpBtn">Join for Free</button>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
-      <!-- end section1  -->
-      <!-- section 2  start-->
-      <section class="vis_part2">
-        <div class="vis_mid">
-          <!--  --> 
-          <div class="vis_staticimg">
+      </nav>
+    </div>
+  </div>
+
+  <!-- Sign up button Popup Modal starts -->
+  <!-- Modal -->
+  <div class="modal fade" id="signUpBtn" tabindex="-1" data-bs-backdrop="static" aria-labelledby="signUpBtnLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="w-100 text-center">
+            <h4 class="modal-title display-6" id="signUpBtnLabel">Sign Up</h4>
+            <p class="lead">Learn on your own time from top universities and businesses.</p>
+          </div>
+          <button type="button" class="btn-close position-absolute end-0 me-3" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="sign-up-div">
+            <form id="signUpForm">
+              <div class="mb-3">
+                <label for="fullname" class="form-label">Full Name</label>
+                <input type="input" name="fullname" class="form-control" id="fullname" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" id="password"
+                  aria-describedby="passwordHelp" minlength="8" maxlength="72" required>
+                <div id="passwordHelp" class="form-text">Between 8 and 72 characters
+                </div>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div>
+              <button type="submit" class="signUpBtnSubmit btn btn-primary">Submit</button>
+              <p class="lead alredyOnCoursera">Already on Coursera? <a href="#">Log in</a></p>
+              <hr>
+              <div id="orgSignUpLink">
+                <a class="orgSignUpLink" href="#">Sign up with your organization</a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div id="termAndConditions">
+            <p class="alredyOnCoursera">I accept Coursera's <a href="#">Terms of Use</a> and <a href="#">Privacy
+                Notice</a>. Having trouble logging in?<a href="#">Learner help
+                center</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Sign up button Popup Modal ends -->
+
+
+  <!-- Sign In button Popup Modal starts -->
+  <!-- Modal -->
+  <div class="modal fade" id="signInBtn" data-bs-backdrop="static" tabindex="-1" aria-labelledby="signInBtnLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="w-100 text-center">
+            <h4 class="modal-title display-6" id="signInBtnLabel">Welcome Back!</h4>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="sign-in-div">
+            <form id="signInForm">
+              <div class="mb-3">
+                <label for="signInemail" class="form-label">Email address</label>
+                <input type="email" id="signInemail" name="signInemail" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label for="signInpassword" class="form-label">Password</label>
+                <input type="password" id="signInpassword" name="signInpassword" class="form-control" minlength="8"
+                  maxlength="72" required>
+                <div id="forgotPasswordHelp" class="form-text"><a href="./forgotPassword.html" class="fs-6">Forgot
+                    password?</a></div>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                <label class="form-check-label" for="exampleCheck2">Check me out</label>
+              </div>
+              <button type="submit" class="btn btn-primary signInBtnSubmit">Login</button>
+            </form>
+            <p class="lead notOnCoursera">Not on Coursera? <a href="#">Sign Up</a></p>
+            <hr>
+            <div class="orgSignUpLink">
+              <a class="orgSignUpLink" href="#">Log In with your organization</a>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="termAndConditions">
+              <p class="alreadyOnCoursera">I accept Coursera's <a href="#">Terms of Use</a> and <a href="#">Privacy
+                  Notice</a>. Having trouble logging in?<a href="#">Learner help
+                  center</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Sign In button Popup Modal ends -->
+  <!----------Navbar section ends-------------->
+
+
+
+
+
+
+  <!----------Expand your horizons section start-------------->
+  <header id="header-section">
+    <div class="header-container container">
+      <div>
+        <p>Expand your horizons with Coursera Plus</p>
+        <p>Unlock job ready skills from industry leaders like Google, IBM, Meta, and IIM Ahmedabad for INR 7999.
+          You can also save on Coursera for Teams.</p>
+        <div class="header-container-div1-btn">
+          <button type="button" class="btn btn-primary">Save on Coursers Plus <i class="fa-solid fa-arrow-right"
+              style="color: #fcf7f7;"></i></button>
+          <button type="button" class="btn btn-primary">Get 50% off Teams <i class="fa-solid fa-arrow-right"
+              style="color: #0056d2;"></i></button>
+        </div>
+      </div>
+      <div><img
+          src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/3ofsZsKwiGcXFHENh18ngG/23c741906132d0e538cfc7f2a29ce04c/BC-2466_LOHP_take_over_Promo2_India.jpg?auto=format%2Ccompress&dpr=1&w=660&q=40"
+          class="img-fluid" alt="..."></div>
+    </div>
+  </header>
+  <!----------Expand your horizons section ends-------------->
+
+
+
+
+  <!----------Section1(We collaborate with ) section start-------------->
+
+  <div class="container-company">
+    <a href="https://www.coursera.org/about/partners">
+      <div>We collaborate with <span id="leading-uni" style="color: rgb(0, 86, 210);">+325 leading universities and
+          companies</span></div>
+    </a>
+    <div class="companiesLogo">
+      <a href="https://www.coursera.org/iima"><img
+          src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/683LGuhO9ccmkKjeW46JYY/bf296880a503ab5dea00c02590e1c066/IIM-A.png?auto=format%2Ccompress&dpr=1&h=37"
+          alt="IIM-A"></a>
+      <a href="https://www.coursera.org/iitb"><img
+          src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2kfn3889F093jtkEHjlB8P/9e41903a726e520c1996e88a82fdd9a1/IIT-_B.png?auto=format%2Ccompress&dpr=1&h=37"
+          alt="IIT-B"></a>
+      <a href="https://www.coursera.org/google-career-certificates"><img
+          src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/1c6RjBHi3Lqb9QpWxje7iA/b529f909c5230af3210ba2d47d149620/google.png?auto=format%2Ccompress&dpr=1&h=37"
+          alt="Google"></a>
+      <a href="https://www.coursera.org/ibm-skills-network"><img
+          src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/3toC4I7jbWxiedfxiyNjtT/735faeaf976a9692f425f8c3a7d125dc/1000px-IBM_logo.svg.png?auto=format%2Ccompress&dpr=1&h=37"
+          alt="IBM"></a>
+      <a href="https://www.coursera.org/deeplearning-ai"><img
+          src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/3FSgsKvZzrTJ8MFjvFASbV/c069e703f813d6298a91d9682f0077c5/Deep_Learning.png?auto=format%2Ccompress&dpr=1&h=37"
+          alt="Deep Learning"></a>
+      <a href="https://www.coursera.org/meta"><img
+          src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/3bmmVE1BHvDQUFldOXgDQe/75409a97cfd2ee95178b05d475eaaf04/meta.png?auto=format%2Ccompress&dpr=1&h=37"
+          alt="Meta"></a>
+      <a href="https://www.coursera.org/microsoft"><img
+          src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/0iCRr2Ac4lfTS1a2UMYle/bd99b2018b66d9b0a7d5db80bf03bcd5/Microsoft.png?auto=format%2Ccompress&dpr=1&h=37"
+          alt="Microsoft"></a>
+      <a href="https://www.coursera.org/isb"><img
+          src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/9V0ZHPEeFBPLlhvvCnS0x/0310b67e486733af9c9b1ba8be8d072b/ISB_transparent_logo.png?auto=format%2Ccompress&dpr=1&h=37"
+          alt="ISB"></a>
+      <a href="https://www.coursera.org/stanford"><img
+          src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4FSFmNXuDIzTvFb7n0v4mK/704ae9e0a7981fb6415f4cb4609bbbb3/stanford.svg?auto=format%2Ccompress&dpr=1&h=27"
+          alt="Stanford"></a>
+    </div>
+  </div>
+
+
+  <!----------Section1(We collaborate with ) section ends-------------->
+
+
+
+
+  <!----------Section-2(Launch a new career) section start-------------->
+
+
+
+
+  <!----------Section-2(Launch a new career) section ends-------------->
+
+
+
+  <!---------- section-3(Degree Programs) section start-------------->
+
+  <div class="MK container">
+    <div class="K1Container">
+      <p><b>Degree Programs</b></p>
+      <h4>Get a head start on a degree today</h4>
+      <p>
+        With these programs, you can build valuable skills, earn career
+        credentials, and make progress toward a degree before you even enroll.
+      </p>
+      <div class="K1Cards">
+        <div class="K1Card">
+          <div class="example12"></div>
+          <div class="uni">
             <img
-              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2QjC04BM3lOBkCBTcgcCiz/46dbd19b10b3a36350b1c39cc40b599d/ThreeImages-Marketing.png?auto=format%2Ccompress&dpr=2&w=606&h=553&q=40"
-              alt=""
-            />
+              src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
+              alt="" />
+            <p>University of Illinois at Urbana</p>
           </div>
-          <div class="vis_statictext">
-            <div class="vis_statictext1">
-              <span><h2>World-class learning for you</h2></span>
-              <p >
-                <span>Pursue</span> <b>a promotion, a raise, or switch careers. 89%</b>
-                <br />of learners who have taken a course <b>report career</b>
-                <br />
-                <b> benefits.</b>
-              </p>
+          <p style="margin-bottom: 10px">
+            <b>Master of Business Administration (iMBA)</b>
+          </p>
+          <div class="earnDegree">
+            <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+            <span class="material-symbols-outlined"> school </span>
+            <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
+          </div>
+
+          <p>Degree</p>
+        </div>
+        <div class="K1Card">
+          <div class="example12"></div>
+          <div class="uni">
+            <img
+              src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
+              alt="" />
+            <p>University of Illinois at Urbana</p>
+          </div>
+          <p style="margin-bottom: 10px">
+            <b>Master of Business Administration (iMBA)</b>
+          </p>
+          <div class="earnDegree">
+            <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+            <span class="material-symbols-outlined"> school </span>
+            <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
+          </div>
+
+          <p>Degree</p>
+        </div>
+        <div class="K1Card">
+          <div class="example12"></div>
+          <div class="uni">
+            <img
+              src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
+              alt="" />
+            <p>University of Illinois at Urbana</p>
+          </div>
+          <p style="margin-bottom: 10px">
+            <b>Master of Business Administration (iMBA)</b>
+          </p>
+          <div class="earnDegree">
+            <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+            <span class="material-symbols-outlined"> school </span>
+            <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
+          </div>
+
+          <p>Degree</p>
+        </div>
+        <div class="K1Card">
+          <div class="example12"></div>
+          <div class="uni">
+            <img
+              src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
+              alt="" />
+            <p>University of Illinois at Urbana</p>
+          </div>
+          <p style="margin-bottom: 10px">
+            <b>Master of Business Administration (iMBA)</b>
+          </p>
+          <div class="earnDegree">
+            <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+            <span class="material-symbols-outlined"> school </span>
+            <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
+          </div>
+
+          <p>Degree</p>
+        </div>
+
+      </div>
+      <div class="K1Buttons">
+        <button>Show 8 more</button>
+        <button style="display: flex; ;align-items: center;">
+          <p style="margin: 0px;">Explore Degrees</p>
+          <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+          <span class="material-symbols-outlined">
+            arrow_forward
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <div class="K1Container">
+      <p><b>Degree Programs</b></p>
+      <h4>Find a top degree that fits your life</h4>
+      <p>
+        Breakthrough pricing on 100% online degrees from top universities.
+      </p>
+      <div class="K1Cards">
+        <div class="K1Card">
+          <div class="example12"></div>
+          <div class="uni">
+            <img
+              src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
+              alt="" />
+            <p>University of Illinois at Urbana</p>
+          </div>
+          <p style="margin-bottom: 10px">
+            <b>Master of Business Administration (iMBA)</b>
+          </p>
+          <div class="earnDegree">
+            <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+            <span class="material-symbols-outlined"> school </span>
+            <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
+          </div>
+
+          <p>Degree</p>
+        </div>
+        <div class="K1Card">
+          <div class="example12"></div>
+          <div class="uni">
+            <img
+              src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
+              alt="" />
+            <p>University of Illinois at Urbana</p>
+          </div>
+          <p style="margin-bottom: 10px">
+            <b>Master of Business Administration (iMBA)</b>
+          </p>
+          <div class="earnDegree">
+            <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+            <span class="material-symbols-outlined"> school </span>
+            <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
+          </div>
+
+          <p>Degree</p>
+        </div>
+        <div class="K1Card">
+          <div class="example12"></div>
+          <div class="uni">
+            <img
+              src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
+              alt="" />
+            <p>University of Illinois at Urbana</p>
+          </div>
+          <p style="margin-bottom: 10px">
+            <b>Master of Business Administration (iMBA)</b>
+          </p>
+          <div class="earnDegree">
+            <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+            <span class="material-symbols-outlined"> school </span>
+            <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
+          </div>
+
+          <p>Degree</p>
+        </div>
+        <div class="K1Card">
+          <div class="example12"></div>
+          <div class="uni">
+            <img
+              src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
+              alt="" />
+            <p>University of Illinois at Urbana</p>
+          </div>
+          <p style="margin-bottom: 10px">
+            <b>Master of Business Administration (iMBA)</b>
+          </p>
+          <div class="earnDegree">
+            <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+            <span class="material-symbols-outlined"> school </span>
+            <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
+          </div>
+
+          <p>Degree</p>
+        </div>
+      </div>
+      <div class="K1Buttons">
+        <button>Show 8 more</button>
+        <button>Explore Degrees</button>
+      </div>
+    </div>
+
+    <div class="K1Container">
+      <p><b>Courses and Professional Certificates</b></p>
+      <h4>New on Coursera</h4>
+      <p>
+        Explore our newest programs, focused on delivering in-demand skills.
+      </p>
+      <div class="K1Cards">
+        <div class="K1Card">
+          <div class="example12"></div>
+          <div class="uni">
+            <img
+              src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
+              alt="" />
+            <p>University of Illinois at Urbana</p>
+          </div>
+          <p style="margin-bottom: 10px">
+            <b>Master of Business Administration (iMBA)</b>
+          </p>
+          <div class="earnDegree">
+            <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+            <span class="material-symbols-outlined"> school </span>
+            <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
+          </div>
+
+          <p>Degree</p>
+        </div>
+        <div class="K1Card">
+          <div class="example12"></div>
+          <div class="uni">
+            <img
+              src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
+              alt="" />
+            <p>University of Illinois at Urbana</p>
+          </div>
+          <p style="margin-bottom: 10px">
+            <b>Master of Business Administration (iMBA)</b>
+          </p>
+          <div class="earnDegree">
+            <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+            <span class="material-symbols-outlined"> school </span>
+            <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
+          </div>
+
+          <p>Degree</p>
+        </div>
+        <div class="K1Card">
+          <div class="example12"></div>
+          <div class="uni">
+            <img
+              src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
+              alt="" />
+            <p>University of Illinois at Urbana</p>
+          </div>
+          <p style="margin-bottom: 10px">
+            <b>Master of Business Administration (iMBA)</b>
+          </p>
+          <div class="earnDegree">
+            <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+            <span class="material-symbols-outlined"> school </span>
+            <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
+          </div>
+
+          <p>Degree</p>
+        </div>
+        <div class="K1Card">
+          <div class="example12"></div>
+          <div class="uni">
+            <img
+              src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
+              alt="" />
+            <p>University of Illinois at Urbana</p>
+          </div>
+          <p style="margin-bottom: 10px">
+            <b>Master of Business Administration (iMBA)</b>
+          </p>
+          <div class="earnDegree">
+            <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+            <span class="material-symbols-outlined"> school </span>
+            <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
+          </div>
+
+          <p>Degree</p>
+        </div>
+      </div>
+      <div class="K1Buttons">
+        <button>Show 8 more</button>
+        <button>Explore Degrees</button>
+      </div>
+    </div>
+
+    <div class="K1Container">
+      <p><b>100% Free</b></p>
+      <h4>Start learning with free courses</h4>
+      <p>
+        Explore free online courses from the world's top universities and
+        companies.
+      </p>
+      <div class="K1Cards">
+        <div class="K1Card">
+          <div class="example12"></div>
+          <div class="uni">
+            <img
+              src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
+              alt="" />
+            <p>University of Illinois at Urbana</p>
+          </div>
+          <p style="margin-bottom: 10px">
+            <b>Master of Business Administration (iMBA)</b>
+          </p>
+          <div class="earnDegree">
+            <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+            <span class="material-symbols-outlined"> school </span>
+            <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
+          </div>
+
+          <p>Degree</p>
+        </div>
+        <div class="K1Card">
+          <div class="example12"></div>
+          <div class="uni">
+            <img
+              src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
+              alt="" />
+            <p>University of Illinois at Urbana</p>
+          </div>
+          <p style="margin-bottom: 10px">
+            <b>Master of Business Administration (iMBA)</b>
+          </p>
+          <div class="earnDegree">
+            <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+            <span class="material-symbols-outlined"> school </span>
+            <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
+          </div>
+
+          <p>Degree</p>
+        </div>
+        <div class="K1Card">
+          <div class="example12"></div>
+          <div class="uni">
+            <img
+              src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
+              alt="" />
+            <p>University of Illinois at Urbana</p>
+          </div>
+          <p style="margin-bottom: 10px">
+            <b>Master of Business Administration (iMBA)</b>
+          </p>
+          <div class="earnDegree">
+            <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+            <span class="material-symbols-outlined"> school </span>
+            <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
+          </div>
+
+          <p>Degree</p>
+        </div>
+        <div class="K1Card">
+          <div class="example12"></div>
+          <div class="uni">
+            <img
+              src="http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png"
+              alt="" />
+            <p>University of Illinois at Urbana</p>
+          </div>
+          <p style="margin-bottom: 10px">
+            <b>Master of Business Administration (iMBA)</b>
+          </p>
+          <div class="earnDegree">
+            <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+            <span class="material-symbols-outlined"> school </span>
+            <a href="https://www.coursera.org/degrees/imba">Earn a degree</a>
+          </div>
+
+          <p>Degree</p>
+        </div>
+      </div>
+      <div class="K1Buttons">
+        <button>Show 8 more</button>
+        <button>Explore Degrees</button>
+      </div>
+    </div>
+
+    <p>
+      ¹Each university determines admission and the number of pre-approved
+      prior learning credits that may count toward the degree requirements
+      according to institutional policies, which may consider any existing
+      credits you may have.
+    </p>
+  </div>
+
+  <!---------- section-3(Degree Programs) section ends--------------->
+
+
+
+
+  <!---------- section-4(Courses and Professional Certificates) section start-------------->
+
+
+
+  <!---------- section-4(Courses and Professional Certificates) section ends---------------->
+
+
+
+
+  <!---------- section-5(100% Free) section start-------------->
+
+
+
+  <!---------- section-5(100% Free) section ends--------------->
+
+
+
+  <!---------- Section-6(Explore Coursera)  section start-------------->
+  <div class="container mt-5 ">
+    <!-- <section >1</section> -->
+    <section class="vis_part1">
+      <div>
+        <div class="vis_exp">
+          <h2>Explore Coursera</h2>
+        </div>
+        <div class="vis_grid">
+          <div class="vis_cardall">
+            <div class="vis_emage">
+              <img
+                src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/browse/domains/data_science.png?auto=format%2Ccompress&dpr=1&fit=crop&h=100"
+                alt="">
             </div>
-            <div class="vis_statictext2">
-              <p>- Coursera Learner Outcome Survey, India (2021)</p>
+            <div class="vis_subpart">
+              <div>
+                <span>DATA SCIENCE</span>
+                <p>425 COURSES</p>
+              </div>
+
             </div>
-            <div class="vis_statictext3">
-              <button id="joinbtn">join for free</button>
+          </div>
+          <div class="vis_cardall">
+            <div class="vis_emage">
+              <img
+                src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/browse/domains/business.png?auto=format%2Ccompress&dpr=1&fit=crop&h=100"
+                alt="">
             </div>
+            <div class="vis_subpart">
+              <div>
+                <span>BUSINESS</span>
+                <p>1095 COURSES</p>
+              </div>
+
+            </div>
+          </div>
+          <div class="vis_cardall">
+            <div class="vis_emage">
+              <img
+                src="https://images.unsplash.com/photo-1628784230353-5bee16e2f005?q=80&w=2235&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="">
+            </div>
+            <div class="vis_subpart">
+              <div>
+                <span>COMPUTER SCIENCE</span>
+                <p>668 COURSES</p>
+              </div>
+
+            </div>
+          </div>
+          <div class="vis_cardall">
+            <div class="vis_emage">
+              <img
+                src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/browse/domains/computer_science.png?auto=format%2Ccompress&dpr=1&fit=crop&h=100"
+                alt="">
+            </div>
+            <div class="vis_subpart">
+              <div>
+                <span>HEALTH</span>
+                <p>471 COURSES</p>
+              </div>
+
+            </div>
+          </div>
+          <div class="vis_cardall">
+            <div class="vis_emage">
+              <img
+                src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/browse/domains/health.png?auto=format%2Ccompress&dpr=1&fit=crop&h=100"
+                alt="">
+            </div>
+            <div class="vis_subpart">
+              <div>
+                <span>SOCIAL SCIENCE</span>
+                <p>401 COURSES</p>
+              </div>
+
+            </div>
+          </div>
+          <div class="vis_cardall">
+            <div class="vis_emage">
+              <img
+                src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/browse/domains/social_sciences.png?auto=format%2Ccompress&dpr=1&fit=crop&h=100"
+                alt="">
+            </div>
+            <div class="vis_subpart">
+              <div>
+                <span>PERSONAL DEVELOPMENT</span>
+                <p>137 COURSES</p>
+              </div>
+
+            </div>
+          </div>
+          <div class="vis_cardall">
+            <div class="vis_emage">
+              <img
+                src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/browse/domains/personal_development.png?auto=format%2Ccompress&dpr=1&fit=crop&h=100"
+                alt="">
+            </div>
+            <div class="vis_subpart">
+              <div>
+                <span>ARTS AND HUMANITIES</span>
+                <p>338 COURSES</p>
+              </div>
+
+            </div>
+          </div>
+          <div class="vis_cardall">
+            <div class="vis_emage">
+              <img
+                src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/browse/domains/arts_and_humanities.png?auto=format%2Ccompress&dpr=1&fit=crop&h=100"
+                alt="">
+            </div>
+            <div class="vis_subpart">
+              <div>
+                <span>PHYSICAL SCIENCE AND ENGINEERING </span>
+                <p>413 COURSES</p>
+              </div>
+
+            </div>
+          </div>
+          <div class="vis_cardall">
+            <div class="vis_emage">
+              <img
+                src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/browse/domains/physical_science_and_engineering.png?auto=format%2Ccompress&dpr=1&fit=crop&h=100"
+                alt="">
+            </div>
+            <div class="vis_subpart">
+              <div>
+                <span>LANGUAGE LEARNING</span>
+                <p>150 COURSES</p>
+              </div>
+
+            </div>
+          </div>
+          <div class="vis_cardall">
+            <div class="vis_emage">
+              <img
+                src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/browse/domains/language_learning.png?auto=format%2Ccompress&dpr=1&fit=crop&h=100"
+                alt="">
+            </div>
+            <div class="vis_subpart">
+              <div>
+                <span>INFORMATION TECHNOLOGY</span>
+                <p>145 COURSES</p>
+              </div>
+
+            </div>
+          </div>
+          <div class="vis_cardall">
+            <div class="vis_emage">
+              <img
+                src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/browse/domains/math_and_logic.png?auto=format%2Ccompress&dpr=1&fit=crop&h=100"
+                alt="">
+            </div>
+            <div class="vis_subpart">
+              <div>
+                <span>MATH AND LOGIC</span>
+                <p>70 COURSES</p>
+              </div>
+
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </section>
+    <!-- end section1  -->
+    <!-- section 2  start-->
+    <section class="vis_part2">
+      <div class="vis_mid">
+        <!--  -->
+        <div class="vis_staticimg">
+          <img
+            src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2QjC04BM3lOBkCBTcgcCiz/46dbd19b10b3a36350b1c39cc40b599d/ThreeImages-Marketing.png?auto=format%2Ccompress&dpr=2&w=606&h=553&q=40"
+            alt="" />
+        </div>
+        <div class="vis_statictext">
+          <div class="vis_statictext1">
+            <span>
+              <h2>World-class learning for you</h2>
+            </span>
+            <p>
+              <span>Pursue</span> <b>a promotion, a raise, or switch careers. 89%</b>
+              <br />of learners who have taken a course <b>report career</b>
+              <br />
+              <b> benefits.</b>
+            </p>
+          </div>
+          <div class="vis_statictext2">
+            <p>- Coursera Learner Outcome Survey, India (2021)</p>
+          </div>
+          <div class="vis_statictext3">
+            <button id="joinbtn">join for free</button>
           </div>
         </div>
-      </section>
-      <!-- <section class="vis_footpart3">
+      </div>
+    </section>
+    <!-- <section class="vis_footpart3">
         <div class="vis_foot">
              <div class="vis_foot1">
                   <h2>From the Coursera community</h2>
@@ -891,7 +1009,7 @@
                         </div>
                       </div>
                       <div class="vis_card2"> -->
-                        <!-- <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/PrIvmSLiG4acl5kOHEPFF/95e4d58ea4152ecb8d5f3f24973ed8bd/manmeet.png?auto=format%2Ccompress&dpr=1&w=202&h=202&q=40" class="d-block w-100" alt="...">
+    <!-- <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/PrIvmSLiG4acl5kOHEPFF/95e4d58ea4152ecb8d5f3f24973ed8bd/manmeet.png?auto=format%2Ccompress&dpr=1&w=202&h=202&q=40" class="d-block w-100" alt="...">
                         <div class="vis_textcontent">
                           <h2>Manmeet G </h2>
                           <span class="manspan-1">IBm cybersecurity Analyst </span><br>
@@ -1015,246 +1133,298 @@
              </div>
         </div>
       </section> -->
+  </div>
+
+
+  <!---------- Section-6(Explore Coursera)  section ends--------------->
+
+
+
+
+  <!---------- section-7(World-class learning)  section start-------------->
+
+
+
+
+  <!---------- section-7(World-class learning)  section ends--------------->
+
+
+  <!---------- section-8(From the Coursera community)  section start-------------->
+
+
+
+
+
+  <!---------- section-8(From the Coursera community)  section ends--------------->
+
+
+
+
+
+
+  <!---------- section-9(The ideal solution for your business)  section start-------------->
+
+  <section class="TheIdealSolution container-fluid">
+    <div class="container d-flex">
+      <div style="padding-top: 40px; padding-bottom: 40px;width:100%;">
+        <div style="max-width: 568px; margin-bottom: 24px;">
+          <h2 style="font-size: 44px; margin-bottom: 0;">
+            The ideal solution for your business
+          </h2>
+        </div>
+        <div style="max-width: 512px; margin-bottom: 24px;">
+          <p style="font-size: 16px; margin-bottom: 0;">Get the world-class learning and development chosen by top
+            organizations across the globe. All on Coursera for Business.
+          </p>
+        </div>
+        <div id="btn1">
+          <button>
+            <a href="https://www.coursera.org/business?utm_campaign=website&utm_content=banner-from-B2C-home-for-enterprise&utm_medium=coursera&utm_source=enterprise"
+              target="_blank">
+              <span>Discover Coursera for Business</span>
+            </a>
+          </button>
+        </div>
+        <div id="upskill_Small_Team" style="max-width: 568px;">
+          <p>Upskill a small team? <a
+              href="https://www.coursera.org/business/teams?utm_campaign=website&utm_content=banner-from-B2C-home-for-teams&utm_medium=coursera&utm_source=enterprise"
+              target="_blank" style="margin-left: 4px;"><span style="color: #2073db; margin-right: 4px;">Check out
+                Coursera for Teams </span> <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                viewBox="0 -960 960 960" width="24px" fill="#2073db">
+                <path
+                  d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" />
+              </svg></a></p>
+        </div>
+      </div>
+      <div id="brand_box">
+        <div class="brand_box_inner">
+          <div><img style="max-width: 113px;"
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/13nB6DdjBJdV5aWWWB5DbH/115574ebbc6de3dffd98daed665dc736/loreal.svg?auto=format%2Ccompress&dpr=2&w=60%25&h=30"
+              alt=""></div>
+          <div><img style="max-width: 30px;"
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2aaUOe2Jitm1Z6OPdylXsL/37974ceb0982ccf2c6fabf3fa6bdb5bc/pandg.svg?auto=format%2Ccompress&dpr=2&w=60%25&h=30"
+              alt=""></div>
+          <div><img style="max-width:32px;"
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2gSh2ySvHF7nLxtb9dlQEt/764bae06b9276de25caa4ed11bf14000/tata.svg?auto=format%2Ccompress&dpr=2&w=60%25&h=30"
+              alt=""></div>
+          <div><img style="max-width: 95px;"
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/6cQLsEIdYwjlG4whpJ0bau/5cb01b12278ee726314800c15f08c5e2/DANONE_LOGO.png?auto=format%2Ccompress&dpr=2&w=60%25&h=30"
+              alt=""></div>
+          <div><img style="max-width: 109px;"
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/46IDJ7jA1jOzKUcuJEdv9x/bccbe406253ab481290052d1580d7eae/Emirates_NBD_logo.png?auto=format%2Ccompress&dpr=2&w=60%25&h=30"
+              alt=""></div>
+          <div><img style="max-width: 42px;"
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2jYSxpX0am6lmzOXiF01eb/b2dad4d9e4844a15e828990aa09b6377/Reliance_logo-2.svg?auto=format%2Ccompress&dpr=2&w=60%25&h=30"
+              alt=""></div>
+          <div><img style="max-width: 113px;"
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/1GFMf2tN2JubXPXodUfEhU/f60a309a58fd4a5e750f0497e24a52ab/logo-capgemini.svg?auto=format%2Ccompress&dpr=2&w=60%25&h=30"
+              alt=""></div>
+          <div><img style="max-width: 113px;"
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/1Td6rChmrhf755FaNcHMkw/7f172851005dc6275667c667ffa2678a/logo-petrobras.svg?auto=format%2Ccompress&dpr=2&w=60%25&h=30"
+              alt=""></div>
+          <div><img style="max-width: 30px;"
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/7ynjohQJbi7h24Qk5uUyPW/399503cb97a2775554f28921721d6fd1/General_Electric_logo.svg?auto=format%2Ccompress&dpr=2&w=60%25&h=30"
+              alt=""></div>
+        </div>
+      </div>
     </div>
-    
+  </section>
 
-    <!---------- Section-6(Explore Coursera)  section ends--------------->
-
-
-
-
-    <!---------- section-7(World-class learning)  section start-------------->
-   
+  <!---------- section-9(The ideal solution for your business)  section ends--------------->
 
 
 
-    <!---------- section-7(World-class learning)  section ends--------------->
+  <!---------- section-10(Take the next step)  section start-------------->
+
+  <section class="TakeTheNextStep container-fluid">
+    <div class="container">
+      <div class="Image-Next-Step">
+        <img
+          src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/front-page-rebrand/secondary-consumer-cta/Image-Next-Step.png?auto=format%2Ccompress&dpr=2&w=471&h=330&q=40"
+          alt="">
+      </div>
+      <div class="TakeTheNextStep-inner2">
+        <div>
+          <h2>Take the next step toward your personal and professional goals with Coursera.</h2>
+        </div>
+        <div>
+          <p>Join now to receive personalized recommendations from the full Coursera catalog.</p>
+        </div>
+        <div>
+          <button>
+            Join for Free
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
-    <!---------- section-8(From the Coursera community)  section start-------------->
-    
-                        
-                 
-
-
-    <!---------- section-8(From the Coursera community)  section ends--------------->
+  <!---------- section-10(Take the next step)  section ends--------------->
 
 
 
+  <!---------- section-11(Footer)  section start-------------->
 
-
-
-    <!---------- section-9(The ideal solution for your business)  section start-------------->
-
-    <section class="TheIdealSolution container-fluid">
-        <div class="container d-flex">
-          <div style="padding-top: 40px; padding-bottom: 40px;width:100%;">
-            <div style="max-width: 568px; margin-bottom: 24px;" >
-              <h2 style="font-size: 44px; margin-bottom: 0;">
-                  The ideal solution for your business
-              </h2>
-            </div>
-            <div style="max-width: 512px; margin-bottom: 24px;">
-              <p style="font-size: 16px; margin-bottom: 0;">Get the world-class learning and development chosen by top organizations across the globe. All on Coursera for Business.
-              </p>
-            </div>
-            <div id="btn1">
-              <button>
-                  <a href="https://www.coursera.org/business?utm_campaign=website&utm_content=banner-from-B2C-home-for-enterprise&utm_medium=coursera&utm_source=enterprise" target="_blank">
-                      <span>Discover Coursera for Business</span>
-                  </a>
-              </button>
-            </div>
-            <div id="upskill_Small_Team" style="max-width: 568px;">
-              <p>Upskill a small team? <a href="https://www.coursera.org/business/teams?utm_campaign=website&utm_content=banner-from-B2C-home-for-teams&utm_medium=coursera&utm_source=enterprise" target="_blank" style="margin-left: 4px;"><span style="color: #2073db; margin-right: 4px;">Check out Coursera for Teams </span> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#2073db"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></a></p>
-            </div>
+  <div class="Vkp-footer container-fluid">
+    <footer class="container">
+      <div class="Vp-footer">
+        <div class="footer-Inner-div">
+          <div class="footer-column">
+            <p>Get Started with AI</p>
+            <ul>
+              <li><a href="#">DLAI AI For Everyone Course</a></li>
+              <li><a href="#">DLAI Deep Learning Specialization</a></li>
+              <li><a href="#">DLAI GenAI For Everyone Course</a></li>
+              <li><a href="#">DLAI GenAI with LLMs Course</a></li>
+              <li><a href="#">Google Cloud Introduction to Generative AI Course</a></li>
+              <li><a href="#">Stanford Machine Learning Specialization</a></li>
+              <li><a href="#">Vanderbilt Prompt Engineering for ChatGPT Course</a></li>
+              <li><a href="#">All Artificial Intelligence Courses</a></li>
+            </ul>
           </div>
-          <div id="brand_box">
-              <div class="brand_box_inner">
-                  <div><img style="max-width: 113px;" src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/13nB6DdjBJdV5aWWWB5DbH/115574ebbc6de3dffd98daed665dc736/loreal.svg?auto=format%2Ccompress&dpr=2&w=60%25&h=30" alt=""></div>
-                  <div><img style="max-width: 30px;" src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2aaUOe2Jitm1Z6OPdylXsL/37974ceb0982ccf2c6fabf3fa6bdb5bc/pandg.svg?auto=format%2Ccompress&dpr=2&w=60%25&h=30" alt=""></div>
-                  <div><img style="max-width:32px;" src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2gSh2ySvHF7nLxtb9dlQEt/764bae06b9276de25caa4ed11bf14000/tata.svg?auto=format%2Ccompress&dpr=2&w=60%25&h=30" alt=""></div>
-                  <div><img style="max-width: 95px;" src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/6cQLsEIdYwjlG4whpJ0bau/5cb01b12278ee726314800c15f08c5e2/DANONE_LOGO.png?auto=format%2Ccompress&dpr=2&w=60%25&h=30" alt=""></div>
-                  <div><img style="max-width: 109px;" src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/46IDJ7jA1jOzKUcuJEdv9x/bccbe406253ab481290052d1580d7eae/Emirates_NBD_logo.png?auto=format%2Ccompress&dpr=2&w=60%25&h=30" alt=""></div>
-                  <div><img style="max-width: 42px;" src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2jYSxpX0am6lmzOXiF01eb/b2dad4d9e4844a15e828990aa09b6377/Reliance_logo-2.svg?auto=format%2Ccompress&dpr=2&w=60%25&h=30" alt=""></div>
-                  <div><img style="max-width: 113px;" src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/1GFMf2tN2JubXPXodUfEhU/f60a309a58fd4a5e750f0497e24a52ab/logo-capgemini.svg?auto=format%2Ccompress&dpr=2&w=60%25&h=30" alt=""></div>
-                  <div><img style="max-width: 113px;" src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/1Td6rChmrhf755FaNcHMkw/7f172851005dc6275667c667ffa2678a/logo-petrobras.svg?auto=format%2Ccompress&dpr=2&w=60%25&h=30" alt=""></div>
-                  <div><img style="max-width: 30px;" src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/7ynjohQJbi7h24Qk5uUyPW/399503cb97a2775554f28921721d6fd1/General_Electric_logo.svg?auto=format%2Ccompress&dpr=2&w=60%25&h=30" alt=""></div>
-              </div>
+          <div class="footer-column">
+            <p>Popular Career Certificates</p>
+            <ul>
+              <li><a href="#">Google Cybersecurity Professional Certificate</a></li>
+              <li><a href="#">Google Data Analytics Professional Certificate</a></li>
+              <li><a href="#">Google Digital Marketing Professional Certificate</a></li>
+              <li><a href="#">Google Project Management Professional Certificate</a></li>
+              <li><a href="#">Google UX Design Professional Certificate</a></li>
+              <li><a href="#">IBM Data Science Professional Certificate</a></li>
+              <li><a href="#">Microsoft Power BI Data Analyst Professional Certificate</a></li>
+              <li><a href="#">All Career Certificates</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <p>Popular Subjects</p>
+            <ul>
+              <li><a href="#">Cybersecurity</a></li>
+              <li><a href="#">Data Analytics</a></li>
+              <li><a href="#">Data Science</a></li>
+              <li><a href="#">Digital Marketing</a></li>
+              <li><a href="#">Generative AI</a></li>
+              <li><a href="#">Project Management</a></li>
+              <li><a href="#">Python</a></li>
+              <li><a href="#">All Courses</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <p>Popular Resources</p>
+            <ul>
+              <li><a href="#">How to Become a Data Analyst</a></li>
+              <li><a href="#">How to Get a PMP Certification</a></li>
+              <li><a href="#">Popular Cybersecurity Certifications</a></li>
+              <li><a href="#">Popular Data Analytics Certifications</a></li>
+              <li><a href="#">Popular IT Certifications</a></li>
+              <li><a href="#">Popular Machine Learning Certifications</a></li>
+              <li><a href="#">Popular SQL Certifications</a></li>
+              <li><a href="#">Career Insights &amp; Advice Hub</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <p>Coursera</p>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">What We Offer</a></li>
+              <li><a href="#">Leadership</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Catalog</a></li>
+              <li><a href="#">Coursera Plus</a></li>
+              <li><a href="#">Professional Certificates</a></li>
+              <li><a href="#">MasterTrack® Certificates</a></li>
+              <li><a href="#">Degrees</a></li>
+              <li><a href="#">For Enterprise</a></li>
+              <li><a href="#">For Government</a></li>
+              <li><a href="#">For Campus</a></li>
+              <li><a href="#">Become a Partner</a></li>
+              <li><a href="#">Social Impact</a></li>
+              <li><a href="#">Free Courses</a></li>
+              <li><a href="#">Career Resource Hub</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <p>Community</p>
+            <ul>
+              <li><a href="#">Learners</a></li>
+              <li><a href="#">Partners</a></li>
+              <li><a href="#">Beta Testers</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">The Coursera Podcast</a></li>
+              <li><a href="#">Tech Blog</a></li>
+              <li><a href="#">Teaching Center</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <p>More</p>
+            <ul>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Investors</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Accessibility</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Articles</a></li>
+              <li><a href="#">Directory</a></li>
+              <li><a href="#">Affiliates</a></li>
+              <li><a href="#">Modern Slavery Statement</a></li>
+              <li><a href="#">Manage Cookie Preferences</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <div><a href="https://apps.apple.com/us/app/coursera-grow-your-career/id736535961"><img
+                  style="max-width: 152px;margin-bottom: 60px;"
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/download_on_the_app_store_badge_en.svg?auto=format%2Ccompress&dpr=2&w=152&h=45&q=40"
+                  alt=""></a></div>
+            <div><a href="https://play.google.com/store/apps/details?id=org.coursera.android"><img
+                  style="max-width: 152px;margin-bottom: 60px;"
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/en_generic_rgb_wo_45.png?auto=format%2Ccompress&dpr=2&w=152&h=45&q=40"
+                  alt=""></a></div>
+            <div><a href=""><img style="max-width: 82px;margin-left: 30px;"
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/2018-B-Corp-Logo-Black-S.png?auto=format%2Ccompress&dpr=2&w=151&h=120&q=40"
+                  alt=""></a></div>
           </div>
         </div>
-      </section>
-
-    <!---------- section-9(The ideal solution for your business)  section ends--------------->
-
-
-
-    <!---------- section-10(Take the next step)  section start-------------->
-
-    <section class="TakeTheNextStep container-fluid">
-        <div class="container">
-          <div class="Image-Next-Step">
-            <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/front-page-rebrand/secondary-consumer-cta/Image-Next-Step.png?auto=format%2Ccompress&dpr=2&w=471&h=330&q=40" alt="">
-          </div>
-          <div class="TakeTheNextStep-inner2">
+        <hr>
+        <div class="d-flex footer-end">
+          <div style="font-size: 14px;color: #575757;padding: 16px 0;">© 2024 Coursera Inc. All rights reserved.</div>
+          <div>
             <div>
-              <h2>Take the next step toward your personal and professional goals with Coursera.</h2>
+              <a href="https://www.facebook.com/Coursera"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/facebook.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40"
+                  alt=""></a>
             </div>
             <div>
-              <p>Join now to receive personalized recommendations from the full Coursera catalog.</p>
+              <a href="https://www.linkedin.com/company/coursera/"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/linkedin.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40"
+                  alt=""></a>
             </div>
-            <div>
-              <button>
-                Join for Free
-              </button>
-            </div>
+            <div><a href="https://x.com/coursera"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/twitter.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40"
+                  alt=""></a></div>
+            <div><a href="https://www.youtube.com/user/coursera"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/youtube.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40"
+                  alt=""></a></div>
+            <div><a href="https://www.instagram.com/coursera/"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/instagram.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40"
+                  alt=""></a></div>
+            <div><a href="https://www.tiktok.com/notfound"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/images/9b7e964107839c77644d7e7d15035b73.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40"
+                  alt=""></a></div>
           </div>
         </div>
-      </section>
-  
+      </div>
+    </footer>
+  </div>
 
-    <!---------- section-10(Take the next step)  section ends--------------->
-
-
-
-    <!---------- section-11(Footer)  section start-------------->
-
-    <div class="Vkp-footer container-fluid">
-        <footer class="container">
-          <div class="Vp-footer">
-            <div class="footer-Inner-div">
-              <div class="footer-column">
-                <p>Get Started with AI</p>
-                <ul>
-                  <li><a href="#">DLAI AI For Everyone Course</a></li>
-                  <li><a href="#">DLAI Deep Learning Specialization</a></li>
-                  <li><a href="#">DLAI GenAI For Everyone Course</a></li>
-                  <li><a href="#">DLAI GenAI with LLMs Course</a></li>
-                  <li><a href="#">Google Cloud Introduction to Generative AI Course</a></li>
-                  <li><a href="#">Stanford Machine Learning Specialization</a></li>
-                  <li><a href="#">Vanderbilt Prompt Engineering for ChatGPT Course</a></li>
-                  <li><a href="#">All Artificial Intelligence Courses</a></li>
-                </ul>
-              </div>
-              <div class="footer-column">
-                <p>Popular Career Certificates</p>
-                <ul>
-                    <li><a href="#">Google Cybersecurity Professional Certificate</a></li>
-                    <li><a href="#">Google Data Analytics Professional Certificate</a></li>
-                    <li><a href="#">Google Digital Marketing Professional Certificate</a></li>
-                    <li><a href="#">Google Project Management Professional Certificate</a></li>
-                    <li><a href="#">Google UX Design Professional Certificate</a></li>
-                    <li><a href="#">IBM Data Science Professional Certificate</a></li>
-                    <li><a href="#">Microsoft Power BI Data Analyst Professional Certificate</a></li>
-                    <li><a href="#">All Career Certificates</a></li>
-                </ul>
-              </div>
-              <div class="footer-column">
-                <p>Popular Subjects</p>
-                <ul>
-                    <li><a href="#">Cybersecurity</a></li>
-                    <li><a href="#">Data Analytics</a></li>
-                    <li><a href="#">Data Science</a></li>
-                    <li><a href="#">Digital Marketing</a></li>
-                    <li><a href="#">Generative AI</a></li>
-                    <li><a href="#">Project Management</a></li>
-                    <li><a href="#">Python</a></li>
-                    <li><a href="#">All Courses</a></li>
-                </ul>
-              </div>
-              <div class="footer-column">
-                <p>Popular Resources</p>
-                <ul>
-                    <li><a href="#">How to Become a Data Analyst</a></li>
-                    <li><a href="#">How to Get a PMP Certification</a></li>
-                    <li><a href="#">Popular Cybersecurity Certifications</a></li>
-                    <li><a href="#">Popular Data Analytics Certifications</a></li>
-                    <li><a href="#">Popular IT Certifications</a></li>
-                    <li><a href="#">Popular Machine Learning Certifications</a></li>
-                    <li><a href="#">Popular SQL Certifications</a></li>
-                    <li><a href="#">Career Insights &amp; Advice Hub</a></li>
-                </ul>
-              </div>
-              <div class="footer-column">
-                <p>Coursera</p>
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">What We Offer</a></li>
-                    <li><a href="#">Leadership</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Catalog</a></li>
-                    <li><a href="#">Coursera Plus</a></li>
-                    <li><a href="#">Professional Certificates</a></li>
-                    <li><a href="#">MasterTrack® Certificates</a></li>
-                    <li><a href="#">Degrees</a></li>
-                    <li><a href="#">For Enterprise</a></li>
-                    <li><a href="#">For Government</a></li>
-                    <li><a href="#">For Campus</a></li>
-                    <li><a href="#">Become a Partner</a></li>
-                    <li><a href="#">Social Impact</a></li>
-                    <li><a href="#">Free Courses</a></li>
-                    <li><a href="#">Career Resource Hub</a></li>
-                </ul>
-              </div>
-              <div class="footer-column">
-                <p>Community</p>
-                <ul>
-                    <li><a href="#">Learners</a></li>
-                    <li><a href="#">Partners</a></li>
-                    <li><a href="#">Beta Testers</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">The Coursera Podcast</a></li>
-                    <li><a href="#">Tech Blog</a></li>
-                    <li><a href="#">Teaching Center</a></li>
-                </ul>
-              </div>
-              <div class="footer-column">
-                <p>More</p>
-                <ul>
-                    <li><a href="#">Press</a></li>
-                    <li><a href="#">Investors</a></li>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">Privacy</a></li>
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Accessibility</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Articles</a></li>
-                    <li><a href="#">Directory</a></li>
-                    <li><a href="#">Affiliates</a></li>
-                    <li><a href="#">Modern Slavery Statement</a></li>
-                    <li><a href="#">Manage Cookie Preferences</a></li>
-                </ul>
-              </div>
-              <div class="footer-column">
-                <div><a href="https://apps.apple.com/us/app/coursera-grow-your-career/id736535961"><img style="max-width: 152px;margin-bottom: 60px;" src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/download_on_the_app_store_badge_en.svg?auto=format%2Ccompress&dpr=2&w=152&h=45&q=40" alt=""></a></div>
-                <div><a href="https://play.google.com/store/apps/details?id=org.coursera.android"><img style="max-width: 152px;margin-bottom: 60px;" src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/en_generic_rgb_wo_45.png?auto=format%2Ccompress&dpr=2&w=152&h=45&q=40" alt=""></a></div>
-                <div><a href=""><img style="max-width: 82px;margin-left: 30px;" src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/2018-B-Corp-Logo-Black-S.png?auto=format%2Ccompress&dpr=2&w=151&h=120&q=40" alt=""></a></div>
-              </div>
-            </div>  
-            <hr>
-            <div class="d-flex footer-end">
-              <div style="font-size: 14px;color: #575757;padding: 16px 0;">© 2024 Coursera Inc. All rights reserved.</div>
-              <div>
-                <div>
-                  <a href="https://www.facebook.com/Coursera"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/facebook.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40" alt=""></a>
-                </div>
-                <div>
-                  <a href="https://www.linkedin.com/company/coursera/"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/linkedin.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40" alt=""></a>
-                </div>
-                <div><a href="https://x.com/coursera"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/twitter.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40" alt=""></a></div>
-                <div><a href="https://www.youtube.com/user/coursera"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/youtube.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40" alt=""></a></div>
-                <div><a href="https://www.instagram.com/coursera/"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/instagram.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40" alt=""></a></div>
-                <div><a href="https://www.tiktok.com/notfound"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/images/9b7e964107839c77644d7e7d15035b73.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40" alt=""></a></div>
-              </div>
-            </div>           
-          </div>
-        </footer>
-     </div>
-
-    <!---------- section-11(Footer)  section ends--------------->
+  <!---------- section-11(Footer)  section ends--------------->
 
 </body>
 <!-- Java script file -->
 <script src="./script.js"></script>
 <script src="https://kit.fontawesome.com/a89a1bd747.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
 </html>
