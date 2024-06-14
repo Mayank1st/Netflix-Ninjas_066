@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fullname": "John Doe",
+      "email": "johndoe@example.com",
+      "password": "password123"
+    },
+    {
+      "id": 2,
+      "fullname": "Jane Smith",
+      "email": "janesmith@example.com",
+      "password": "password456"
+    },
+    {
+      "id": 3,
+      "fullname": "Alice Johnson",
+      "email": "alicejohnson@example.com",
+      "password": "password789"
+    },
+    {
+      "fullname": "rohit",
+      "email": "rohit@gmail.com",
+      "password": "Dp8pzi9Xtry3On3SXBwT1w==",
+      "id": 7
+    },
+    {
+      "fullname": "ritesh",
+      "email": "ritesh@gmail.com",
+      "password": "iBTwrrYScfTGsa1z2aA9uBEVPLlLxUXsyrC49IVFiyY=",
+      "id": 8
+    },
+    {
+      "fullname": "vivek",
+      "email": "vivek@gmail.com",
+      "password": "7QSt6yBjRkCSuYHPq3jBBwqNnwjmyVoPnpd2jJ4hI/8=",
+      "id": 9
+    }
+  ]
+}
