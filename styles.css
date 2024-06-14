@@ -765,16 +765,6 @@
 }
 
 
-/* .container{
-    max-width: 1440px;
-} */
-/*  */
-.vis_foot1 h2,
-p {
-  text-align: center;
-
-}
-
 .vis_card2 {
   height: auto;
   /* border-radius: 100%; */
@@ -800,7 +790,7 @@ p {
 /* textcontent */
 .vis_textcontent h2 {
   text-align: center;
-  /* background-color: pink; */
+  
 }
 
 .vis_textcontent {
@@ -911,6 +901,7 @@ hr {
   background-color: #f5f7f8;
   padding-top: 20px;
   padding-bottom: 20px;
+  margin-top: 50px;
 }
 
 .TheIdealSolution>.container {
@@ -1113,13 +1104,13 @@ hr {
   box-sizing: border-box;
 }
 
-.footer-column p {
+.footer-column>p {
   font-size: 20px;
   font-weight: 600;
   margin: 0px;
 }
 
-.footer-column ul {
+.footer-column>ul {
   list-style: none;
   padding: 0;
   margin-right: 18px;
@@ -1127,19 +1118,19 @@ hr {
   box-sizing: border-box;
 }
 
-.footer-column ul li {
+.footer-column>ul>li {
   list-style: none;
   margin-bottom: 8px;
 }
 
-.footer-column ul li a {
+.footer-column>ul>li>a {
   text-decoration: none;
   font-size: 14px;
   color: #575757;
   line-height: 20px;
 }
 
-.footer-column ul li a:hover {
+.footer-column>ul>li>a:hover {
   color: #333;
   text-decoration: underline;
 }
