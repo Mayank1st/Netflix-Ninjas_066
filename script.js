@@ -179,8 +179,104 @@ function closeModal(modalElement) {
 signUpForm.addEventListener('submit', signUpRedirectBtn);
 signInForm.addEventListener('submit', signInRedirectBtn);
 
+// Forgot Password Section starts
 
+let forgotPasswordForm = document.querySelector('#forgotPasswordForm');
+let otpPasswordForm = document.querySelector('#otpPasswordForm');
+function generateCaptcha() {
+    const canvas = document.getElementById('captchaCanvas');
+    const ctx = canvas.getContext('2d');
+    const random = Math.random;
 
+    // Clear canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw background
+    const bkgStyles = [
+        'repeating-linear-gradient(45deg, white, white 10px, lightgray 10px, lightgray 20px)',
+        'repeating-linear-gradient(90deg, white, white 10px, lightgray 10px, lightgray 20px)',
+        'repeating-linear-gradient(-45deg, white, white 10px, lightgray 10px, lightgray 20px)'
+    ];
+    const bkgStyle = bkgStyles[Math.floor(random() * bkgStyles.length)];
+    canvas.style.background = bkgStyle;
+
+    // Draw random lines
+    ctx.beginPath();
+    ctx.moveTo(random() * 50, random() * 30);
+    ctx.lineTo(random() * 200, random() * 50);
+    ctx.strokeStyle = 'black';
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.rect(random() * 20, random() * 20, random() * 50 + 50, random() * 20 + 20);
+    ctx.strokeStyle = 'blue';
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(random() * 20, random() * 50);
+    ctx.lineTo(random() * 100 + 100, random() * 80);
+    ctx.strokeStyle = 'blue';
+    ctx.stroke();
+
+    // Generate CAPTCHA code
+    const captchaCode = Math.floor(random() * 9000000 + 1000000).toString(16).toUpperCase();
+    sessionStorage.setItem('sessionCaptcha', captchaCode.toLowerCase());
+
+    // Draw CAPTCHA text
+    ctx.font = '25px Arial';
+    ctx.fillStyle = 'black';
+    ctx.fillText(captchaCode, 20, 50);
+}
+
+function fetchCaptchaRedirect(event) {
+
+    event.preventDefault();
+
+    const email = document.getElementById('forgotPasswordEmail').value;
+    const userInput = document.getElementById('captchaCanvasinput').value.toLowerCase();
+    const storedCaptcha = sessionStorage.getItem('sessionCaptcha');
+
+    // Check if CAPTCHA is correct
+    if (userInput !== storedCaptcha) {
+        alert('Captcha did not match. Please try again.');
+        generateCaptcha();
+        return;
+    }
+
+    // Check if email exists in the JSON data
+    fetch('db.json')
+        .then(response => response.json())
+        .then(data => {
+            const user = data.users.find(user => user.email === email);
+
+            if (user) {
+                alert('Captcha matched! Form submitted successfully.');
+                document.getElementById('forgotPasswordForm').reset(); // Reset the form fields
+                generateCaptcha(); // Refresh the CAPTCHA
+                // Hide Forgot-password section smoothly
+                document.getElementById('Forgot-password').classList.add('hide');
+
+                // Show OTP section smoothly after delay for transition
+                setTimeout(() => {
+                    document.getElementById('otp-password').classList.add('show');
+                }, 500); // Adjust delay to match transition duration
+
+            } else {
+                alert('Email not found! Please check your email address.');
+                generateCaptcha(); // Refresh the CAPTCHA
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching the JSON data:', error);
+            alert('There was an error processing your request. Please try again later.');
+            generateCaptcha(); // Refresh the CAPTCHA
+        });
+}
+
+window.onload = generateCaptcha;
+forgotPasswordForm.addEventListener("submit", fetchCaptchaRedirect);
+
+// Forgot Password Section ends
 
 /* Navbar section ends */
 
