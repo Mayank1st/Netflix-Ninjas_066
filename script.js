@@ -341,7 +341,34 @@ forgotPasswordForm.addEventListener("submit", fetchCaptchaRedirect);
 
 
 
+document.addEventListener("DOMContentLoaded", (event) => {
+    let prevbtn = document.querySelector(".prevbtn");
 
+    function handleBorder() {
+      prevbtn.style.border = "1px solid black";
+    }
+
+    function removeBorder() {
+      prevbtn.style.border = "none";
+    }
+
+    prevbtn.addEventListener("click", handleBorder);
+    prevbtn.addEventListener("mouseleave", removeBorder);
+  });
+  document.addEventListener("DOMContentLoaded", (event) => {
+    let nextbtn = document.querySelector(".nextbtn");
+
+    function handleBorder() {
+      nextbtn.style.border = "1px solid black";
+    }
+
+    function removeBorder() {
+      nextbtn.style.border = "none";
+    }
+
+    nextbtn.addEventListener("click", handleBorder);
+    nextbtn.addEventListener("mouseleave", removeBorder);
+  });
 
 
 
