@@ -38,7 +38,141 @@
 
 /* section-3(Degree Programs) section start */
 
+let data;
+    let K1Cards = document.querySelector(".K1Cards");
+    let K2Cards = document.querySelector(".K2Cards")
+    let K3Cards = document.querySelector(".K3Cards")
+    let K4Cards = document.querySelector(".K4Cards")
+    let showMore = document.querySelector(".showMore");
+    let screenWidth = window.innerWidth;
 
+    let showData = (arr, condition, div) => {
+      K1Cards.innerHTML = "";
+      arr.forEach((ele, i) => {
+        if (condition > i) {
+          let K1Card = document.createElement("div");
+          K1Card.className = "K1Card";
+
+          let titleImg = document.createElement("div");
+          titleImg.className = "example12";
+          titleImg.style.backgroundImage = `url(${ele.img})`;
+
+          let uni = document.createElement("div");
+          uni.className = "uni";
+
+          let uniLogo = document.createElement("img");
+          uniLogo.src = ele.uniLogo;
+
+          let uniName = document.createElement("p");
+          uniName.textContent = ele.uniName;
+
+          uni.append(uniLogo, uniName);
+
+          let degreeName = document.createElement("p");
+          degreeName.innerHTML = `<p style="margin-bottom: 10px">
+              <b>${ele.degree}</b>
+            </p>`;
+
+          let earnDegree = document.createElement("div");
+          earnDegree.className = "earnDegree";
+
+          let templateIcon = document.createElement("span");
+          templateIcon.className = "material-symbols-outlined";
+          templateIcon.textContent = ele.templateIcon;
+
+          let template = document.createElement("p");
+          template.innerHTML = `<a href="${ele.templateHref}">${ele.template}</a>`;
+
+          earnDegree.append(templateIcon, template);
+
+          let title = document.createElement("p");
+          title.textContent = ele.title;
+
+          K1Card.append(titleImg, uni, degreeName, earnDegree, title);
+          if(div == "uni1"){
+            K1Cards.append(K1Card);
+          } else if(div == "uni2"){
+            K2Cards.append(K1Card);
+          } else if(div == "cousera"){
+            K3Cards.append(K1Card);
+          } else if(div == "learning"){
+            K4Cards.append(K1Card);
+          }
+          console.log(screenWidth);
+        }
+      });
+    };
+    let sd = () => {
+        showMore.textContent = "Show 8 more"
+      let viewportWidth = window.innerWidth;
+      console.log("Viewport Width:", viewportWidth);
+
+      if (viewportWidth <= 600) {
+        K = 1;
+        showData(data, K, "uni1");
+      } else if (viewportWidth <= 1023) {
+        K = 2;
+        showData(data, K, "uni1");
+      } else {
+        K = 4;
+        showData(data, K, "uni1");
+      }
+    };
+
+    let K = 4;
+
+    window.addEventListener("resize", () => {
+      sd();
+
+    });
+
+    
+
+    let handleShowMore = async () => {
+      if (showMore.textContent == "Show 8 more") {
+        K += 8;
+        await showData(data, K, "uni1");
+        if (K < data.length) {
+          showMore.textContent = `Show ${data.length-K} more`;
+        } else {
+          showMore.textContent = "Show fewer";
+        }
+      } else if (showMore.textContent == "Show fewer") {
+        await sd();
+        showMore.textContent = "Show 8 more";
+      } else {
+        K += 8;
+        await showData(data, K, "uni1");
+          showMore.textContent = "Show fewer";
+      }
+    };
+    showMore.addEventListener("click", () => {
+      handleShowMore();
+    });
+    let data2;
+let data3;
+let data4;
+    let getData = async(endPoint) => {
+      let res =  await fetch (`http://localhost:3000/${endPoint}`);
+      let ans = await res.json();
+      
+
+      if(endPoint == "Universities"){
+        data = ans
+        showData(data, K);
+      } else if(endPoint == "Universities2"){
+        data2 = ans
+        showData2(data, K);
+      } else if(endPoint == "coursera"){
+        data3 = ans
+        showData3(data, K);
+      }  else if(endPoint == "learning"){
+        data4 = ans
+        showData4(data, K);
+      } 
+      
+    }
+    getData("Universities");
 
 /* section-3(Degree Programs) section ends */
 
