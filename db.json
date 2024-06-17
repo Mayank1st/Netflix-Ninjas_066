@@ -35,6 +35,12 @@
       "email": "vivek@gmail.com",
       "password": "7QSt6yBjRkCSuYHPq3jBBwqNnwjmyVoPnpd2jJ4hI/8=",
       "id": 9
+    },
+    {
+      "fullname": "vivek kumar",
+      "email": "oovickey97@gmail.com",
+      "password": "39eQq2T7VNlszUqFHgyd9mM8IwpV8HVgJ2S97t1pZxM=",
+      "id": 10
     }
   ],
   "Universities2": [
@@ -98,6 +104,15 @@
       "template": "Earn a degree",
       "templateHref": "https://www.coursera.org/degrees/imba",
       "title": "Degree"
+    },{
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/statistics-data-analytics-pgdip-isi/b94f93dd-8ebe-444b-9cf9-18998c0b4045.jpg?auto=format%2Ccompress%2C%20enhance&dpr=2&w=265&h=204&fit=crop&q=50",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/13/4f6741eec44e2b9e40fc79bdf15b87/360x360.png",
+      "uniName": "O.P. Jindal Global University",
+      "degree": "Master of Applied Data Science",
+      "templateIcon": "school",
+      "template": "Earn a degree",
+      "templateHref": "https://www.coursera.org/degrees/imba",
+      "title": "Degree"
     },
     {
       "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/pgdm-spjimr/f68db508-5619-402b-adcb-07f5f4af90c2.jpg?auto=format%2Ccompress%2C%20enhance&dpr=2&w=265&h=204&fit=crop&q=50",
@@ -148,17 +163,8 @@
       "template": "Earn a degree",
       "templateHref": "https://www.coursera.org/degrees/imba",
       "title": "Degree"
-    },
-    {
-      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/statistics-data-analytics-pgdip-isi/b94f93dd-8ebe-444b-9cf9-18998c0b4045.jpg?auto=format%2Ccompress%2C%20enhance&dpr=2&w=265&h=204&fit=crop&q=50",
-      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/13/4f6741eec44e2b9e40fc79bdf15b87/360x360.png",
-      "uniName": "O.P. Jindal Global University",
-      "degree": "Master of Applied Data Science",
-      "templateIcon": "school",
-      "template": "Earn a degree",
-      "templateHref": "https://www.coursera.org/degrees/imba",
-      "title": "Degree"
     }
+    
   ],
   "Universities":[
     {
