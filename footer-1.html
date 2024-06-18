@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    /* footer section start */
+
+    .Vkp-footer {
+      padding: 0px !important;
+      background-color: #f5f5f5;
+    }
+
+    .Vkp-footer>.container {
+      padding: 0 1px;
+      margin: 0 auto;
+    }
+
+    .Vkp-footer>.container>.Vp-footer>.footer-Inner-div {
+      padding-top: 80px;
+      padding-bottom: 8px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: 100%;
+      height: auto;
+      margin: auto;
+
+    }
+
+    .footer-column {
+      padding: 0 20px;
+      margin-bottom: 60px;
+      box-sizing: border-box;
+    }
+
+    .footer-column>p {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0px;
+    }
+
+    .footer-column>ul {
+      list-style: none;
+      padding: 0;
+      margin-right: 18px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    .footer-column>ul>li {
+      list-style: none;
+      margin-bottom: 8px;
+    }
+
+    .footer-column>ul>li>a {
+      text-decoration: none;
+      font-size: 14px;
+      color: #575757;
+      line-height: 20px;
+    }
+
+    .footer-column>ul>li>a:hover {
+      color: #333;
+      text-decoration: underline;
+    }
+
+    #footer-store>div {
+      max-width: 344px;
+      margin-bottom: 50px;
+    }
+
+    #footer-store>div>a>img {
+      width: 50%;
+    }
+
+    #footer-store>div:nth-of-type(3)>a>img {
+      width: 30%;
+    }
+
+    .footer-end {
+      padding: 20px 0 40px 0;
+      justify-content: space-between;
+    }
+
+    .footer-end>div:nth-of-type(2) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 18px;
+
+    }
+
+    .footer-end>div:nth-of-type(2)>div {
+      max-width: 25px;
+    }
+
+    .footer-end>div:nth-of-type(2)>div>a>img {
+      max-width: 100%;
+    }
+
+    .footer-end>div:nth-of-type(2)>div>img:hover {
+      cursor: pointer;
+    }
+
+    /* footer section Ends */
+
+    /* mediaQuerry starts */
+
+    @media (max-width: 768px) {
+
+      .footer-column {
+        flex: 1 1 100%;
+        text-align: left;
+      }
+
+      .footer-end {
+        padding: 20px 0 40px 0;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        text-align: center;
+      }
+
+      #footer-store>div {
+        max-width: 344px;
+        margin-bottom: 0;
+      }
+
+      #footer-store>div>a>img {
+        width: 100%;
+      }
+
+      #footer-store>div:nth-of-type(3)>a>img {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+
+      #footer-store>div {
+        max-width: 344px;
+        margin-bottom: 0;
+      }
+
+      #footer-store>div>a>img {
+        width: 100%;
+      }
+
+      #footer-store>div:nth-of-type(3)>a>img {
+        width: 100%;
+      }
+
+      .Vkp-footer>.container>.Vp-footer>.footer-Inner-div {
+        padding-top: 80px;
+        padding-bottom: 8px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        height: auto;
+        margin: auto;
+
+      }
+
+    }
+
+    @media (max-width: 480px) {
+
+      .footer-column {
+        flex: 1 1 100%;
+        text-align: left;
+      }
+
+      .footer-end {
+        padding: 20px 0 40px 0;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        text-align: center;
+      }
+    }
+
+    /* mediaQuerry Ends */
+  </style>
+</head>
+
+<body>
+  <!--- footer section Start -->
+  <div class="Vkp-footer container-fluid">
+    <footer class="container">
+      <div class="Vp-footer">
+        <div class="footer-Inner-div">
+          <div class="footer-column">
+            <p>Get Started with AI</p>
+            <ul>
+              <li><a href="https://www.coursera.org/learn/ai-for-everyone">DLAI AI For Everyone Course</a></li>
+              <li><a href="https://www.coursera.org/specializations/deep-learning">DLAI Deep Learning Specialization</a>
+              </li>
+              <li><a href="https://www.coursera.org/learn/generative-ai-for-everyone">DLAI GenAI For Everyone Course</a>
+              </li>
+              <li><a href="https://www.coursera.org/learn/ai-for-everyone">DLAI GenAI with LLMs Course</a></li>
+              <li><a href="https://www.coursera.org/learn/google-ai-essentials">Google AI Essentials</a></li>
+              <li><a href="https://www.coursera.org/learn/introduction-to-generative-ai">Google Cloud Introduction to
+                  Generative AI Course</a></li>
+              <li><a href="https://www.coursera.org/specializations/machine-learning-introduction">Stanford Machine
+                  Learning Specialization</a></li>
+              <li><a href="https://www.coursera.org/learn/prompt-engineering">Vanderbilt Prompt Engineering for ChatGPT
+                  Course</a></li>
+              <li><a href="https://www.coursera.org/courses?query=artificial%20intelligence">All Artificial Intelligence
+                  Courses</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <p>Popular Career Certificates</p>
+            <ul>
+              <li><a href="https://www.coursera.org/professional-certificates/google-cybersecurity">Google Cybersecurity
+                  Professional Certificate</a></li>
+              <li><a href="https://www.coursera.org/professional-certificates/google-data-analytics">Google Data
+                  Analytics Professional Certificate</a></li>
+              <li><a href="https://www.coursera.org/professional-certificates/google-digital-marketing-ecommerce">Google
+                  Digital Marketing Professional Certificate</a></li>
+              <li><a href="https://www.coursera.org/professional-certificates/google-project-management">Google Project
+                  Management Professional Certificate</a></li>
+              <li><a href="https://www.coursera.org/professional-certificates/google-ux-design">Google UX Design
+                  Professional Certificate</a></li>
+              <li><a href="https://www.coursera.org/professional-certificates/ibm-data-science">IBM Data Science
+                  Professional Certificate</a></li>
+              <li><a href="https://www.coursera.org/professional-certificates/microsoft-power-bi-data-analyst">Microsoft
+                  Power BI Data Analyst Professional Certificate</a></li>
+              <li><a href="https://www.coursera.org/professional-certificates">All Career Certificates</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <p>Popular Subjects</p>
+            <ul>
+              <li><a href="https://www.coursera.org/courses?query=cybersecurity">Cybersecurity</a></li>
+              <li><a href="https://www.coursera.org/courses?query=data%20analytics">Data Analytics</a></li>
+              <li><a href="https://www.coursera.org/courses?query=data%20analytics">Data Science</a></li>
+              <li><a href="https://www.coursera.org/courses?query=digital%20marketing">Digital Marketing</a></li>
+              <li><a href="https://www.coursera.org/courses?query=generative%20ai">Generative AI</a></li>
+              <li><a href="https://www.coursera.org/courses?query=project%20management">Project Management</a></li>
+              <li><a href="https://www.coursera.org/courses?query=python">Python</a></li>
+              <li><a href="https://www.coursera.org/courses">All Courses</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <p>Popular Resources</p>
+            <ul>
+              <li><a href="https://www.coursera.org/articles/how-to-become-a-data-analyst">How to Become a Data
+                  Analyst</a></li>
+              <li><a href="https://www.coursera.org/articles/the-pmp-certification-a-guide-to-getting-started">How to
+                  Get a PMP Certification</a></li>
+              <li><a href="https://www.coursera.org/articles/popular-cybersecurity-certifications">Popular Cybersecurity
+                  Certifications</a></li>
+              <li><a href="https://www.coursera.org/articles/data-analytics-certification">Popular Data Analytics
+                  Certifications</a></li>
+              <li><a
+                  href="https://www.coursera.org/articles/essential-it-certifications-entry-level-and-beginner">Popular
+                  IT Certifications</a></li>
+              <li><a href="https://www.coursera.org/articles/machine-learning-certification">Popular Machine Learning
+                  Certifications</a></li>
+              <li><a href="https://www.coursera.org/articles/sql-certifications-for-your-data-career">Popular SQL
+                  Certifications</a></li>
+              <li><a href="https://www.coursera.org/articles">Career Insights &amp; Advice Hub</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <p>Coursera</p>
+            <ul>
+              <li><a href="https://about.coursera.org/">About</a></li>
+              <li><a href="https://about.coursera.org/how-coursera-works/">What We Offer</a></li>
+              <li><a href="https://about.coursera.org/leadership">Leadership</a></li>
+              <li><a href="https://careers.coursera.com/">Careers</a></li>
+              <li><a href="https://www.coursera.org/browse">Catalog</a></li>
+              <li><a href="https://www.coursera.org/professional-certificates">Coursera Plus</a></li>
+              <li><a href="https://www.coursera.org/professional-certificates">Professional Certificates</a></li>
+              <li><a href="https://www.coursera.org/mastertrack">MasterTrack® Certificates</a></li>
+              <li><a href="https://www.coursera.org/degrees">Degrees</a></li>
+              <li><a
+                  href="https://www.coursera.org/business?utm_campaign=website&utm_content=corp-to-home-footer-for-enterprise&utm_medium=coursera&utm_source=enterprise">For
+                  Enterprise</a></li>
+              <li><a
+                  href="https://www.coursera.org/government?utm_campaign=website&utm_content=corp-to-home-footer-for-government&utm_medium=coursera&utm_source=enterprise">For
+                  Government</a></li>
+              <li><a
+                  href="https://www.coursera.org/campus?utm_campaign=website&utm_content=corp-to-home-footer-for-campus&utm_medium=coursera&utm_source=enterprise">For
+                  Campus</a></li>
+              <li><a
+                  href="https://www.coursera.org/partnerships?utm_medium=coursera&utm_source=partnerships&utm_campaign=website&utm_content=corp-to-home-footer-become-a-partner">Become
+                  a Partner</a></li>
+              <li><a href="https://www.coursera.org/social-impact">Social Impact</a></li>
+              <li><a href="https://www.coursera.org/courses?query=free">Free Courses</a></li>
+              <li><a href="https://www.coursera.org/resources">Career Resource Hub</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <p>Community</p>
+            <ul>
+              <li><a href="https://www.coursera.support/s/community?language=en_US">Learners</a></li>
+              <li><a href="https://www.coursera.org/about/partners">Partners</a></li>
+              <li><a
+                  href="https://www.coursera.support/s/article/360000152926-Become-a-Coursera-beta-tester?language=en_US">Beta
+                  Testers</a></li>
+              <li><a href="https://blog.coursera.org/" target="_blank">Blog</a></li>
+              <li><a href="https://open.spotify.com/show/58M36bneU7REOofdPZxe6A">The Coursera Podcast</a></li>
+              <li><a href="https://medium.com/coursera-engineering" target="_blank">Tech Blog</a></li>
+              <li><a href="https://www.coursera.org/teaching-center/" target="_blank">Teaching Center</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <p>More</p>
+            <ul>
+              <li><a href="https://about.coursera.org/press">Press</a></li>
+              <li><a href="https://investor.coursera.com/overview/default.aspx">Investors</a></li>
+              <li><a href="https://www.coursera.org/about/terms">Terms</a></li>
+              <li><a href="https://www.coursera.org/about/privacy">Privacy</a></li>
+              <li><a href="https://www.coursera.support/s/learner-help-center?language=en_US">Help</a></li>
+              <li><a
+                  href="https://www.coursera.support/s/article/360050668591-Accessibility-Statement?language=en_US">Accessibility</a>
+              </li>
+              <li><a href="https://about.coursera.org/contact/">Contact</a></li>
+              <li><a href="https://www.coursera.org/articles">Articles</a></li>
+              <li><a href="https://www.coursera.org/directory">Directory</a></li>
+              <li><a href="https://about.coursera.org/affiliates">Affiliates</a></li>
+              <li><a href="https://coursera_assets.s3.amazonaws.com/footer/Modern+Slavery+Statement+26+April+2023.pdf"
+                  target="_blank">Modern Slavery Statement</a></li>
+              <li><a href="https://www.coursera.org/about/cookies-manage">Manage Cookie Preferences</a></li>
+            </ul>
+          </div>
+          <div class="footer-column" id="footer-store">
+            <div><a href="https://apps.apple.com/us/app/coursera-grow-your-career/id736535961"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/download_on_the_app_store_badge_en.svg?auto=format%2Ccompress&dpr=2&w=152&h=45&q=40"
+                  alt=""></a></div>
+            <div><a href="https://play.google.com/store/apps/details?id=org.coursera.android"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/en_generic_rgb_wo_45.png?auto=format%2Ccompress&dpr=2&w=152&h=45&q=40"
+                  alt=""></a></div>
+            <div><a href="#"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/2018-B-Corp-Logo-Black-S.png?auto=format%2Ccompress&dpr=2&w=151&h=120&q=40"
+                  alt=""></a></div>
+          </div>
+        </div>
+        <hr>
+        <div class="d-flex footer-end">
+          <div style="font-size: 14px;color: #575757;padding: 16px 0;">© 2024 Coursera Inc. All rights reserved.</div>
+          <div>
+            <div>
+              <a href="https://www.facebook.com/Coursera"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/facebook.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40"
+                  alt=""></a>
+            </div>
+            <div>
+              <a href="https://www.linkedin.com/company/coursera/"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/linkedin.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40"
+                  alt=""></a>
+            </div>
+            <div><a href="https://x.com/coursera"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/twitter.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40"
+                  alt=""></a></div>
+            <div><a href="https://www.youtube.com/user/coursera"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/youtube.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40"
+                  alt=""></a></div>
+            <div><a href="https://www.instagram.com/coursera/"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/instagram.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40"
+                  alt=""></a></div>
+            <div><a href="https://www.tiktok.com/notfound"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/images/9b7e964107839c77644d7e7d15035b73.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40"
+                  alt=""></a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!--- footer section Ends --->
+</body>
+
+</html>

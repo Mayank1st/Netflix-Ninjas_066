@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./online-degreepage.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a89a1bd747.js" crossorigin="anonymous"></script>
+  <style src="./navProfilePic.css"></style>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .custom-navbar-container {
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    header {
+      /* border: solid black; */
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+
+    .navbar {
+      background-color: transparent !important;
+    }
+
+    .navbar-searchbox {
+      width: 390px;
+      border-radius: 100px;
+      border: solid rgb(209, 205, 205) 1px;
+      padding-right: 40px;
+    }
+
+    .navbar-search-btn {
+      background-color: #0056d2;
+      color: #ffffff;
+      font-weight: 500;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .navbar-select {
+      border: transparent !important;
+    }
+
+    .navbar-select>option {
+      background-color: transparent !important;
+      border: none !important;
+    }
+
+    .navbar-select:hover {
+      background-color: rgb(207, 199, 199) !important;
+      cursor: pointer;
+      border: none !important;
+    }
+
+    .navbar-right-side>li:nth-of-type(1)>a:hover {
+      color: #0056d2;
+    }
+
+    .navbar-right-side>li:nth-of-type(2)>a:hover {
+      color: #0056d2;
+    }
+
+    .nav-item:nth-of-type(3) {
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-item:nth-of-type(3):hover {
+      background-color: rgb(207, 199, 199) !important;
+      border-radius: 5px !important;
+      cursor: pointer;
+    }
+
+    .nav-item:nth-of-type(4):hover {
+      background-color: rgb(207, 199, 199) !important;
+      border-radius: 5px !important;
+      cursor: pointer;
+    }
+
+
+    .nav-item:nth-of-type(5) {
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-item:nth-of-type(5):hover {
+      background-color: rgb(207, 199, 199) !important;
+      border-radius: 5px !important;
+      cursor: pointer;
+    }
+
+    .Profile_pic_li>select {
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+
+    .nav-profile_pic {
+      border-radius: 50% !important;
+      height: 40px;
+      width: 40px;
+      background-color: #0056d2;
+    }
+
+    .navbar-right-side .nav-item {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-right-side .nav-link {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+    }
+
+    .navbar-right-side .nav-item .form-select {
+      width: auto;
+    }
+
+    .form-container {
+      position: relative;
+    }
+
+    .form-control::placeholder {
+      color: #999;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header id="navbar" class="container-fluid">
+    <div class="container custom-navbar-container container-sm container-md container-lg container-xl container-xxl">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+
+          <a class="navbar-brand" href="">
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/logo.png" alt="Bootstrap" width="100"
+              height="45">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Explore
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <div class="form-container d-flex my-2 my-lg-0 w-100">
+                  <input class="form-control navbar-searchbox" type="search" placeholder="What do you want to learn?"
+                    aria-label="Search" id="searchInput">
+                  <button class="btn navbar-search-btn my-2 my-sm-0" type="submit" id="searchButton">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </div>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2 navbar-right-side">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Degrees</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Find Careers</a>
+              </li>
+              <li class="nav-item">
+                <i class="fa-solid fa-globe fa-lg me-2"></i>
+                <select class="form-select navbar-select" aria-label="Default select example">
+                  <option selected>English</option>
+                  <option value="zh">Chinese</option>
+                  <option value="hi">Hindi</option>
+                  <option value="es">Spanish</option>
+                  <option value="fr">French</option>
+                  <option value="ar">Arabic</option>
+                  <option value="bn">Bengali</option>
+                  <option value="pt">Portuguese</option>
+                  <option value="ru">Russian</option>
+                  <option value="ja">Japanese</option>
+                  <option value="pa">Punjabi</option>
+                  <option value="de">German</option>
+                  <option value="jv">Javanese</option>
+                  <option value="te">Telugu</option>
+                  <option value="vi">Vietnamese</option>
+                  <option value="ko">Korean</option>
+                  <option value="ta">Tamil</option>
+                  <option value="it">Italian</option>
+                  <option value="tr">Turkish</option>
+                  <option value="pl">Polish</option>
+                  <option value="uk">Ukrainian</option>
+                  <option value="gu">Gujarati</option>
+                  <option value="fa">Persian</option>
+                  <option value="mr">Marathi</option>
+                  <option value="tl">Tagalog</option>
+                  <option value="nl">Dutch</option>
+                  <option value="ko">Korean</option>
+                  <option value="th">Thai</option>
+                  <option value="my">Burmese</option>
+                  <option value="sw">Swahili</option>
+                  <option value="he">Hebrew</option>
+                  <option value="am">Amharic</option>
+                  <option value="el">Greek</option>
+                  <option value="cz">Czech</option>
+                  <option value="da">Danish</option>
+                  <option value="is">Icelandic</option>
+                  <option value="ky">Kyrgyz</option>
+                  <option value="ku">Kurdish</option>
+                  <option value="ms">Malay</option>
+                  <option value="mn">Mongolian</option>
+                  <option value="no">Norwegian</option>
+                  <option value="ps">Pashto</option>
+                  <option value="rm">Romansh</option>
+                  <option value="sr">Serbian</option>
+                  <option value="si">Sinhala</option>
+                  <option value="sk">Slovak</option>
+                  <option value="so">Somali</option>
+                  <option value="sd">Sindhi</option>
+                  <option value="su">Sundanese</option>
+                  <option value="sv">Swedish</option>
+                  <option value="tg">Tajik</option>
+                  <option value="uz">Uzbek</option>
+                  <option value="xh">Xhosa</option>
+                  <option value="yo">Yoruba</option>
+                  <option value="zu">Zulu</option>
+                </select>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fa-regular fa-bell fa-lg"></i>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="https://via.placeholder.com/40" class="nav-profile_pic me-2" alt="Profile Picture">
+                  <span>Profile</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="./coursera_plus_profile_page.html">Profile</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Settings</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#" id="logOutBtn">Log Out</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Container for the fetched content -->
+  <div id="mainContent"></div>
+
+  <!-- soumya-navbar starts  -->
+  <nav class="navbar navbar-card container">
+    <ul class="nav-items-landing">
+      <li class="nav-item-landing" onclick="moveIndicators(0)"><a style="text-decoration: none;"
+          href="./home.html">Home</a></li>
+      <li class="nav-item-landing" onclick="moveIndicators(1)"><a style="text-decoration: none;"
+          href="./myLearnings.html">My Learning</a></li>
+      <li class="nav-item-landing" onclick="moveIndicators(2)">Online Degree</li>
+      <li class="nav-item-landing" onclick="moveIndicators(3)"><a style="text-decoration: none;"
+          href="https://www.coursera.org/career-academy/?trk_ref=globalnav">Find your new Carrer</a></li>
+    </ul>
+    <div class="indicatorsbackground"></div>
+    <div class="indicators"></div>
+  </nav>
+
+
+  <!-- soumya-navbar ends  -->
+
+
+  <!-- soumya section starts  -->
+  <div class="container-fluid custom-container">
+    <div class="container container-align">
+      Take your career to the next level with an online degree
+    </div>
+  </div>
+
+  <div class="container rightDegree">
+    Find the right degree for you
+  </div>
+
+  <!-- <div class="container filter-section">
+      <div class="filter-dropdown dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Program Level
+          </button>
+          <div class="dropdown-menu filter-content">
+              <label><input type="checkbox" class="program-filter" value="Bachelor" onchange="applyFilter('program')"> Bachelor's Degree</label>
+              <label><input type="checkbox" class="program-filter" value="master"> Master's Degree</label>
+              <button class="btn btn-primary" onclick="applyFilter('program')">Apply</button>
+              <button class="btn btn-secondary" onclick="clearFilter('program')">Clear</button>
+          </div>
+      </div>
+      <div class="filter-dropdown dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Subject
+          </button>
+          <div class="dropdown-menu filter-content">
+              <label><input type="checkbox" class="subject-filter" value="subject1"> Subject 1</label>
+              <label><input type="checkbox" class="subject-filter" value="subject2"> Subject 2</label>
+              <label><input type="checkbox" class="subject-filter" value="subject3"> Subject 3</label>
+              <label><input type="checkbox" class="subject-filter" value="subject4"> Subject 4</label>
+              <label><input type="checkbox" class="subject-filter" value="subject5"> Subject 5</label>
+              <label><input type="checkbox" class="subject-filter" value="subject6"> Subject 6</label>
+              <label><input type="checkbox" class="subject-filter" value="subject7"> Subject 7</label>
+              <label><input type="checkbox" class="subject-filter" value="subject8"> Subject 8</label>
+              <label><input type="checkbox" class="subject-filter" value="subject9"> Subject 9</label>
+              <label><input type="checkbox" class="subject-filter" value="subject10"> Subject 10</label>
+              <button class="btn btn-primary" onclick="applyFilter('subject')">Apply</button>
+              <button class="btn btn-secondary" onclick="clearFilter('subject')">Clear</button>
+          </div>
+      </div>
+  </div> -->
+
+  <div class="container" style="margin-top: 50px;">
+    <div class="container-card" id="card-container"></div>
+    <div id="pagination-container" class="pagination"></div>
+  </div>
+
+
+  <div class="container" style="margin-top: 50px;">
+    <p>Browse by category</p>
+    <div class="container text-center" style="margin-top: 30px;">
+      <!-- First row of containers -->
+      <div class="row gap-2">
+        <a href="https://www.coursera.org/degrees/msc-cyber-security-london" class="col">
+          Business and MBA degrees
+        </a>
+        <a href="https://www.coursera.org/degrees/ms-management-illinois" class="col">
+          Computer Science Degrees
+        </a>
+        <a href="https://www.coursera.org/degrees/master-of-science-data-science-boulder" class="col">
+          Data Science degrees
+        </a>
+        <a href="https://www.coursera.org/degrees/msc-cyber-security-london" class="col">
+          Public Health Degrees
+        </a>
+      </div>
+      <!-- Second row of containers -->
+      <div class="row gap-2 mt-2" style="margin-top: 30px;">
+        <a href="https://www.coursera.org/degrees/msc-cyber-security-london" class="col">
+          Top Europe degrees
+        </a>
+        <a href="https://www.coursera.org/degrees/ms-management-illinois" class="col">
+          Top Indian Degrees
+        </a>
+        <a href="https://www.coursera.org/degrees/master-of-science-data-science-boulder" class="col">
+          Data Analytics degrees
+        </a>
+        <a href="https://www.coursera.org/degrees/msc-cyber-security-london" class="col">
+          Maestrias en linea de Latinoamerica
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- soumya section ends  -->
+
+  <!-- vishal section starts  -->
+
+  <div class="container-fluid border">
+    <div class="container box">
+      <div class="box1">
+        <a href="">
+          <div class="card1">
+            <div class="subcard1">
+              <div>
+                <p>Affordable tuition with flexible payment options</p>
+                <div>
+                  <p>
+                    Pursue your degree with affordable tuition, flexible payment
+                    options that let you pay as you go, and financial aid
+                    opportunities, including scholarships.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </a>
+        <a href="https://www.coursera.org/degrees/msc-cyber-security-london">
+          <div class="card2">
+            <div>
+              <div>
+                <img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4mrOdqJi42NxrBI41WUp6o/d25b6495268583fe9c079bfbac858fa8/University_of_London_logo.svg.png?auto=format%2Ccompress&dpr=1"
+                  alt="" class="img-fluid">
+              </div>
+              <div>
+                <p>University of London</p>
+                <p>Master of Science in Cyber Security</p>
+                <p>#29 in Top Universities in the U.K. (The Times and Sunday Times Good University Guide, 2023)</p>
+                <p>Application due September 8, 2024</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.coursera.org/degrees/ms-management-illinois">
+          <div class="card2">
+            <div>
+              <div>
+                <img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/1Rp5a6TiZD2LO4n6MHsMtS/78e1f67bd7784a40ddae53db3389a054/IllinoisGies.jpg?auto=format%2Ccompress&dpr=1"
+                  alt="" class="img-fluid">
+              </div>
+              <div>
+                <p>University of Illinois at Urbana-Champaign</p>
+                <p>Master of Science in Management (iMSM)</p>
+                <p><span>#12 in Top Public Universities in the U.S. (U.S. News &amp; World Report, 2023)</span></p>
+                <p>Application due September 8, 2024</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.coursera.org/degrees/master-of-science-data-science-boulder">
+          <div class="card2 ">
+            <div>
+              <div>
+                <img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/QYnQLOD2XH1JdEAJt7zFY/982c1e09539e87e4cf637c57eb4142dd/CU-Boulder.jpg?auto=format%2Ccompress&dpr=1"
+                  alt="" class="img-fluid">
+              </div>
+              <div>
+                <p>University of Colorado Boulder</p>
+                <p class="cds-CommonCard-title css-6ecy9b">Master of Science in Data Science</p>
+                <p><span class="css-ialdbj">#38 University in the World (Academic Ranking of World Universities,
+                    2019)</span></p>
+                <p><span>Application due August 8, 2024</span></p>
+              </div>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+
+      <div class="box1 container-fluid ">
+        <a href="">
+          <div class="card1">
+            <div class="subcard1">
+              <div>
+
+                <p>Designed for working adults</p>
+                <div>
+
+                  <p>Enroll in flexible, 100% online degree programs. Set your own schedule to balance your work and
+                    personal commitments and complete coursework at your own pace.</p>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </a>
+
+
+        <a href="https://www.coursera.org/degrees/bachelor-of-science-data-science-ai-iitguwahati">
+          <div class="card2">
+            <div>
+              <div>
+                <img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/IHNuNEKZnmjtOs3g6uX9h/c0038feefd8e96515ab88ee67e1bb59f/Square_logo_for_partner_landing_page.png?auto=format%2Ccompress&dpr=1"
+                  alt="" class="img-fluid" id="guw">
+              </div>
+              <div>
+                <p>Indian Institute of Technology Guwahati</p>
+                <p>Bachelor of Science in Data Science &amp; AI</p>
+                <p><span class="css-ialdbj">Ranked 7th among India’s top engineering institutes, according to NIRF
+                    2023</span></p>
+                <span class="css-ialdbj">Application due June 19, 2024</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://www.coursera.org/degrees/master-of-science-information-technology-iiithyderabad">
+          <div class="card2">
+            <div>
+              <div>
+                <img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/1Ov6ze63502ZD59yfcRPEP/790e16c08aa93a61e75c4064ddadbc12/IIITH_Logo.jpg?auto=format%2Ccompress&amp;dpr=1"
+                  alt="International Institute of Information Technology, Hyderabad logo" id="urb">
+              </div>
+              <div>
+                <p class="cds-ProductCard-partnerNames css-vac8rf">International Institute of ..</p>
+                <p>Master of Science in Information Technology</p>
+                <p>Ranked #1 institute in South Region Dataquest T-School Employability Index Survey 2021</p>
+                <p>Application due June 24, 2024</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.coursera.org/degrees/master-of-science-data-science-boulder">
+          <div class="card2">
+            <div>
+              <div>
+                <img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/QYnQLOD2XH1JdEAJt7zFY/982c1e09539e87e4cf637c57eb4142dd/CU-Boulder.jpg?auto=format%2Ccompress&dpr=1"
+                  alt="" class="img-fluid">
+              </div>
+              <div>
+                <p>University of Colorado Boulder</p>
+                <p class="cds-CommonCard-title css-6ecy9b">Master of Science in Data Science</p>
+                <p><span class="css-ialdbj">#38 University in the World (Academic Ranking of World Universities,
+                    2019)</span></p>
+                <p><span>Application due August 8, 2024</span></p>
+              </div>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="box1">
+        <div class="card1">
+          <div class="subcard1">
+            <div>
+              <p>Quality learning from world-class universities</p>
+              <div>
+                <p>
+                  Unlock your potential and pave the way to a successful career by earning a degree from an accredited
+                  university. Learn from expert faculty passionate about helping you achieve your goals.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+        <div class="card2">
+          <div>
+            <div>
+              <img
+                src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2Io1b5QQU4YcyVOuQTdjOO/e29485e582c8a543ca136e61d3ef78e8/OPJindal.jpg?auto=format%2Ccompress&dpr=1"
+                alt="" class="img-fluid">
+            </div>
+            <div>
+              <p>O.P. Jindal Global University</p>
+              <p>MBA in Business Analytics</p>
+              <p><span class="css-ialdbj">#1 ranked private university in India (QS World University Rankings,
+                  2021)</span></p>
+              <p>Application due June 23, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="card2">
+          <div>
+            <div>
+              <img
+                src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4mrOdqJi42NxrBI41WUp6o/d25b6495268583fe9c079bfbac858fa8/University_of_London_logo.svg.png?auto=format%2Ccompress&dpr=1"
+                alt="" class="img-fluid">
+            </div>
+            <div>
+              <p>University of London</p>
+              <p>Master of Science in Cyber Security</p>
+              <p>#29 in Top Universities in the U.K. (The Times and Sunday Times Good University Guide, 2023)</p>
+              <p>Application due September 8, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="card2">
+          <div>
+            <div>
+              <img
+                src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4r5JpFHQvXgmWvMtRMXbeb/8179cc039f4c5a1e2bfda3007d34de0d/UMGC-Logo.png?auto=format%2Ccompress&dpr=1"
+                alt="" class="img-fluid">
+            </div>
+            <div>
+              <p class="cds-ProductCard-partnerNames css-vac8rf">University of Maryland Global Campus</p>
+              <p class="cds-CommonCard-title css-6ecy9b">Master of Science in Data Science</p>
+              <p>Bachelor of Science in Cybersecurity Management and Policy</p>
+              <p><span>Application due August 8, 2024</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box1">
+        <div class="card1">
+          <div class="subcard1">
+            <div>
+              <p>Start making progress toward a degree today</p>
+              <div>
+                <p>Discover flexible degree pathways that enable you to build...</p>
+                <p>
+                  Each university determines the number of pre-approved credits that may count towards the degree
+                  requirements according to institutional policies.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="card2">
+          <div>
+            <div>
+              <img
+                src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2yj3zCXqTytZevxwT4h4xK/114973b81842684c450c6dfc67338276/London_Goldsmiths_logo_1000x200.png?auto=format%2Ccompress&dpr=1"
+                alt="" class="img-fluid">
+            </div>
+            <div>
+              <p>University of London</p>
+              <p>Bachelor of Science in Computer Science</p>
+
+              <p>#29 in Top Universities in the U.K. (The Times and Sunday Times Good University Guide, 2023)</p>
+              <p>Application due September 8, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="card2">
+          <div>
+            <div>
+              <img
+                src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/HL1NahIE4QwHd9xvhxvtx/8293d49ce1609a5c858719fb183f6229/UNT_COURSERA_BAAS_Logo.png?auto=format%2Ccompress&dpr=1"
+                alt="" class="img-fluid">
+            </div>
+            <div>
+              <p class="cds-ProductCard-partnerNames css-vac8rf">University of North Texas</p>
+              <p> Bachelor of Applied Arts and Sciences</p>
+
+              <p><span class="css-ialdbj">#23 Best Online Learning Schools (Newsweek, 2022)</span></p>
+              <p>Application due July 31, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="card2">
+          <div>
+            <div>
+              <img
+                src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/1Rp5a6TiZD2LO4n6MHsMtS/78e1f67bd7784a40ddae53db3389a054/IllinoisGies.jpg?auto=format%2Ccompress&dpr=1"
+                alt="" class="img-fluid">
+            </div>
+            <div>
+              <p>University of Illinois at Urbana-Champaign</p>
+              <p>Master of Science in Management (iMSM)</p>
+              <p><span>#12 in Top Public Universities in the U.S. (U.S. News &amp; World Report, 2023)</span></p>
+              <p>Application due September 8, 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box1">
+        <div class="card1">
+          <div class="subcard1">
+            <div>
+              <p>Gain admission without an application</p>
+              <div>
+                <p>
+                  Complete university-approved content to qualify for performance-based admission to select degree
+                  programs and pathways.</p>
+                <p class="css-qw04es">Each university determines the grades required to qualify for performance-based
+                  admission.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <a href="https://www.coursera.org/degrees/ms-data-science-ball-state">
+          <div class="card2">
+            <div>
+              <div>
+                <img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5JUClhmEcjBngRNT8Jp4A8/718fded3686a7003bdd2aeb70a772c49/e52950db-1fef-454d-82a6-a40667359c0a.png?auto=format%2Ccompress&dpr=1"
+                  alt="" class="img-fluid" id="it">
+              </div>
+              <div>
+                <p>Illinois Tech</p>
+                <p>Master of Business Administration</p>
+
+                <p>Application due June 23, 2024</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.coursera.org/degrees/mas-information-technology-illinois-tech">
+          <div class="card2">
+            <div>
+              <div>
+                <img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4bQOCuNYCY47cyyKwA4F0s/2cfb493b214fdbd0bb3c3ec8d4680d59/BSU-logo-vert-4color.png?auto=format%2Ccompress&dpr=1"
+                  alt="" class="img-fluid" id="ball">
+              </div>
+              <div>
+                <p>Ball state of university</p>
+                <p>Master of Science in Computer Science</p>
+
+                <p>Application due Augustt 24, 2024</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.coursera.org/degrees/msee-boulder">
+          <div class="card2">
+            <div>
+              <div>
+                <img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/QYnQLOD2XH1JdEAJt7zFY/982c1e09539e87e4cf637c57eb4142dd/CU-Boulder.jpg?auto=format%2Ccompress&dpr=1"
+                  alt="" class="img-fluid">
+              </div>
+              <div>
+                <p>University of Colorado Boulder</p>
+                <p class="cds-CommonCard-title css-6ecy9b">Master of Science in Data Science</p>
+                <p><span class="css-ialdbj">#38 University in the World (Academic Ranking of World Universities,
+                    2019)</span></p>
+                <p><span>Application due August 8, 2024</span></p>
+              </div>
+            </div>
+
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- vishal section ends  -->
+
+
+
+  <!-- Learn from expert faculty start -->
+
+  <section class="container-fluid">
+    <div class="container">
+      <div class="learn-from-expert-outer-div">
+        <div>
+          <h2>Learn from expert faculty</h2>
+        </div>
+        <div class="learn-from-expert-grid-div">
+          <div class="learn-from-expert-grid-div-card">
+            <div>
+              <div>
+                <img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2IPmuma57uM5ek16lRQAbT/061735e29e1ac3b2b6741fdee4753dec/CUBoulder_360x360.png?auto=format%2Ccompress&dpr=1&fm=avif&fit=fill&w=48&h=48"
+                  alt="university-of-colorado">
+              </div>
+              <div>University of Colorado Boulder</div>
+            </div>
+            <div>
+              <h3>Master of Engineering in Engineering Management</h3>
+            </div>
+            <div>
+              <div>
+                <img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2Tj0svl0sk0cwBZdb7a7Gl/d35276c5b6dfe0c8133e0c5d491610da/Jessica_Rush_Leeker_Boulder_ME-EM.jpeg?auto=format%2Ccompress&dpr=1&fit=fill&w=40&h=40"
+                  alt="img">
+              </div>
+              <div>
+                <p>Jessica Leeker</p>
+                <p>Professor in Engineering Practice</p>
+              </div>
+            </div>
+          </div>
+          <div class="learn-from-expert-grid-div-card">
+            <div>
+              <div>
+                <img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/60SA8pGxPXMmJf4n7umK1H/ccec31bbe2358210bf8391dcba6cd2f1/umich.png?auto=format%2Ccompress&dpr=1&fm=avif&fit=fill&w=48&h=48"
+                  alt="university-of-michigan">
+              </div>
+              <div>University of Michigan</div>
+            </div>
+            <div>
+              <h3>Master of Public Health</h3>
+            </div>
+            <div>
+              <div>
+                <img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/6jNba3IfoTFyZAlUNrCb1E/51a35a67f6d3acc01d6d91727ce6b260/michigan-mph-Kardia.jpg?auto=format%2Ccompress&dpr=1&fit=fill&w=40&h=40"
+                  alt="img">
+              </div>
+              <div>
+                <p>Sharon L.R. Kardia, PhD</p>
+                <p>Millicent W. Higgins Collegiate Professor of Epidemiology, Associate Dean dor Education</p>
+              </div>
+            </div>
+          </div>
+          <div class="learn-from-expert-grid-div-card">
+            <div>
+              <div>
+                <img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/1FEh4ZoSeNYJ44HxicpwgE/7e94d0f48196b2f1284c90168dd1104b/CenterILblock-ISQUAREOrangeBackgrnd__1_.png?auto=format%2Ccompress&dpr=1&fm=avif&fit=fill&w=48&h=48"
+                  alt="University of Illinois">
+              </div>
+              <div>University of Illinois</div>
+            </div>
+            <div>
+              <h3>Master of Business Administration (iMBA)</h3>
+            </div>
+            <div>
+              <div>
+                <img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/7giNWTdnyZmO4zVuqdbegq/6e1db5fabb1b90b2754f4632550d9976/gary-hecht-news.jpeg?auto=format%2Ccompress&dpr=1&fit=fill&w=40&h=40"
+                  alt="img">
+              </div>
+              <div>
+                <p>Gary Hecht</p>
+                <p>Associate Dean of Professional Education Pathways and Professor of Accountancy and Arthur Andersen
+                  Faculty Fellow</p>
+              </div>
+            </div>
+          </div>
+          <div class="learn-from-expert-grid-div-card">
+            <div>
+              <div>
+                <img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2TGd4ZOjIp0SJOb63J2QQj/7a96187ecd3de0afcc7b2759af1341b8/HEC_logo-96.jpg?auto=format%2Ccompress&dpr=1&fm=avif&fit=fill&w=48&h=48"
+                  alt="HEC Paris">
+              </div>
+              <div>HEC Paris</div>
+            </div>
+            <div>
+              <h3>MSc in Innovation and Entrepreneurship</h3>
+            </div>
+            <div>
+              <div>
+                <img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5BBaYlLdj5VmVBKMrJt9MK/04c2e42992b1b8e91811faa41734d64d/laurence-lehmann-ortega.jpg?auto=format%2Ccompress&dpr=1&fit=fill&w=40&h=40"
+                  alt="img">
+              </div>
+              <div>
+                <p>Laurence Lehmann-Ortega</p>
+                <p>Affiliate Professor of Management</p>
+              </div>
+            </div>
+          </div>
+          <div class="learn-from-expert-grid-div-card">
+            <div>
+              <div>
+                <img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2vpThGDM4ephvaJehcYKGs/a8f07a48746d89d7114e7a99b16dba76/uniandessquare.png?auto=format%2Ccompress&dpr=1&fm=avif&fit=fill&w=48&h=48"
+                  alt="university-of-colorado">
+              </div>
+              <div>Universidad de los Andes</div>
+            </div>
+            <div>
+              <h3>Maestría en Ingeniería de Software</h3>
+            </div>
+            <div>
+              <div>
+                <img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/31Yd7eG4V1y4aucU5bN7nc/7bcd94a3fcb342c9243d45926ae8b706/Rubby_Casallas_Uniandes.png?auto=format%2Ccompress&dpr=1&fit=fill&w=40&h=40"
+                  alt="img">
+              </div>
+              <div>
+                <p>Rubby Casallas, PhD</p>
+                <p>Profesora titular</p>
+              </div>
+            </div>
+          </div>
+          <div class="learn-from-expert-grid-div-card">
+            <div>
+              <div>
+                <img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/P0YwewIQ8RlXfWzxp7p66/fcf89fdfc47d60f0363a1c3c8c13ede1/University_of_London_coat_of_arms.png?auto=format%2Ccompress&dpr=1&fm=avif&fit=fill&w=48&h=48"
+                  alt="University of London">
+              </div>
+              <div>University of London</div>
+            </div>
+            <div>
+              <h3>Master of Science in Cyber Security</h3>
+            </div>
+            <div>
+              <div>
+                <img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/zCE4mK7JSv0bzfpcxmI3T/ca6e4bdebbeb53ffc8f1ec7d650c00d7/Chris_180315_v2__1_.jpg?auto=format%2Ccompress&dpr=1&fit=fill&w=40&h=40"
+                  alt="img">
+              </div>
+              <div>
+                <p>Chris Mitchell</p>
+                <p>Professor of Computer Science</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Learn from expert faculty end-->
+
+
+  <!-- gain helpful insight sec starts -->
+
+  <section class="container-fluid gain-helpful-insight-sec-vkp">
+    <div class="container">
+      <div class="gain-help-outer-div">
+        <div class="gain-help-inner-div1">
+          <div>
+            <h2>Gain helpful insight on degree-related topics</h2>
+          </div>
+          <div>
+            <a href="">Explore all articles</a>
+          </div>
+        </div>
+        <div class="gain-help-inner-div2">
+          <div class="gain-help-inner-div1-card">
+            <div class="inner-card">
+              <div>
+                <a href="">
+                  <h3>A guide to Online Bachelor&rsquo;s Degrees</h3>
+                </a>
+              </div>
+              <div>
+                <p>
+                  Online bachelor degrees have become increasingly popular,
+                  especially for students in need of greater flexibility. Learn
+                  more about this degree option, and the many benefits it has to
+                  offer.
+                </p>
+              </div>
+              <div>
+                <p>Last updated on November 29, 2023</p>
+                <p>Article</p>
+              </div>
+            </div>
+          </div>
+          <div class="gain-help-inner-div1-card">
+            <div class="inner-card">
+              <div>
+                <a href="">
+                  <h3>A Guide to Online Master's Degrees</h3>
+                </a>
+              </div>
+              <div>
+                <p>
+                  A growing number of students are opting to earn their master&rsquo;s degree online. Learn more about
+                  online master's degrees and their particular benefits.
+                </p>
+              </div>
+              <div>
+                <p>Last updated on November 29, 2023</p>
+                <p>Article</p>
+              </div>
+            </div>
+          </div>
+          <div class="gain-help-inner-div1-card">
+            <div class="inner-card">
+              <div>
+                <a href="">
+                  <h3>Should You Go Back to School? 7 Things to Consider</h3>
+                </a>
+              </div>
+              <div>
+                <p>
+                  Going back to school has the potential to boost your career possibilities and your income. Here are
+                  some questions to ask yourself as you figure out what's best for you.
+                </p>
+              </div>
+              <div>
+                <p>Last updated on December 1, 2023</p>
+                <p>Article</p>
+              </div>
+            </div>
+          </div>
+          <div class="gain-help-inner-div1-card">
+            <div class="inner-card">
+              <div>
+                <a href="">
+                  <h3>10 Surprising Benefits of Online Learning in 2024</h3>
+                </a>
+              </div>
+              <div>
+                <p>
+                  Interested in pursuing an online educational program? Find out about the specific benefits that come
+                  with pursuing an online education.
+                </p>
+              </div>
+              <div>
+                <p>Last updated on January 2, 2024</p>
+                <p>Article · 6 min read</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- gain helpful insight sec Ends -->
+
+  <!-- Frequently asked question section starts -->
+
+  <section class="container-fluid">
+    <div class="container freq-asked-container">
+      <div class="freq-asked-question-container">
+        <h2>Frequently asked questions</h2>
+        <div class="freq-asked-que-inner-acc-div">
+          <div class="core-accordion corsera-accordion-faq-div">
+            <div class="core-accordion-item">
+              <div class="core-accordion-title">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                  fill="#5f6368">
+                  <path d="m320-116-34-34 330-330-330-330 34-34 364 364-364 364Z" />
+                </svg>
+                Are the degrees hosted on Coursera from accredited
+                universities?
+              </div>
+              <div class="core-accordion-content">
+                Yes, all online degree programs available on Coursera are
+                directly conferred by accredited institutions. Accreditation
+                is important because it shows that an institution meets
+                rigorous academic standards, eases your ability to transfer
+                credits, and helps employers validate the quality of education
+                on your resume or application.
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="core-accordion corsera-accordion-faq-div">
+            <div class="core-accordion-item">
+              <div class="core-accordion-title">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                  fill="#5f6368">
+                  <path d="m320-116-34-34 330-330-330-330 34-34 364 364-364 364Z" />
+                </svg>
+                Can I transfer previously earned college credits?
+              </div>
+              <div class="core-accordion-content">
+                That depends on the degree you&rsquo; re interested in
+                earning. Many of the bachelor&rsquo; s degrees on Coursera
+                from US-based institutions, such as Georgetown
+                University&rsquo; s Bachelor of Arts in Liberal Studies, allow
+                students to transfer some previously earned college credits.
+                Some, like the University of North Texas&rsquo; Bachelor of
+                Applied Arts and Sciences and Bachelor of Science in General
+                Business, are degree completion programs and require transfer
+                credits in order to enroll. Each university determines the
+                number of pre-approved transfer credits that may count towards
+                the degree requirements according to institutional policies.
+                Check with each degree program for more information. You can
+                also build credit toward an online degree program by first
+                enrolling in university pre-approved courses, specializations,
+                and certificates on Coursera. If you decide to apply and are
+                admitted, the courses you&rsquo; ve completed may count toward
+                your degree requirements.
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="core-accordion corsera-accordion-faq-div">
+            <div class="core-accordion-item">
+              <div class="core-accordion-title">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                  fill="#5f6368">
+                  <path d="m320-116-34-34 330-330-330-330 34-34 364 364-364 364Z" />
+                </svg>
+                Can I take online degree courses from anywhere in the world?
+              </div>
+              <div class="core-accordion-content">
+                Yes, all you need is a reliable internet connection. No matter
+                where you are in the world, you can enroll in the degree
+                programs that Coursera&rsquo;s university partners offer,
+                though there may be specific application requirements based on
+                your status as a domestic or international student.
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="core-accordion corsera-accordion-faq-div">
+            <div class="core-accordion-item">
+              <div class="core-accordion-title">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                  fill="#5f6368">
+                  <path d="m320-116-34-34 330-330-330-330 34-34 364 364-364 364Z" />
+                </svg>
+                How long degrees take to finish?
+              </div>
+              <div class="core-accordion-content">
+                Many degree programs with Coursera&rsquo;s university partners
+                are designed to be pursued part-time or full-time, depending
+                on your availability. Undergraduate degrees take between two
+                and six years, depending on the amount of college credit
+                you&rsquo;re able to transfer (if applicable) and the length
+                of each degree program. For instance, BITS Pilani recommends
+                dedicating 25 hours per week to your courses, while the
+                University of London recommends 28 hours per week. Graduate
+                degrees can take between one and three years. Yes, all online
+                degree programs available on Coursera are directly conferred
+                by accredited institutions. Accreditation is important because
+                it shows that an institution meets rigorous academic
+                standards, eases your ability to transfer credits, and helps
+                employers validate the quality of education on your resume or
+                application.
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="core-accordion corsera-accordion-faq-div">
+            <div class="core-accordion-item">
+              <div class="core-accordion-title">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                  fill="#5f6368">
+                  <path d="m320-116-34-34 330-330-330-330 34-34 364 364-364 364Z" />
+                </svg>
+                What are the application deadlines?
+              </div>
+              <div class="core-accordion-content">
+                College application deadlines, for both bachelor&rsquo;s
+                degrees and master&rsquo;s degrees, tend to occur just once a
+                year. However, on Coursera, you&rsquo;ll find greater
+                flexibility from universities. Deadlines tend to occur around
+                three times a year—once in the fall, once in the spring, and
+                once in the summer—depending on the institution. Some degree
+                programs, like the University of Colorado Boulder's Master of
+                Science in Data Science, don't require an application for
+                admission. Instead, you can qualify for performance-based
+                admission by passing three online courses pre-approved by the
+                university with an 80% grade or higher.
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="core-accordion corsera-accordion-faq-div">
+            <div class="core-accordion-item">
+              <div class="core-accordion-title">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                  fill="#5f6368">
+                  <path d="m320-116-34-34 330-330-330-330 34-34 364 364-364 364Z" />
+                </svg>
+                What is the online degree exprience like on Coursera?
+              </div>
+              <div class="core-accordion-content">
+                Earning your degree from a leading university on Coursera
+                means experiencing greater flexibility than in-person degree
+                programs, so you can earn the best degree for your needs
+                without having to relocate or choose between your other
+                responsibilities. You can take your online courses from
+                anywhere in the world, at a pace that works for you. Once
+                enrolled in your program, you may find a range of learning
+                options, including live video lectures that encourage you to
+                collaborate and self-paced courses that give you greater
+                independence. Moreover, throughout your learning journey,
+                you'll have access to a dedicated support team, course
+                facilitators, and a network of peers to help you achieve your
+                academic goals. Learn more about the benefits of learning
+                online.
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="core-accordion corsera-accordion-faq-div">
+            <div class="core-accordion-item">
+              <div class="core-accordion-title">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                  fill="#5f6368">
+                  <path d="m320-116-34-34 330-330-330-330 34-34 364 364-364 364Z" />
+                </svg>
+                Does Coursera offer scholarships or tuition assistance? Where
+                can I find information about them?
+              </div>
+              <div class="core-accordion-content">
+                You cannot apply for a scholarship or tuition assistance
+                directly from Coursera. However, many university partners
+                offer an opportunity to apply for financial support directly.
+                Check with each degree program for more information. You can
+                find information on external scholarships and other resources
+                to help fund your degree on Coursera&rsquo;s Financial
+                Resources Hub.
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="core-accordion corsera-accordion-faq-div">
+            <div class="core-accordion-item">
+              <div class="core-accordion-title">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                  fill="#5f6368">
+                  <path d="m320-116-34-34 330-330-330-330 34-34 364 364-364 364Z" />
+                </svg>
+                Is online degree worth it?
+              </div>
+              <div class="core-accordion-content">
+                Education is a valuable tool you can use to achieve some
+                goals: pivot to a new field, progress in your career, or learn
+                about a subject in more depth. Online degree programs on
+                Coursera come from accredited university partners and
+                typically offer the same curriculum as their in-person degree
+                programs. Deciding whether an online degree is worth it is
+                ultimately up to you. Consider your overall goals, whether the
+                subject matter in a degree program aligns with your needs, the
+                types of skills you&rsquo;d like to develop, and how you learn
+                best. These are just some of the factors worth reflecting on
+                as you set about reviewing different degree programs on
+                Coursera. Learn more about whether a bachelor&rsquo;s degree
+                is worth it and whether a master&rsquo;s degree is worth it.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="more-question-container">
+        <div class="more-question-container-inner-div">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#5f6368">
+              <path
+                d="M483.07-272.87q11.47 0 19.53-8.37 8.07-8.36 8.07-19.83 0-10.96-8.11-19.28t-19.58-8.32q-11.47 0-19.79 8.37-8.32 8.36-8.32 19.32 0 11.47 8.37 19.79 8.36 8.32 19.83 8.32Zm-20.51-130.21h34.26q1.03-23.97 9.14-41.18 8.12-17.2 33.73-40.71 28.05-26.77 40.57-48.45 12.51-21.68 12.51-48.57 0-46.32-31.2-74.96-31.21-28.64-76.75-28.64-40.9 0-71.58 21.85-30.68 21.84-45.65 52.46L400.31-598q11.05-24.41 30.4-39.56 19.34-15.16 51.6-15.16 39.23 0 58.69 21.5t19.46 49.89q0 21.07-11.38 38.24-11.39 17.17-31.49 35.14-30.56 28.03-42.8 52.21-12.23 24.18-12.23 52.66ZM480.13-120q-74.51 0-140-28.34-65.48-28.34-114.44-77.25-48.96-48.92-77.32-114.34Q120-405.35 120-479.87q0-74.67 28.34-140.41 28.34-65.73 77.25-114.36 48.92-48.63 114.34-76.99Q405.35-840 479.87-840q74.67 0 140.41 28.34 65.73 28.34 114.36 76.92 48.63 48.58 76.99 114.26Q840-554.81 840-480.13q0 74.51-28.34 140-28.34 65.48-76.92 114.44-48.58 48.96-114.26 77.32Q554.81-120 480.13-120Zm-.13-33.85q136.26 0 231.21-95.02Q806.15-343.9 806.15-480q0-136.26-94.94-231.21-94.95-94.94-231.21-94.94-136.1 0-231.13 94.94-95.02 94.95-95.02 231.21 0 136.1 95.02 231.13Q343.9-153.85 480-153.85ZM480-480Z" />
+            </svg>
+          </div>
+          <div>More Questions</div>
+          <div>
+            <a
+              href="https://www.coursera.support/s/?language=en_US&ErrorCode=No_Oauth_State&ErrorDescription=State%20was%20not%20valid&ProviderId=0SO1U000000kEFY"><span>Visit
+                the learner help center</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Frequently asked question section starts -->
+  <!-- footer-section starts -->
+
+  <div class="Vkp-footer container-fluid">
+    <footer class="container">
+      <div class="Vp-footer">
+        <div class="footer-Inner-div">
+          <div class="footer-column">
+            <p>Coursera</p>
+            <ul>
+              <li><a href="https://about.coursera.org/">About</a></li>
+              <li>
+                <a href="https://about.coursera.org/how-coursera-works/">What We Offer</a>
+              </li>
+              <li>
+                <a href="https://about.coursera.org/leadership">Leadership</a>
+              </li>
+              <li><a href="https://careers.coursera.com/">Careers</a></li>
+              <li><a href="https://www.coursera.org/browse">Catalog</a></li>
+              <li>
+                <a href="https://www.coursera.org/professional-certificates">Coursera Plus</a>
+              </li>
+              <li>
+                <a href="https://www.coursera.org/professional-certificates">Professional Certificates</a>
+              </li>
+              <li>
+                <a href="https://www.coursera.org/mastertrack">MasterTrack® Certificates</a>
+              </li>
+              <li><a href="https://www.coursera.org/degrees">Degrees</a></li>
+              <li>
+                <a
+                  href="https://www.coursera.org/business?utm_campaign=website&utm_content=corp-to-home-footer-for-enterprise&utm_medium=coursera&utm_source=enterprise">For
+                  Enterprise</a>
+              </li>
+              <li>
+                <a
+                  href="https://www.coursera.org/government?utm_campaign=website&utm_content=corp-to-home-footer-for-government&utm_medium=coursera&utm_source=enterprise">For
+                  Government</a>
+              </li>
+              <li>
+                <a
+                  href="https://www.coursera.org/campus?utm_campaign=website&utm_content=corp-to-home-footer-for-campus&utm_medium=coursera&utm_source=enterprise">For
+                  Campus</a>
+              </li>
+              <li>
+                <a
+                  href="https://www.coursera.org/partnerships?utm_medium=coursera&utm_source=partnerships&utm_campaign=website&utm_content=corp-to-home-footer-become-a-partner">Become
+                  a Partner</a>
+              </li>
+              <li>
+                <a href="https://www.coursera.org/social-impact">Social Impact</a>
+              </li>
+              <li>
+                <a href="https://www.coursera.org/courses?query=free">Free Courses</a>
+              </li>
+              <li>
+                <a href="https://www.coursera.org/resources">Career Resource Hub</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <p>Community</p>
+            <ul>
+              <li>
+                <a href="https://www.coursera.support/s/community?language=en_US">Learners</a>
+              </li>
+              <li>
+                <a href="https://www.coursera.org/about/partners">Partners</a>
+              </li>
+              <li>
+                <a
+                  href="https://www.coursera.support/s/article/360000152926-Become-a-Coursera-beta-tester?language=en_US">Beta
+                  Testers</a>
+              </li>
+              <li>
+                <a href="https://blog.coursera.org/" target="_blank">Blog</a>
+              </li>
+              <li>
+                <a href="https://open.spotify.com/show/58M36bneU7REOofdPZxe6A">The Coursera Podcast</a>
+              </li>
+              <li>
+                <a href="https://medium.com/coursera-engineering" target="_blank">Tech Blog</a>
+              </li>
+              <li>
+                <a href="https://www.coursera.org/teaching-center/" target="_blank">Teaching Center</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <p>More</p>
+            <ul>
+              <li><a href="https://about.coursera.org/press">Press</a></li>
+              <li>
+                <a href="https://investor.coursera.com/overview/default.aspx">Investors</a>
+              </li>
+              <li>
+                <a href="https://www.coursera.org/about/terms">Terms</a>
+              </li>
+              <li>
+                <a href="https://www.coursera.org/about/privacy">Privacy</a>
+              </li>
+              <li>
+                <a href="https://www.coursera.support/s/learner-help-center?language=en_US">Help</a>
+              </li>
+              <li>
+                <a
+                  href="https://www.coursera.support/s/article/360050668591-Accessibility-Statement?language=en_US">Accessibility</a>
+              </li>
+              <li>
+                <a href="https://about.coursera.org/contact/">Contact</a>
+              </li>
+              <li>
+                <a href="https://www.coursera.org/articles">Articles</a>
+              </li>
+              <li>
+                <a href="https://www.coursera.org/directory">Directory</a>
+              </li>
+              <li>
+                <a href="https://about.coursera.org/affiliates">Affiliates</a>
+              </li>
+              <li>
+                <a href="https://coursera_assets.s3.amazonaws.com/footer/Modern+Slavery+Statement+26+April+2023.pdf"
+                  target="_blank">Modern Slavery Statement</a>
+              </li>
+              <li>
+                <a href="https://www.coursera.org/about/cookies-manage">Manage Cookie Preferences</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column" id="footer-store">
+            <p>Mobile App</p>
+            <div>
+              <a href="https://apps.apple.com/us/app/coursera-grow-your-career/id736535961"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/download_on_the_app_store_badge_en.svg?auto=format%2Ccompress&dpr=2&w=152&h=45&q=40"
+                  alt="" /></a>
+            </div>
+            <div>
+              <a href="https://play.google.com/store/apps/details?id=org.coursera.android"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/en_generic_rgb_wo_45.png?auto=format%2Ccompress&dpr=2&w=152&h=45&q=40"
+                  alt="" /></a>
+            </div>
+            <div>
+              <a href="#"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/2018-B-Corp-Logo-Black-S.png?auto=format%2Ccompress&dpr=2&w=151&h=120&q=40"
+                  alt="" /></a>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="d-flex footer-end">
+          <div style="font-size: 14px; color: #575757; padding: 16px 0">
+            © 2024 Coursera Inc. All rights reserved.
+          </div>
+          <div>
+            <div>
+              <a href="https://www.facebook.com/Coursera"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/facebook.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40"
+                  alt="" /></a>
+            </div>
+            <div>
+              <a href="https://www.linkedin.com/company/coursera/"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/linkedin.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40"
+                  alt="" /></a>
+            </div>
+            <div>
+              <a href="https://x.com/coursera"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/twitter.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40"
+                  alt="" /></a>
+            </div>
+            <div>
+              <a href="https://www.youtube.com/user/coursera"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/youtube.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40"
+                  alt="" /></a>
+            </div>
+            <div>
+              <a href="https://www.instagram.com/coursera/"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/instagram.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40"
+                  alt="" /></a>
+            </div>
+            <div>
+              <a href="https://www.tiktok.com/notfound"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/images/9b7e964107839c77644d7e7d15035b73.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40"
+                  alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- footer-section ends -->
+</body>
+<script src="https://kit.fontawesome.com/a89a1bd747.js" crossorigin="anonymous"></script>
+<script src="./online-degreepage.js"></script>
+<!-- <script>
+  window.onload = function () {
+    // First AJAX request
+    var xhr1 = new XMLHttpRequest();
+    xhr1.open('GET', 'main_page.html', true);
+    xhr1.onreadystatechange = function () {
+      if (xhr1.readyState == 4 && xhr1.status == 200) {
+        var content1 = xhr1.responseText;
+        document.getElementById('mainContent').innerHTML = content1;
+      }
+    };
+    xhr1.send();
+
+  }; -->
+<!-- </script> -->
+<script>
+  const logOutBtn = document.querySelector('#logOutBtn');
+  const isLoggedIn = localStorage.getItem('email');
+
+  if (!isLoggedIn) {
+    window.location.href = 'index.html';
+  }
+
+  if (logOutBtn) {
+    logOutBtn.addEventListener('click', function (event) {
+      event.preventDefault(); // Prevent default action of link
+      localStorage.removeItem('email');  // Clear username from local storage
+      window.location.href = 'index.html';  // Redirect to index.html
+    });
+  }
+</script>
+<script src="updateNavProfilePic.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const userEmail = localStorage.getItem("email");
+    if (userEmail) {
+      fetchAndSetProfileImage(userEmail);
+    }
+  });
+</script>
+
+</html>

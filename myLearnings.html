@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Page</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    .video-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .video-card {
+      flex: 0 0 calc(50% - 20px);
+      /* Two videos per row */
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .video-card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .video-card .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      /* Initially hidden */
+      transition: opacity 0.3s ease;
+    }
+
+    .video-card:hover .video-overlay {
+      opacity: 1;
+      /* Show overlay on hover */
+    }
+
+    .video-card video {
+      width: 100%;
+      height: auto;
+      display: block;
+      position: relative;
+      z-index: 1;
+      /* Ensure video is on top */
+    }
+
+    .video-card .card-body {
+      padding: 10px;
+      background-color: #f8f9fa;
+      position: relative;
+      z-index: 2;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container mt-5">
+    <h1>Main Page</h1>
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <div class="video-container" id="videoContainer">
+          <!-- Videos will be dynamically added here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Custom JS -->
+  <script>
+    function addVideo(videoUrl, type, videoId) {
+      const videoCard = document.createElement('div');
+      videoCard.classList.add('video-card', 'card');
+      videoCard.innerHTML = `
+        <div class="video-overlay">
+          <button class="btn btn-primary btn-sm" onclick="togglePlay('${videoId}')">Play/Pause</button>
+        </div>
+        <video id="${videoId}" class="card-img-top" muted loop>
+          <source src="${videoUrl}" type="${type}">
+          Your browser does not support the video tag.
+        </video>
+        <div class="card-body">
+          <h5 class="card-title">Video Title</h5>
+          <p class="card-text">Video description or other info</p>
+        </div>
+      `;
+      document.getElementById('videoContainer').appendChild(videoCard);
+      const videoElement = document.getElementById(videoId);
+      videoElement.pause(); // Pause video initially
+      videoElement.addEventListener('mouseover', function () {
+        videoElement.play();
+      });
+      videoElement.addEventListener('mouseout', function () {
+        videoElement.pause();
+      });
+    }
+
+    function loadVideosFromLocalStorage() {
+      const videos = JSON.parse(localStorage.getItem('videos')) || [];
+      videos.forEach(video => {
+        addVideo(video.videoUrl, video.type, video.videoId);
+      });
+    }
+
+    function togglePlay(videoId) {
+      const video = document.getElementById(videoId);
+      if (video.paused) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    }
+
+    // Load videos from local storage on page load
+    window.addEventListener('load', loadVideosFromLocalStorage);
+  </script>
+</body>
+
+</html>

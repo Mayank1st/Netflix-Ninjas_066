@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.custom-navbar-container {
+    max-width: 1300px;
+    margin: auto;
+}
+
+header {
+    /* border: solid black; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.navbar {
+    background-color: transparent !important;
+}
+
+.navbar-searchbox {
+    width: 390px;
+    border-radius: 100px;
+    border: solid rgb(209, 205, 205) 1px;
+    padding-right: 40px;
+}
+
+.navbar-search-btn {
+    background-color: #0056d2;
+    color: #ffffff;
+    font-weight: 500;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.navbar-select {
+    border: transparent !important;
+}
+
+.navbar-select>option {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.navbar-select:hover {
+    background-color: rgb(207, 199, 199) !important;
+    cursor: pointer;
+    border: none !important;
+}
+
+.navbar-right-side>li:nth-of-type(1)>a:hover {
+    color: #0056d2;
+}
+
+.navbar-right-side>li:nth-of-type(2)>a:hover {
+    color: #0056d2;
+}
+
+.nav-item:nth-of-type(3) {
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item:nth-of-type(3):hover {
+    background-color: rgb(207, 199, 199) !important;
+    border-radius: 5px !important;
+    cursor: pointer;
+}
+
+.nav-item:nth-of-type(4):hover {
+    background-color: rgb(207, 199, 199) !important;
+    border-radius: 5px !important;
+    cursor: pointer;
+}
+
+.navbar-collapse>ul {}
+
+.nav-item:nth-of-type(5) {
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item:nth-of-type(5):hover {
+    background-color: rgb(207, 199, 199) !important;
+    border-radius: 5px !important;
+    cursor: pointer;
+}
+
+.Profile_pic_li>select {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.nav-profile_pic {
+    border-radius: 50% !important;
+    height: 40px;
+    width: 40px;
+    background-color: #0056d2;
+}
+
+.navbar-right-side .nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right-side .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-right-side .nav-item .form-select {
+    width: auto;
+}
+
+.form-container {
+    position: relative;
+}
+
+.form-control::placeholder {
+    color: #999;
+}
