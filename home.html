@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./main.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./online-degreepage.html">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a89a1bd747.js" crossorigin="anonymous"></script>
+  <style src="./navProfilePic.css"></style>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .custom-navbar-container {
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    header {
+      /* border: solid black; */
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+
+    .navbar {
+      background-color: transparent !important;
+    }
+
+    .navbar-searchbox {
+      width: 390px;
+      border-radius: 100px;
+      border: solid rgb(209, 205, 205) 1px;
+      padding-right: 40px;
+    }
+
+    .navbar-search-btn {
+      background-color: #0056d2;
+      color: #ffffff;
+      font-weight: 500;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .navbar-select {
+      border: transparent !important;
+    }
+
+    .navbar-select>option {
+      background-color: transparent !important;
+      border: none !important;
+    }
+
+    .navbar-select:hover {
+      background-color: rgb(207, 199, 199) !important;
+      cursor: pointer;
+      border: none !important;
+    }
+
+    .navbar-right-side>li:nth-of-type(1)>a:hover {
+      color: #0056d2;
+    }
+
+    .navbar-right-side>li:nth-of-type(2)>a:hover {
+      color: #0056d2;
+    }
+
+    .nav-item:nth-of-type(3) {
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-item:nth-of-type(3):hover {
+      background-color: rgb(207, 199, 199) !important;
+      border-radius: 5px !important;
+      cursor: pointer;
+    }
+
+    .nav-item:nth-of-type(4):hover {
+      background-color: rgb(207, 199, 199) !important;
+      border-radius: 5px !important;
+      cursor: pointer;
+    }
+
+    .navbar-collapse>ul {}
+
+    .nav-item:nth-of-type(5) {
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-item:nth-of-type(5):hover {
+      background-color: rgb(207, 199, 199) !important;
+      border-radius: 5px !important;
+      cursor: pointer;
+    }
+
+    .Profile_pic_li>select {
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+
+    .nav-profile_pic {
+      border-radius: 50% !important;
+      height: 40px;
+      width: 40px;
+      background-color: #0056d2;
+    }
+
+    .navbar-right-side .nav-item {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-right-side .nav-link {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+    }
+
+    .navbar-right-side .nav-item .form-select {
+      width: auto;
+    }
+
+    .form-container {
+      position: relative;
+    }
+
+    .form-control::placeholder {
+      color: #999;
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+  <header id="navbar" class="container-fluid">
+    <div class="container custom-navbar-container container-sm container-md container-lg container-xl container-xxl">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+
+          <a class="navbar-brand" href="">
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/logo.png" alt="Bootstrap" width="100"
+              height="45">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Explore
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <div class="form-container d-flex my-2 my-lg-0 w-100">
+                  <input class="form-control navbar-searchbox" type="search" placeholder="What do you want to learn?"
+                    aria-label="Search" id="searchInput">
+                  <button class="btn navbar-search-btn my-2 my-sm-0" type="submit" id="searchButton">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </div>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2 navbar-right-side">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Degrees</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Find Careers</a>
+              </li>
+              <li class="nav-item">
+                <i class="fa-solid fa-globe fa-lg me-2"></i>
+                <select class="form-select navbar-select" aria-label="Default select example">
+                  <option selected>English</option>
+                  <option value="zh">Chinese</option>
+                  <option value="hi">Hindi</option>
+                  <option value="es">Spanish</option>
+                  <option value="fr">French</option>
+                  <option value="ar">Arabic</option>
+                  <option value="bn">Bengali</option>
+                  <option value="pt">Portuguese</option>
+                  <option value="ru">Russian</option>
+                  <option value="ja">Japanese</option>
+                  <option value="pa">Punjabi</option>
+                  <option value="de">German</option>
+                  <option value="jv">Javanese</option>
+                  <option value="te">Telugu</option>
+                  <option value="vi">Vietnamese</option>
+                  <option value="ko">Korean</option>
+                  <option value="ta">Tamil</option>
+                  <option value="it">Italian</option>
+                  <option value="tr">Turkish</option>
+                  <option value="pl">Polish</option>
+                  <option value="uk">Ukrainian</option>
+                  <option value="gu">Gujarati</option>
+                  <option value="fa">Persian</option>
+                  <option value="mr">Marathi</option>
+                  <option value="tl">Tagalog</option>
+                  <option value="nl">Dutch</option>
+                  <option value="ko">Korean</option>
+                  <option value="th">Thai</option>
+                  <option value="my">Burmese</option>
+                  <option value="sw">Swahili</option>
+                  <option value="he">Hebrew</option>
+                  <option value="am">Amharic</option>
+                  <option value="el">Greek</option>
+                  <option value="cz">Czech</option>
+                  <option value="da">Danish</option>
+                  <option value="is">Icelandic</option>
+                  <option value="ky">Kyrgyz</option>
+                  <option value="ku">Kurdish</option>
+                  <option value="ms">Malay</option>
+                  <option value="mn">Mongolian</option>
+                  <option value="no">Norwegian</option>
+                  <option value="ps">Pashto</option>
+                  <option value="rm">Romansh</option>
+                  <option value="sr">Serbian</option>
+                  <option value="si">Sinhala</option>
+                  <option value="sk">Slovak</option>
+                  <option value="so">Somali</option>
+                  <option value="sd">Sindhi</option>
+                  <option value="su">Sundanese</option>
+                  <option value="sv">Swedish</option>
+                  <option value="tg">Tajik</option>
+                  <option value="uz">Uzbek</option>
+                  <option value="xh">Xhosa</option>
+                  <option value="yo">Yoruba</option>
+                  <option value="zu">Zulu</option>
+                </select>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fa-regular fa-bell fa-lg"></i>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="https://via.placeholder.com/40" class="nav-profile_pic me-2" alt="Profile Picture">
+                  <span>Profile</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="./coursera_plus_profile_page.html">Profile</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Settings</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#" id="logOutBtn">Log Out</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- Container for the fetched content -->
+  <div id="mainContent"></div>
+  <!-- soumya-navbar starts  -->
+  <nav class="navbar navbar-card container">
+    <ul class="nav-items-landing">
+      <li class="nav-item-landing" onclick="moveIndicators(0)"><a style="text-decoration: none;"
+          href="./home.html">Home</a></li>
+      <li class="nav-item-landing" onclick="moveIndicators(1)"><a style="text-decoration: none;"
+          href="./myLearnings.html">My Learning</a></li>
+      <li class="nav-item-landing" onclick="moveIndicators(2)"><a style="text-decoration: none;"
+          href="./online-degree.html">Online Degree</a></li>
+      <li class="nav-item-landing" onclick="moveIndicators(3)"><a style="text-decoration: none;"
+          href="https://www.coursera.org/career-academy/?trk_ref=globalnav">Find your new Carrer</a></li>
+    </ul>
+    <div class="indicatorsbackground"></div>
+    <div class="indicators"></div>
+  </nav>
+
+
+  <!-- soumya-navbar ends  -->
+
+
+
+  <!-- manjot user main page home tab section starts  -->
+  <!-- <div class="MK container">
+      <div class="MKheading">
+        <h1>Earn credit towards one of these degrees</h1>
+        <p>
+          <b
+            >Your enrollment in Meta Front-End Developer is eligible for college
+            credit towards any of these degrees. If you complete the certificate
+            and are admitted into the program, you can transfer your credit.¹</b
+          >
+        </p>
+        <p>
+          ¹Each university determines admission and the number of pre-approved
+          prior learning credits that may count toward the degree requirements
+          according to institutional policies.
+        </p>
+      </div> -->
+  <div class="MK container">
+    <div class="MKheader">
+      <div class="cards">
+        <a href="https://www.coursera.org/degrees/master-of-science-information-technology-iiithyderabad"
+          style="text-decoration: none">
+          <div class="card">
+            <div class="image1"></div>
+            <div class="uni">
+              <img
+                src="https://coursera-university-assets.s3.amazonaws.com/3d/1c8fdf7ef5404aa83ab0c00fa12cf5/LOGO_1.png"
+                alt="">
+              <p>Illinios Tech</p>
+            </div>
+            <p><b>Master of Science in Information Technology</b></p>
+            <p>Degree</p>
+          </div>
+        </a>
+
+        <a href="https://www.coursera.org/degrees/bach-information-technology-illinois-tech"
+          style="text-decoration: none">
+          <div class="card">
+            <div class="image1"
+              style="background-image: url('https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/bcs-uol/thumbnail.jpg?auto=format%2Ccompress%2C%20enhance&dpr=2&w=265&h=204&q=50&fit=crop')">
+            </div>
+            <div class="uni">
+              <img
+                src="https://coursera-university-assets.s3.amazonaws.com/f5/9e2889e6dd42c1b1c116ed9cdbe047/360x360.png"
+                alt="">
+              <p>International Institute of Information</p>
+            </div>
+            <p><b>Master of Science in Information Technology</b></p>
+            <p>Degree</p>
+          </div>
+        </a>
+
+      </div>
+      <a href="https://www.coursera.org/degrees/browse" style="display: flex; align-items: center">
+        Explore more Degrees
+      </a>
+
+      <div class="K1Container">
+        <h4>Recently Viewed Products</h4>
+        <div class="K3Cards"></div>
+        <div class="K1Buttons">
+          <button class="showMore3">Show 8 more</button>
+        </div>
+      </div>
+
+      <div class="K1Container">
+        <h4>Most Popular Certificates</h4>
+        <div class="K2Cards"></div>
+        <div class="K1Buttons">
+          <button class="showMore2">Show 8 more</button>
+        </div>
+      </div>
+
+      <div class="K1Container">
+        <h4>Earn Your Degree</h4>
+        <div class="K1Cards"></div>
+        <div class="K1Buttons">
+          <button class="showMore">Show 8 more</button>
+        </div>
+      </div>
+
+      <!-- category section starts  -->
+      <section class="category-outer container-fluid">
+        <div class="category-inner container">
+          <h2>Categories</h2>
+          <div class="category-grid">
+
+            <div><a href="">Arts and Humanities</a></div>
+            <div><a href="">Business</a></div>
+            <div><a href="">Computer Science</a></div>
+            <div><a href="">Data Science</a></div>
+            <div><a href="">Information Technology</a></div>
+            <div><a href="">Health</a></div>
+            <div><a href="">Math and Logic</a></div>
+            <div><a href="">Personal Development</a></div>
+            <div><a href="">Physical Science and Engineering</a></div>
+            <div><a href="">Social Sciences</a></div>
+            <div><a href="">Language Learning</a></div>
+          </div>
+        </div>
+      </section>
+      <!-- category section ends  -->
+      <div class="K1Container">
+        <h4>Grow Your Skill Set</h4>
+        <div class="K4Cards"></div>
+
+        <div class="K1Buttons">
+          <button class="showMore4">Show 8 more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- manjot user main page home tab section ends  -->
+
+
+  <!-- footer-section starts -->
+
+  <div class="Vkp-footer container-fluid">
+    <footer class="container">
+      <div class="Vp-footer">
+        <div class="footer-Inner-div">
+          <div class="footer-column">
+            <p>Coursera</p>
+            <ul>
+              <li><a href="https://about.coursera.org/">About</a></li>
+              <li>
+                <a href="https://about.coursera.org/how-coursera-works/">What We Offer</a>
+              </li>
+              <li>
+                <a href="https://about.coursera.org/leadership">Leadership</a>
+              </li>
+              <li><a href="https://careers.coursera.com/">Careers</a></li>
+              <li><a href="https://www.coursera.org/browse">Catalog</a></li>
+              <li>
+                <a href="https://www.coursera.org/professional-certificates">Coursera Plus</a>
+              </li>
+              <li>
+                <a href="https://www.coursera.org/professional-certificates">Professional Certificates</a>
+              </li>
+              <li>
+                <a href="https://www.coursera.org/mastertrack">MasterTrack® Certificates</a>
+              </li>
+              <li><a href="https://www.coursera.org/degrees">Degrees</a></li>
+              <li>
+                <a
+                  href="https://www.coursera.org/business?utm_campaign=website&utm_content=corp-to-home-footer-for-enterprise&utm_medium=coursera&utm_source=enterprise">For
+                  Enterprise</a>
+              </li>
+              <li>
+                <a
+                  href="https://www.coursera.org/government?utm_campaign=website&utm_content=corp-to-home-footer-for-government&utm_medium=coursera&utm_source=enterprise">For
+                  Government</a>
+              </li>
+              <li>
+                <a
+                  href="https://www.coursera.org/campus?utm_campaign=website&utm_content=corp-to-home-footer-for-campus&utm_medium=coursera&utm_source=enterprise">For
+                  Campus</a>
+              </li>
+              <li>
+                <a
+                  href="https://www.coursera.org/partnerships?utm_medium=coursera&utm_source=partnerships&utm_campaign=website&utm_content=corp-to-home-footer-become-a-partner">Become
+                  a Partner</a>
+              </li>
+              <li>
+                <a href="https://www.coursera.org/social-impact">Social Impact</a>
+              </li>
+              <li>
+                <a href="https://www.coursera.org/courses?query=free">Free Courses</a>
+              </li>
+              <li>
+                <a href="https://www.coursera.org/resources">Career Resource Hub</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <p>Community</p>
+            <ul>
+              <li>
+                <a href="https://www.coursera.support/s/community?language=en_US">Learners</a>
+              </li>
+              <li>
+                <a href="https://www.coursera.org/about/partners">Partners</a>
+              </li>
+              <li>
+                <a
+                  href="https://www.coursera.support/s/article/360000152926-Become-a-Coursera-beta-tester?language=en_US">Beta
+                  Testers</a>
+              </li>
+              <li>
+                <a href="https://blog.coursera.org/" target="_blank">Blog</a>
+              </li>
+              <li>
+                <a href="https://open.spotify.com/show/58M36bneU7REOofdPZxe6A">The Coursera Podcast</a>
+              </li>
+              <li>
+                <a href="https://medium.com/coursera-engineering" target="_blank">Tech Blog</a>
+              </li>
+              <li>
+                <a href="https://www.coursera.org/teaching-center/" target="_blank">Teaching Center</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <p>More</p>
+            <ul>
+              <li><a href="https://about.coursera.org/press">Press</a></li>
+              <li>
+                <a href="https://investor.coursera.com/overview/default.aspx">Investors</a>
+              </li>
+              <li>
+                <a href="https://www.coursera.org/about/terms">Terms</a>
+              </li>
+              <li>
+                <a href="https://www.coursera.org/about/privacy">Privacy</a>
+              </li>
+              <li>
+                <a href="https://www.coursera.support/s/learner-help-center?language=en_US">Help</a>
+              </li>
+              <li>
+                <a
+                  href="https://www.coursera.support/s/article/360050668591-Accessibility-Statement?language=en_US">Accessibility</a>
+              </li>
+              <li>
+                <a href="https://about.coursera.org/contact/">Contact</a>
+              </li>
+              <li>
+                <a href="https://www.coursera.org/articles">Articles</a>
+              </li>
+              <li>
+                <a href="https://www.coursera.org/directory">Directory</a>
+              </li>
+              <li>
+                <a href="https://about.coursera.org/affiliates">Affiliates</a>
+              </li>
+              <li>
+                <a href="https://coursera_assets.s3.amazonaws.com/footer/Modern+Slavery+Statement+26+April+2023.pdf"
+                  target="_blank">Modern Slavery Statement</a>
+              </li>
+              <li>
+                <a href="./admin-login.html">Admin</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column" id="footer-store">
+            <p>Mobile App</p>
+            <div>
+              <a href="https://apps.apple.com/us/app/coursera-grow-your-career/id736535961"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/download_on_the_app_store_badge_en.svg?auto=format%2Ccompress&dpr=2&w=152&h=45&q=40"
+                  alt="" /></a>
+            </div>
+            <div>
+              <a href="https://play.google.com/store/apps/details?id=org.coursera.android"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/en_generic_rgb_wo_45.png?auto=format%2Ccompress&dpr=2&w=152&h=45&q=40"
+                  alt="" /></a>
+            </div>
+            <div>
+              <a href="#"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/2018-B-Corp-Logo-Black-S.png?auto=format%2Ccompress&dpr=2&w=151&h=120&q=40"
+                  alt="" /></a>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="d-flex footer-end">
+          <div style="font-size: 14px; color: #575757; padding: 16px 0">
+            © 2024 Coursera Inc. All rights reserved.
+          </div>
+          <div>
+            <div>
+              <a href="https://www.facebook.com/Coursera"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/facebook.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40"
+                  alt="" /></a>
+            </div>
+            <div>
+              <a href="https://www.linkedin.com/company/coursera/"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/linkedin.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40"
+                  alt="" /></a>
+            </div>
+            <div>
+              <a href="https://x.com/coursera"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/twitter.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40"
+                  alt="" /></a>
+            </div>
+            <div>
+              <a href="https://www.youtube.com/user/coursera"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/youtube.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40"
+                  alt="" /></a>
+            </div>
+            <div>
+              <a href="https://www.instagram.com/coursera/"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/instagram.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40"
+                  alt="" /></a>
+            </div>
+            <div>
+              <a href="https://www.tiktok.com/notfound"><img
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/images/9b7e964107839c77644d7e7d15035b73.png?auto=format%2Ccompress&dpr=2&w=28&h=28&q=40"
+                  alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- footer-section ends -->
+</body>
+<script>
+
+  // soumya section starts
+
+  // navbar section 
+
+  const indicator = document.querySelector('.indicators');
+  const navItems = document.querySelectorAll('.nav-item-landing');
+  let selectedIndex = 0;
+  function moveIndicators(index) {
+    const item = navItems[index];
+    indicator.style.width = `${item.offsetWidth}px`;
+    indicator.style.left = `${item.offsetLeft}px`;
+    navItems[selectedIndex].style.color = 'black';
+    navItems[selectedIndex].style.fontWeight = 'normal';
+    navItems[index].style.color = 'rgb(0, 86, 210)';
+    navItems[index].style.fontWeight = 'bold';
+    selectedIndex = index;
+  }
+  window.addEventListener('load', () => {
+    moveIndicators(0);
+  });
+  //navbar end
+  document.addEventListener("DOMContentLoaded", () => {
+    let data, data2, data3, data4;
+    let K1Cards = document.querySelector(".K1Cards");
+    let K2Cards = document.querySelector(".K2Cards");
+    let K3Cards = document.querySelector(".K3Cards");
+    let K4Cards = document.querySelector(".K4Cards");
+    let showMore = document.querySelector(".showMore");
+    let showMore2 = document.querySelector(".showMore2");
+    let showMore3 = document.querySelector(".showMore3");
+    let showMore4 = document.querySelector(".showMore4");
+
+    let showData = (arr, condition, div) => {
+      let targetDiv;
+      if (div === "uni1") targetDiv = K1Cards;
+      else if (div === "uni2") targetDiv = K2Cards;
+      else if (div === "coursera") targetDiv = K3Cards;
+      else if (div === "learning") targetDiv = K4Cards;
+
+      targetDiv.innerHTML = "";
+      arr.forEach((ele, i) => {
+        if (condition > i) {
+          let K1Card = document.createElement("div");
+          K1Card.className = "K1Card";
+          K1Card.style.cursor = "pointer";
+
+          K1Card.addEventListener("click", (ele) => {
+            if (div === "uni1") {
+              window.location.href = "https://www.coursera.org/degrees/imba";
+            } else if (div === "uni2") {
+              window.location.href =
+                "https://www.coursera.org/degrees/bachelor-of-science-data-science-ai-iitguwahati";
+            } else if (div === "coursera") {
+              window.location.href =
+                "https://www.coursera.org/professional-certificates/microsoft-business-analyst";
+            } else if (div === "learning") {
+              window.location.href =
+                "https://www.coursera.org/learn/introduction-to-generative-ai";
+            }
+          });
+
+          let titleImg = document.createElement("div");
+          titleImg.className = "example12";
+          titleImg.style.backgroundImage = `url(${ele.img})`;
+
+          let uni = document.createElement("div");
+          uni.className = "uni";
+
+          let uniLogo = document.createElement("img");
+          uniLogo.src = ele.uniLogo;
+
+          let uniName = document.createElement("p");
+          uniName.textContent = ele.uniName;
+
+          uni.append(uniLogo, uniName);
+
+          let degreeName = document.createElement("p");
+          degreeName.innerHTML = `<p style="margin-bottom: 10px"><b>${ele.degree}</b></p>`;
+
+          let earnDegree = document.createElement("div");
+          earnDegree.className = "earnDegree";
+
+          let templateIcon = document.createElement("span");
+          templateIcon.className = "material-symbols-outlined";
+          templateIcon.textContent = ele.templateIcon;
+
+          let template = document.createElement("p");
+          template.innerHTML = `<a href="${ele.templateHref}">${ele.template}</a>`;
+
+          earnDegree.append(templateIcon, template);
+
+          let title = document.createElement("p");
+          title.textContent = ele.title;
+
+          K1Card.append(titleImg, uni, degreeName, earnDegree, title);
+
+          targetDiv.append(K1Card);
+        }
+      });
+    };
+
+    let sd = () => {
+      if (showMore.textContent === "Show 8 more") {
+        let viewportWidth = window.innerWidth;
+        if (viewportWidth <= 767) {
+          K = 1;
+        } else if (viewportWidth <= 1023) {
+          K = 2;
+        } else {
+          K = 4;
+        }
+        showData(data, K, "uni1");
+      }
+    };
+
+    let sd2 = () => {
+      if (showMore2.textContent === "Show 8 more") {
+        let viewportWidth = window.innerWidth;
+        if (viewportWidth <= 767) {
+          K2 = 1;
+        } else if (viewportWidth <= 1023) {
+          K2 = 2;
+        } else {
+          K2 = 4;
+        }
+        showData(data2, K2, "uni2");
+      }
+    };
+
+    let sd3 = () => {
+      if (showMore3.textContent === "Show 8 more") {
+        let viewportWidth = window.innerWidth;
+        if (viewportWidth <= 767) {
+          K3 = 1;
+        } else if (viewportWidth <= 1023) {
+          K3 = 2;
+        } else {
+          K3 = 4;
+        }
+        showData(data3, K3, "coursera");
+      }
+    };
+
+    let sd4 = () => {
+      if (showMore4.textContent === "Show 8 more") {
+        let viewportWidth = window.innerWidth;
+        if (viewportWidth <= 767) {
+          K4 = 1;
+        } else if (viewportWidth <= 1023) {
+          K4 = 2;
+        } else {
+          K4 = 4;
+        }
+        showData(data4, K4, "learning");
+      }
+    };
+
+    let K = 4;
+    let K2 = 4;
+    let K3 = 4;
+    let K4 = 4;
+
+    window.addEventListener("resize", () => {
+      sd();
+      sd2();
+      sd3();
+      sd4();
+    });
+
+    let handleShowMore = async () => {
+      if (showMore.textContent === "Show 8 more") {
+        K += 8;
+        await showData(data, K, "uni1");
+        if (K < data.length) {
+          showMore.textContent = `Show ${data.length - K} more`;
+        } else {
+          showMore.textContent = "Show fewer";
+        }
+      } else if (showMore.textContent === "Show fewer") {
+        let viewportWidth = window.innerWidth;
+        if (viewportWidth <= 600) {
+          await showData(data, 1, "uni1");
+        } else if (viewportWidth <= 1023) {
+          await showData(data, 2, "uni1");
+        } else {
+          await showData(data, 4, "uni1");
+        }
+        showMore.textContent = "Show 8 more";
+      } else {
+        K += 8;
+        await showData(data, K, "uni1");
+        showMore.textContent = "Show fewer";
+      }
+    };
+
+    let handleShowMore2 = async () => {
+      if (showMore2.textContent.includes("Show 8 more")) {
+        K2 += 8;
+        await showData(data2, K2, "uni2");
+        if (K2 < data2.length) {
+          showMore2.textContent = `Show ${data2.length - K2} more`;
+        } else {
+          showMore2.textContent = "Show fewer";
+        }
+      } else if (showMore2.textContent.includes("Show fewer")) {
+        let viewportWidth = window.innerWidth;
+        if (viewportWidth <= 600) {
+          await showData(data2, 1, "uni2");
+        } else if (viewportWidth <= 1023) {
+          await showData(data2, 2, "uni2");
+        } else {
+          await showData(data2, 4, "uni2");
+        }
+        showMore2.textContent = "Show 8 more";
+        K2 = 0;
+      } else {
+        K2 += 8;
+        await showData(data2, K2, "uni2");
+        showMore2.textContent = "Show fewer";
+      }
+    };
+
+    let handleShowMore3 = async () => {
+      if (showMore3.textContent.includes("Show 8 more")) {
+        K3 += 8;
+        await showData(data3, K3, "coursera");
+        if (K3 < data3.length) {
+          showMore3.textContent = `Show ${data3.length - K3} more`;
+        } else {
+          showMore3.textContent = "Show fewer";
+        }
+      } else if (showMore3.textContent.includes("Show fewer")) {
+        let viewportWidth = window.innerWidth;
+        if (viewportWidth <= 600) {
+          await showData(data3, 1, "coursera");
+        } else if (viewportWidth <= 1023) {
+          await showData(data3, 2, "coursera");
+        } else {
+          await showData(data3, 4, "coursera");
+        }
+        showMore3.textContent = "Show 8 more";
+        K3 = 0;
+      } else {
+        K3 += 8;
+        await showData(data3, K3, "coursera");
+        showMore3.textContent = "Show fewer";
+      }
+    };
+
+    let handleShowMore4 = async () => {
+      if (showMore4.textContent.includes("Show 8 more")) {
+        K4 += 8;
+        await showData(data4, K4, "learning");
+        if (K4 < data4.length) {
+          showMore4.textContent = `Show ${data4.length - K4} more`;
+        } else {
+          showMore4.textContent = "Show fewer";
+        }
+      } else if (showMore4.textContent.includes("Show fewer")) {
+        let viewportWidth = window.innerWidth;
+        if (viewportWidth <= 600) {
+          await showData(data4, 1, "learning");
+        } else if (viewportWidth <= 1023) {
+          await showData(data4, 2, "learning");
+        } else {
+          await showData(data4, 4, "learning");
+        }
+        showMore4.textContent = "Show 8 more";
+        K4 = 0;
+      } else {
+        K4 += 8;
+        await showData(data4, K4, "learning");
+        showMore4.textContent = "Show fewer";
+      }
+    };
+
+    showMore.addEventListener("click", () => {
+      handleShowMore();
+    });
+
+    showMore2.addEventListener("click", () => {
+      handleShowMore2();
+    });
+
+    showMore3.addEventListener("click", () => {
+      handleShowMore3();
+    });
+
+    showMore4.addEventListener("click", () => {
+      handleShowMore4();
+    });
+
+    let getData = async (endPoint) => {
+      let res = await fetch(`http://localhost:3000/${endPoint}`);
+      let ans = await res.json();
+
+      if (endPoint === "Universities") {
+        data = ans;
+        sd();
+      } else if (endPoint === "Universities2") {
+        data2 = ans;
+        sd2();
+      } else if (endPoint === "coursera") {
+        data3 = ans;
+        sd3();
+      } else if (endPoint === "learning") {
+        data4 = ans;
+        sd4();
+      }
+    };
+
+    getData("Universities");
+    getData("Universities2");
+    getData("coursera");
+    getData("learning");
+  });
+</script>
+<script>
+  const logOutBtn = document.querySelector('#logOutBtn');
+  const isLoggedIn = localStorage.getItem('email');
+
+  if (!isLoggedIn) {
+    window.location.href = 'index.html';
+  }
+
+  if (logOutBtn) {
+    logOutBtn.addEventListener('click', function (event) {
+      event.preventDefault(); // Prevent default action of link
+      localStorage.removeItem('email');  // Clear username from local storage
+      window.location.href = 'index.html';  // Redirect to index.html
+    });
+  }
+</script>
+<script src="updateNavProfilePic.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const userEmail = localStorage.getItem("email");
+    if (userEmail) {
+      fetchAndSetProfileImage(userEmail);
+    }
+  });
+</script>
+<script src="./search.js"></script>
+
+</html>

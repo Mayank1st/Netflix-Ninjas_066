@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.setItem('email', email);
         updateProfileDropdownVisibility(); // Update UI after login
         // Optionally redirect or perform other actions
-        window.location.href = "main_page.html"; // Redirect to main page after login
+        window.location.href = "home.html"; // Redirect to main page after login
     }
 
     // Logout snippet

@@ -43,7 +43,1040 @@
       "id": 10
     }
   ],
+  "admin": [
+    {
+      "username": "admin",
+      "password": "admin123"
+    }
+  ],
   "Universities2": [
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/ms-management-illinois/thumbnail.jpg?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&fit=crop&q=50",
+      "uniLogo": "http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png",
+      "uniName": "University of Illinois at Urbana",
+      "degree": "Master of Business Administration (iMBA)",
+      "templateIcon": "school",
+      "template": "Earn a degree",
+      "templateHref": "https://www.coursera.org/degrees/imba",
+      "title": "Degree",
+      "link": "https://www.coursera.org/degrees/imba"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/ba-liberal-studies-georgetown/40ad070e-4c5d-4f7b-93b1-16792b711e78.jpg?auto=format%2Ccompress%2C%20enhance&dpr=2&w=265&h=204&q=50&fit=crop",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/b9/c608c79b5c498a8fa55b117fc3282f/5.-Square-logo-for-landing-page---Alpha.png",
+      "uniName": "Birla Institute of Technology & Science, Pilani",
+      "degree": "Master of Advanced Study in Engineering",
+      "templateIcon": "school",
+      "template": "Earn a degree",
+      "templateHref": "https://www.coursera.org/degrees/imba",
+      "title": "Degree"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/mas-engineering-berkeley/1203ebfb-99c9-4919-b943-18add117e361.jpg?auto=format%2Ccompress%2C%20enhance&dpr=2&w=265&h=204&fit=crop&q=50",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png",
+      "uniName": "S.P. Jain Institute of Management and Research",
+      "degree": "Executive MBA",
+     "templateIcon": "school",
+      "template": "Earn a degree",
+      "templateHref": "https://www.coursera.org/degrees/imba",
+      "title": "Degree"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/emba-iitr/8e84c46b-a993-49d9-80cf-0e77a78399b0.jpg?auto=format%2Ccompress%2C%20enhance&dpr=2&w=265&h=204&q=50&fit=crop",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/4e/115f6ff5a845b89c1bc809f133491b/Berkeley_Square_GoldOnBlue.png",
+      "uniName": "University of Illinois at Urbana-Champaign",
+      "degree": "Master of Business Administration (iMBA)",
+      "templateIcon": "school",
+      "template": "Earn a degree",
+      "templateHref": "https://www.coursera.org/degrees/imba",
+      "title": "Degree"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/bachelor-of-science-computer-science-bits/2c1c9800-93b0-48df-b278-a5246da9e086.jpg?auto=format%2Ccompress%2C%20enhance&dpr=2&w=265&h=204&q=50&fit=crop",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/93/dafd90b13544b3844d0967bcb2fe77/iitricon.png",
+      "uniName": "University of California, Berkeley",
+      "degree": "Bachelor of Science in Computer Science",
+      "templateIcon": "school",
+      "template": "Earn a degree",
+      "templateHref": "https://www.coursera.org/degrees/imba",
+      "title": "Degree"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/imsa/imsa-thumbnail.jpg?auto=format%2Ccompress%2C%20enhance&dpr=2&w=265&h=204&q=50&fit=crop",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png",
+      "uniName": "IIT Roorkee",
+      "degree": "Master of Science in Management (iMSM)",
+      "templateIcon": "school",
+      "template": "Earn a degree",
+      "templateHref": "https://www.coursera.org/degrees/imba",
+      "title": "Degree"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/pgdm-spjimr/f68db508-5619-402b-adcb-07f5f4af90c2.jpg?auto=format%2Ccompress%2C%20enhance&dpr=2&w=265&h=204&fit=crop&q=50",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/57/8c726bb7f54c75b38f7bcb25d2c2a7/square.png",
+      "uniName": "Indian Statistical Institute",
+      "degree": "PostGraduate Diploma in Applied Statistics",
+      "templateIcon": "school",
+      "template": "Earn a degree",
+      "templateHref": "https://www.coursera.org/degrees/imba",
+      "title": "Degree"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/illinois/iMBA+square.jpg?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&fit=crop&q=50",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/67/ea8ae2575a4402ab7d212dd3b66ace/360-x-360-1-.png",
+      "uniName": "Indian Institute of Technology Guwahati",
+      "degree": "Bachelor of Science in Data Science & AI",
+      "templateIcon": "school",
+      "template": "Earn a degree",
+      "templateHref": "https://www.coursera.org/degrees/imba",
+      "title": "Degree"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/me-engineering-management-boulder/7f1ba63f-ce16-4c29-9690-557ac3eb3168.jpg?auto=format%2Ccompress%2C%20enhance&dpr=2&w=265&h=204&q=50&fit=crop",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png",
+      "uniName": "University of Illinois at Urbana-Champaign",
+      "degree": "Master of Science in Information Technology",
+      "templateIcon": "school",
+      "template": "Earn a degree",
+      "templateHref": "https://www.coursera.org/degrees/imba",
+      "title": "Degree"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/ma-international-relations-security-strategy-jgu/ma-international-relations-security-strategy-jgu-thumbnail.jpg?auto=format%2Ccompress%2C%20enhance&dpr=2&w=265&h=204&q=50&fit=crop",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/68/9b2c6526cb41afa07c86903b8b0961/Untitled-design-15-.png",
+      "uniName": "Georgetown University",
+      "degree": "M.A. in International Relation , Security, and Strategy",
+      "templateIcon": "school",
+      "template": "Earn a degree",
+      "templateHref": "https://www.coursera.org/degrees/imba",
+      "title": "Degree"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/statistics-data-analytics-pgdip-isi/b94f93dd-8ebe-444b-9cf9-18998c0b4045.jpg?auto=format%2Ccompress%2C%20enhance&dpr=2&w=265&h=204&fit=crop&q=50",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/a6/7035b7e00b401383be4e5856b8bdaa/Boulder-FL-VERT-B---cropped.png",
+      "uniName": "University of Colorado Boulder",
+      "degree": "Bachelor of Arts in Liberal Studies",
+      "templateIcon": "school",
+      "template": "Earn a degree",
+      "templateHref": "https://www.coursera.org/degrees/imba",
+      "title": "Degree"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/statistics-data-analytics-pgdip-isi/b94f93dd-8ebe-444b-9cf9-18998c0b4045.jpg?auto=format%2Ccompress%2C%20enhance&dpr=2&w=265&h=204&fit=crop&q=50",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/13/4f6741eec44e2b9e40fc79bdf15b87/360x360.png",
+      "uniName": "O.P. Jindal Global University",
+      "degree": "Master of Applied Data Science",
+      "templateIcon": "school",
+      "template": "Earn a degree",
+      "templateHref": "https://www.coursera.org/degrees/imba",
+      "title": "Degree"
+    }
+  ],
+  "Universities":[
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/illinois/iMBA+square.jpg?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&fit=crop&q=50",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/13/4f6741eec44e2b9e40fc79bdf15b87/360x360.png",
+      "uniName": "University of Illinois at Urbana-Champaign",
+      "degree": "Master of Business Administration (iMBA)",
+      "templateIcon": "school",
+      "template": "Earn a degree",
+      "templateHref": "https://www.coursera.org/degrees/imba",
+      "title": "Degree"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/me-engineering-management-boulder/7f1ba63f-ce16-4c29-9690-557ac3eb3168.jpg?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&fit=crop&q=50",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/a6/7035b7e00b401383be4e5856b8bdaa/Boulder-FL-VERT-B---cropped.png",
+      "uniName": "University of Colorado Boulder",
+      "degree": "Master of Science in Data Science",
+     "templateIcon": "school",
+      "template": "Earn a degree",
+      "templateHref": "https://www.coursera.org/degrees/imba",
+      "title": "Degree"
+    }, 
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/msee-boulder/thumbnail.jpeg?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&fit=crop&q=50",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/68/9b2c6526cb41afa07c86903b8b0961/Untitled-design-15-.png",
+      "uniName": "University of Colorado Boulder",
+      "degree": "Master of Science in Electrical Engineering",
+      "templateIcon": "school",
+      "template": "Earn a degree",
+      "templateHref": "https://www.coursera.org/degrees/imba",
+      "title": "Degree"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/msds-boulder/header.jpg?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&fit=crop&q=50",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/a6/7035b7e00b401383be4e5856b8bdaa/Boulder-FL-VERT-B---cropped.png",
+      "uniName": "University of Colorado Boulder",
+      "degree": "Master of Engineering in Engineering Management",
+      "templateIcon": "school",
+      "template": "Earn a degree",
+      "templateHref": "https://www.coursera.org/degrees/imba",
+      "title": "Degree"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/ms-management-illinois/thumbnail.jpg?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&fit=crop&q=50",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png",
+      "uniName": "University of Illinois at Urbana-Champaign",
+      "degree": "Master of Science in Management(iMSM)",
+      "templateIcon": "school",
+      "template": "Earn a degree",
+      "templateHref": "https://www.coursera.org/degrees/imba",
+      "title": "Degree"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/ms-computer-science-boulder/62f0f4eb-8630-41cb-bbeb-ca66ccb81fc6.jpg?auto=format%2Ccompress%2C%20enhance&dpr=2&w=265&h=204&fit=crop&q=50",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/b9/c608c79b5c498a8fa55b117fc3282f/5.-Square-logo-for-landing-page---Alpha.png",
+      "uniName": "University of Colorado Boulder",
+      "degree": "Master of Science in Computer Science",
+      "templateIcon": "school",
+      "template": "Earn a degree",
+      "templateHref": "https://www.coursera.org/degrees/imba",
+      "title": "Degree"
+    }, 
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/imsa/imsa-thumbnail.jpg?auto=format%2Ccompress%2C%20enhance&dpr=2&w=265&h=204&q=50&fit=crop",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/93/dafd90b13544b3844d0967bcb2fe77/iitricon.png",
+      "uniName": "University of Illinois at Urbana-Champaign",
+      "degree": "Master of Science in Accountancy(iMSA)",
+      "templateIcon": "school",
+      "template": "Earn a degree",
+      "templateHref": "https://www.coursera.org/degrees/imba",
+      "title": "Degree"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/bach-information-technology-illinois-tech/40ddc07b-ccec-49d4-b172-25ffcbdb6fe4.jpg?auto=format%2Ccompress%2C%20enhance&dpr=2&w=265&h=204&q=50&fit=crop",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/4e/115f6ff5a845b89c1bc809f133491b/Berkeley_Square_GoldOnBlue.png",
+      "uniName": "University of Illinois at Urbana-Champaign",
+      "degree": "Bachelor of Information Technology",
+      "templateIcon": "school",
+      "template": "Earn a degree",
+      "templateHref": "https://www.coursera.org/degrees/imba",
+      "title": "Degree"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/mba-illinois-tech/14f38073-19e7-4f79-888d-7a9fd77b2398.jpg?auto=format%2Ccompress%2C%20enhance&dpr=2&w=265&h=204&q=50&fit=crop",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png",
+      "uniName": "Illinois Tech",
+      "degree": "Master of Business Administration",
+      "templateIcon": "school",
+      "template": "Earn a degree",
+      "templateHref": "https://www.coursera.org/degrees/imba",
+      "title": "Degree"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/mas-data-science-illinois-tech/25a8c7a3-1100-4830-875a-6dc97bfe19bb.jpg?auto=format%2Ccompress%2C%20enhance&dpr=2&w=265&h=204&q=50&fit=crop",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/57/8c726bb7f54c75b38f7bcb25d2c2a7/square.png",
+      "uniName": "Illinois Tech",
+      "degree": "Master of Information Technology",
+      "templateIcon": "school",
+      "template": "Earn a degree",
+      "templateHref": "https://www.coursera.org/degrees/imba",
+      "title": "Degree"
+    }, 
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/mas-information-technology-illinois-tech/1b37393a-cb27-4fd3-8c3c-f8413ff31123.jpg?auto=format%2Ccompress%2C%20enhance&dpr=2&w=265&h=204&q=50&fit=crop",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/67/ea8ae2575a4402ab7d212dd3b66ace/360-x-360-1-.png",
+      "uniName": "Illinois Tech",
+      "degree": "Bachelor of Science in Computer Science",
+      "templateIcon": "school",
+      "template": "Earn a degree",
+      "templateHref": "https://www.coursera.org/degrees/imba",
+      "title": "Degree"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/bcs-uol/thumbnail.jpg?auto=format%2Ccompress%2C%20enhance&dpr=2&w=265&h=204&q=50&fit=crop",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png",
+      "uniName": "University of London",
+      "degree": "Master of Data Science",
+      "templateIcon": "school",
+      "template": "Earn a degree",
+      "templateHref": "https://www.coursera.org/degrees/imba",
+      "title": "Degree"
+    }
+  ],
+  "coursera":[
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/cb/412c57d143465691790ad6c2bd9727/Business-Analyst-professional-certificate-SP-logo.png?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&fit=crop&q=50",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/cc/61dbdf2c1c475d82d3b8bf8eee1bda/MSFT-stacked-logo_FINAL.png",
+      "uniName": "Microsoft",
+      "degree": "Microsoft Business Analyst",
+      "templateIcon": "",
+      "template": "",
+      "title": "Professional certificate"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/46/f21968f2a744b4986ff347449444b5/Computer-support-specialist-marketing.png?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&fit=crop&q=50",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png",
+      "uniName": "Microsoft",
+      "degree": "Microsoft IT Support Specialist",
+      "templateIcon": "",
+      "template": "",
+      "title": "Profesional Certificate"
+    }, 
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/d6/4a3207152349b9bff31b445b06b929/600x600_CourseraImages_Moses.png?auto=format%2Ccompress%2C%20enhance&dpr=1&w=320&h=180&fit=crop&q=50&crop=faces",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/89/63fef0315140268d5c0f66eee8e85e/VU_360x360.png",
+      "uniName": "Google",
+      "degree": "Google AI Essentials",
+      "templateIcon": "",
+      "template": "",
+      "title": "Courses"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/16/5e0361da674644abdad374133539d2/sparc_600.png?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&fit=crop&q=50",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/73/e03b13a8e44df9b19eb279e5506396/360-x-360.png",
+      "uniName": "Vanderbilt University",
+      "degree": "Prompt Engineering",
+      "templateIcon": "",
+      "template": "",
+      "title": "Specialization"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/e1/58b36d811b4978a586b8f7c4ad94a2/Project-management-professional-certificate-SP-Logo.png?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&fit=crop&q=50",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/d4/6c1c1ee0ca48c5993298bb2e0c7f46/Darden_Foundation_Monogram_360x360.png",
+      "uniName": "Microsoft",
+      "degree": "Microsoft Product Management",
+      "templateIcon": "",
+      "template": "",
+      "title": "Professional certificate"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/fe/3d676089c4461bbdcd6423d473d4fa/GettyImages-943067460.jpg?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&fit=crop&q=50",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/40/5848fd984e4e9c90c0e04a94ddd9b3/Screenshot-2024-04-04-at-2.03.12-PM.png",
+      "uniName": "Microsoft",
+      "degree": "Microsoft cloud Support Associate",
+      "templateIcon": "",
+      "template": "",
+      "title": "Professional certificate"
+    }, 
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/4d/b27d3d4fcc42f4b1f7e3cbc46e1dd6/Specialization_Meta-Data-Analyst.png?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&q=50&fit=crop",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/e1/e09168d22a4837a71f9b222b3da087/Square-logo-for-partner-landing-page-2-.png",
+      "uniName": "Meta",
+      "degree": "Generative AI in Marketing",
+      "templateIcon": "",
+      "template": "",
+      "title": "Professional certificate"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/6e/08a82d5bb848f280fc6f2a64f97e07/AdobeStock_616162312.jpeg?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&q=50&fit=crop",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/bb/f5ced2bdd4437aa79f00eb1bf7fbf0/IBM-Logo-Blk---Square.png",
+      "uniName": "University of Virginia Darden School Foundation",
+      "degree": "Building your Audience for Music professionals",
+      "templateIcon": "",
+      "template": "",
+      "title": "Specialization"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/0e/8951e09f174c5684a69ea0e648ad5a/GrammyGO_coursera_Specialization_600x600.png?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&q=50&fit=crop",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/74/fa9028074941789429dfc1d1b71ddf/gc-logo-360x360.png",
+      "uniName": "GRAMMY GO",
+      "degree": "Building your Audience for Music professionals",
+      "templateIcon": "",
+      "template": "",
+      "title": "Specialization"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/8c/e0f2fd124b441fa8d9aa68fdab2167/Marketing-Image.png?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&q=50&fit=crop",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/b4/339da416653830d015f5a179f864e1/square_logo_large.png",
+      "uniName": "Microsoft",
+      "degree": "Microsoft Power BI data Analyst",
+      "templateIcon": "",
+      "template": "",
+      "title": "Professional certificate"
+    }, 
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/df/ccc92936344beb9c95b5cfedd08c69/Program_Logo_5.png?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&q=50&fit=crop",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/74/7ae340ec6911e5b395490a2a565172/JHU-Logo-Square-Mini_180px.png",
+      "uniName": "HRCI",
+      "degree": "HRCI Human Resources Associate ",
+      "templateIcon": "",
+      "template": "",
+      "title": "Professional certificate"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/5b/36b3f2a4b24e33990c54a11d0f6527/1200x1200_AdobeStock_534595938.jpg?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&q=50&fit=crop",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/44/a878a0f37541f3b6dd0ebb5e1d40b8/deep-teaching-solutions-sizes-05.png",
+      "uniName": "IBM",
+      "degree": "IBM AI Product manager",
+      "templateIcon": "",
+      "template": "",
+      "title": "Professional certificate"
+    }
+  ],
+  "learning":[
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/63/b72069efbc42a689ccd470cfecafd9/unnamed.png?auto=format%2Ccompress%2C%20enhance&dpr=2&w=265&h=204&fit=crop&q=50",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/a2/66aaaad14d426fa9798ed714b3d0e5/UniversityofPennsylvania_Vertical_RGB_coursera-cert.png",
+      "uniName": "Google Cloud",
+      "degree": "Introduction to Generative AI",
+      "templateIcon": "",
+      "template": "",
+      "title": "course"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/bb/62e6a0120b11e6bc32c330496bd91a/Career-Development.jpg?auto=format%2Ccompress%2C%20enhance&dpr=2&w=265&h=204&fit=crop&q=50",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/79/ef4a80c5a111e5a5ce35080560fd45/coursera_logo.png",
+      "uniName": "University of Pennsylvania",
+      "degree": "English for career",
+      "templateIcon": "",
+      "template": "",
+      "title": "Development course"
+    }, 
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/6f/e2514b11a94e01868350b10d65c8a4/Logo_Financial-Markets.png?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&fit=crop&q=50",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/70/de505d47be7d3a063b51b6f856a6e2/New-Block-M-Stacked-Blue-295C_600x600.png",
+      "uniName": "Yale University",
+      "degree": "Financial Markets",
+      "templateIcon": "",
+      "template": "",
+      "title": "course"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/66/e2793ae80742ccac9bdebe7f538a1c/excel-g9ac6b342d_1920.png?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&fit=crop&q=50",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/70/de505d47be7d3a063b51b6f856a6e2/New-Block-M-Stacked-Blue-295C_600x600.png",
+      "uniName": "Johns Hopkins University",
+      "degree": "Business Analystics with excel:Elementry to Advanced",
+      "templateIcon": "",
+      "template": "",
+      "title": "course"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/eb/bde77b80db4b5784c5106f65b2e81e/Learning-How-to-Learn-Logo.png?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&fit=crop&q=50",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/e8/7cc3d09d3f11e698dfff46d35f2da1/Stanford_Coursera_Logo.png",
+      "uniName": "Deep Teaching Solutions",
+      "degree": "Learning how to Learn:Powerful mental tools to help you master tough subjects",
+      "templateIcon": "",
+      "template": "",
+      "title": "course"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/7e/aff5b0f54c11e7b5ae579a0e963c38/Logo_TheScienceofWell-Being.png?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&fit=crop&q=50",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/6d/3cb3e06c357d40ef60000fb3d12d72/dukesquare_blue.png",
+      "uniName": "Yale University",
+      "degree": "The Science of WellBeing",
+      "templateIcon": "",
+      "template": "",
+      "title": "course"
+    }, 
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/7b/3030708c3111e5ae965dd3ea8cdc5d/________03.jpg?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&q=50&fit=crop",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/66/4d1f6067b511e599c247e28e57110c/Logo-B-for-Coursera.png",
+      "uniName": "Yonsei University",
+      "degree": "First Step Korean",
+      "templateIcon": "",
+      "template": "",
+      "title": "course"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/99/7ab7c00f7b11e79b617dbb2116532d/contractnegotiations_Logo_080814d.jpg?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&q=50&fit=crop",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/a2/66aaaad14d426fa9798ed714b3d0e5/UniversityofPennsylvania_Vertical_RGB_coursera-cert.png",
+      "uniName": "University of Michigan",
+      "degree": "Successful Negotiation essential Strategies and Skills",
+      "templateIcon": "",
+      "template": "",
+      "title": "course"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/e3/b971b05cfe11e89d97d1bd932bfd30/algs4partI-logo.png?auto=format%2Ccompress%2C%20enhance&dpr=2&w=265&h=204&q=50&fit=crop",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/b4/339da416653830d015f5a179f864e1/square_logo_large.png",
+      "uniName": "Princeton University",
+      "degree": "Algorithms",
+      "templateIcon": "",
+      "template": "",
+      "title": "course"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/19/554c8d156a477690c6f0b81733c11c/intoduction-to-statistics_XFDS112.jpg?auto=format%2Ccompress%2C%20enhance&dpr=2&w=265&h=204&q=50&fit=crop",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/74/7ae340ec6911e5b395490a2a565172/JHU-Logo-Square-Mini_180px.png",
+      "uniName": "Stanford University",
+      "degree": "Introduction to Statistics",
+      "templateIcon": "",
+      "template": "",
+      "title": "course"
+    }, 
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/08/8c6610c07e11e6a7f5e70b413367a6/DMSIcon.jpg?auto=format%2Ccompress%2C%20enhance&dpr=2&w=265&h=204&q=50&fit=crop",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/44/a878a0f37541f3b6dd0ebb5e1d40b8/deep-teaching-solutions-sizes-05.png",
+      "uniName": "Duke University",
+      "degree": "Data Science Math Skills",
+      "templateIcon": "",
+      "template": "",
+      "title": "course"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/40/8dbf10ac1911e68f5119007c0cf554/GettyImages-547015901-Thumbnail.jpg?auto=format%2Ccompress%2C%20enhance&dpr=2&w=265&h=204&q=50&fit=crop",
+      "uniLogo": "https://coursera-university-assets.s3.amazonaws.com/79/ef4a80c5a111e5a5ce35080560fd45/coursera_logo.png",
+      "uniName": "University of California, Davis",
+      "degree": "The Strategy of Content marketing",
+      "templateIcon": "",
+      "template": "",
+      "title": "course"
+    }
+  ],
+  "cards": [
+      {
+        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/IHNuNEKZnmjtOs3g6uX9h/c0038feefd8e96515ab88ee67e1bb59f/Square_logo_for_partner_landing_page.png?auto=format%2Ccompress&amp;dpr=1",
+        "title": "Indian Institute of Technology Guwahati",
+        "degree": "Bachelor of Science in Data Science & AI",
+        "description": "Ranked 7th among India’s top engineering institutes, according to NIRF 2023 Application due June 19, 2024",
+        "application": "Application due June 19, 2024"
+      },
+      {
+        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5WVyYON4icQJuoFQfLYBM5/2e5aa47d543e59637cb208563b9fb373/BITS_Emblem.png?auto=format%2Ccompress&dpr=1",
+        "title": "Birla Institute of Technology & Science, Pilani",
+        "degree":"Bachelor of Science in Computer Science",
+        "description": "Accredited by the National Assessment & Accreditation Council (NAAC) with 'A' grade"
+      },
+      {
+        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/72PP9Froq0UViAjRjCa6mq/d303df6cdadd5dd9ea042da54787b012/HEC_Paris_logo_Monotone.png?auto=format%2Ccompress&dpr=1",
+        "title": "HEC Paris",
+        "degree": "Executive MSc & MSc in Innovation and Entrepreneurship",
+        "description": "#1 Business School in Europe (Financial Times, 2022), Skills you'll gain: Networking, Security, Operating Systems, Troubleshooting, Customer Service,",
+        "application": "Application due June 19, 2024"
+      },
+      {
+        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2yj3zCXqTytZevxwT4h4xK/114973b81842684c450c6dfc67338276/London_Goldsmiths_logo_1000x200.png?auto=format%2Ccompress&dpr=1",
+        "title": "University of london",
+        "degree": "Bachelor of Science in Computer Science",
+        "description": "#29 in Top Universities in the U.K. (The Times and Sunday Times Good University Guide, 2023),#1 Business School in Europe (Financial Times, 2022), Skills you'll gain: Networking, Security, Operating Systems, Troubleshooting, Customer Service",
+        "application": "Application due September 8, 2024"
+      },
+      {
+        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/kOsUZSBCii9hlZDYYtejJ/22eca0f9c3c06b14892aafbf396f7f33/University_of_London_logo.svg__1_.png?auto=format%2Ccompress&dpr=1",
+        "title": "University of london",
+        "degree": "Bachelor of Science in Business Administration",
+        "description":"#29 in Top Universities in the U.K. (The Times and Sunday Times Good University Guide, 2023),#1 Business School in Europe (Financial Times, 2022), Skills you'll gain: Networking, Security, Operating Systems, Troubleshooting, Customer Service",
+        "application": "Beginner · Professional Certificate · 6 months"
+      },
+      {
+       "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/kOsUZSBCii9hlZDYYtejJ/22eca0f9c3c06b14892aafbf396f7f33/University_of_London_logo.svg__1_.png?auto=format%2Ccompress&dpr=1",
+        "title": "University of london",
+        "degree": "Bachelor of Science in Marketing",
+        "description":"#29 in Top Universities in the U.K. (The Times and Sunday Times Good University Guide, 2023),#1 Business School in Europe (Financial Times, 2022), Skills you'll gain: Networking, Security, Operating Systems, Troubleshooting, Customer Service",
+        "application": "Beginner · Professional Certificate · 6 months"
+      },
+      {
+        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/249FlRfDx2yviQr9UUz57n/e25a8f5dd17ed44212698529e3e88760/Georgetown_SCS_MonotoneLogo.png?auto=format%2Ccompress&dpr=1",
+        "title": "Georgetown University",
+        "degree": "Bachelor of Arts in liberal studies",
+        "description":"Ranked in the Top 25 Best National Universities in the U.S.(U.S. News & World Report, 2023),Accredited by the National Assessment & Accreditation Council (NAAC) with 'A' grade",
+        "application": "Advanced · Degree · 24 months"
+      },
+      {
+        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4r5JpFHQvXgmWvMtRMXbeb/8179cc039f4c5a1e2bfda3007d34de0d/UMGC-Logo.png?auto=format%2Ccompress&dpr=1",
+        "title": "University of Maryland Global Campus",
+        "degree": "Bachelor of Science in Cybersecurity Technology",
+        "description":"Ranked in the Top 25 Best National Universities in the U.S.(U.S. News & World Report, 2023),Accredited by the National Assessment & Accreditation Council (NAAC) with 'A' grade",
+        "duration": "Beginner · Degree · 36 months"
+      },
+      {
+        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4r5JpFHQvXgmWvMtRMXbeb/8179cc039f4c5a1e2bfda3007d34de0d/UMGC-Logo.png?auto=format%2Ccompress&dpr=1",
+        "title": "University of Maryland Global Campus",
+        "degree": "Bachelor of Science in Cybersecurity Management and Policy",
+        "description":"Ranked in the Top 25 Best National Universities in the U.S.(U.S. News & World Report, 2023),Accredited by the National Assessment & Accreditation Council (NAAC) with 'A' grade",
+        "duration": "Beginner · Degree · 36 months"
+      },
+      {
+        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/702oQRI5BJ9hihjIBGDsev/cadc7a224417a35959dbb0ba303efe73/UMG.png?auto=format%2Ccompress&dpr=1",
+        "title": "University of Massachusetts Global",
+        "description": "Skills you'll gain: Machine Learning, Python, Data Science, Artificial Intelligence, Algorithms",
+        "degree":"Bachelor of Arts in Psycology",
+        "duration": "Intermediate · Course · 6 months"
+      },
+      {
+        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/HL1NahIE4QwHd9xvhxvtx/8293d49ce1609a5c858719fb183f6229/UNT_COURSERA_BAAS_Logo.png?auto=format%2Ccompress&dpr=1",
+        "title": "University of North Texas",
+        "degree":"Bachelor of Science in General Business",
+        "description": "Skills you'll gain: Python, Programming, Data Structures, Data Analysis, Software Development",
+        "duration": "Beginner · Course · 5 months"
+      },
+      {
+        
+        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/HL1NahIE4QwHd9xvhxvtx/8293d49ce1609a5c858719fb183f6229/UNT_COURSERA_BAAS_Logo.png?auto=format%2Ccompress&dpr=1",
+        "title": "University of North Texas",
+        "degree":"Bachelor of Applied Arts and Science",
+        "description": "Skills you'll gain: Python, Programming, Data Structures, Data Analysis, Software Development",
+        "duration": "Beginner · Course · 5 months"
+      },
+      {
+        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5JUClhmEcjBngRNT8Jp4A8/718fded3686a7003bdd2aeb70a772c49/e52950db-1fef-454d-82a6-a40667359c0a.png?auto=format%2Ccompress&dpr=1",
+        "title": "Illinios Tech",
+        "description": "Skills you'll gain: Data Science, Python, Machine Learning, Data Visualization, Data Analysis",
+        "degree":"Bachelor of Information Technology",
+        "duration": "Intermediate · Specialization · 10 months"
+      },
+      {
+        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5FsJACbyl7bFW4DjI2cZDE/181c290b91b2f801fdf09cc3d9bae75a/IIT_Roorkee__3___1_.png?auto=format%2Ccompress&dpr=1",
+        "title": "IIT Rookree",
+        "description": "Skills you'll gain: Python, Programming, Problem Solving, Algorithms, Software Development",
+        "degree":"Executive MBA",
+        "duration": "Beginner · Course · 6 months"
+      },
+      {
+        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/QYnQLOD2XH1JdEAJt7zFY/982c1e09539e87e4cf637c57eb4142dd/CU-Boulder.jpg?auto=format%2Ccompress&dpr=1",
+        "title": "University of Corolardo Boulder",
+        "description": "Skills you'll gain: Machine Learning, Python, Data Science, Artificial Intelligence, Algorithms",
+        "degree":"Master of Science in Computer Science",
+        "duration": "Intermediate · Specialization · 12 months"
+      },
+      {
+        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2Io1b5QQU4YcyVOuQTdjOO/e29485e582c8a543ca136e61d3ef78e8/OPJindal.jpg?auto=format%2Ccompress&dpr=1",
+        "title": "O.P. Jindal Global University",
+        "description": "Skills you'll gain: Artificial Intelligence, Machine Learning, Deep Learning, Data Science, Algorithms",
+        "degree":"MBA Business Analytics",
+        "duration": "Advanced · Specialization · 14 months"
+      },
+      {
+        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/1Rp5a6TiZD2LO4n6MHsMtS/78e1f67bd7784a40ddae53db3389a054/IllinoisGies.jpg?auto=format%2Ccompress&dpr=1",
+        "title": "University of Illinois at Urbana-Champaign",
+        "description": "Skills you'll gain: Python, Data Science, Data Analysis, Machine Learning, Programming",
+        "degree":"Masters of Buisness Administration",
+        "duration": "Beginner · Course · 5 months"
+      },
+      {
+        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/3p9ZNoXblmUIo6mCA64e8K/606acde0eea006e97b10079ccbdad90f/logo-color.png?auto=format%2Ccompress&dpr=1",
+        "title": "University of Illinois at Urbana-Champaign",
+        "description": "Skills you'll gain: Data Science, Machine Learning, Python, Data Analysis, Artificial Intelligence",
+        "degree":"Master of Science in Computer Science",
+        "duration": "Intermediate · Course · 7 months"
+      },
+      {
+        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/QYnQLOD2XH1JdEAJt7zFY/982c1e09539e87e4cf637c57eb4142dd/CU-Boulder.jpg?auto=format%2Ccompress&dpr=1",
+        "title": "University of Corolardo Boulder",
+        "description": "Skills you'll gain: Machine Learning, Python, Data Science, Artificial Intelligence, Algorithms",
+        "degree":"Master of Science in Data Science",
+        "duration": "Intermediate · Specialization · 12 months"
+      },
+      {
+        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2UqKAdajxMiAKGLdOgYCrc/f09facd5960e7697c6398f672c7c14dc/Captura_de_pantalla_2023-08-30_a_la_s__11.29.07_a.m..png?auto=format%2Ccompress&dpr=1",
+        "title": "Northeaster University",
+        "description": "Skills you'll gain: Data Science, Data Analysis, Python, Data Visualization, Machine Learning",
+        "degree":"Master of Science in Data Analystics",
+        "duration": "Beginner · Course · 5 months"
+      },
+      {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/IHNuNEKZnmjtOs3g6uX9h/c0038feefd8e96515ab88ee67e1bb59f/Square_logo_for_partner_landing_page.png?auto=format%2Ccompress&amp;dpr=1",
+      "title": "Indian Institute of Technology Guwahati",
+      "degree": "Bachelor of Science in Data Science & AI",
+      "description": "Ranked 7th among India’s top engineering institutes, according to NIRF 2023 Application due June 19, 2024",
+      "application": "Application due June 19, 2024"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5WVyYON4icQJuoFQfLYBM5/2e5aa47d543e59637cb208563b9fb373/BITS_Emblem.png?auto=format%2Ccompress&dpr=1",
+      "title": "Birla Institute of Technology & Science, Pilani",
+      "degree":"Bachelor of Science in Computer Science",
+      "description": "Accredited by the National Assessment & Accreditation Council (NAAC) with 'A' grade"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/72PP9Froq0UViAjRjCa6mq/d303df6cdadd5dd9ea042da54787b012/HEC_Paris_logo_Monotone.png?auto=format%2Ccompress&dpr=1",
+      "title": "HEC Paris",
+      "degree": "Executive MSc & MSc in Innovation and Entrepreneurship",
+      "description": "#1 Business School in Europe (Financial Times, 2022), Skills you'll gain: Networking, Security, Operating Systems, Troubleshooting, Customer Service,",
+      "application": "Application due June 19, 2024"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2yj3zCXqTytZevxwT4h4xK/114973b81842684c450c6dfc67338276/London_Goldsmiths_logo_1000x200.png?auto=format%2Ccompress&dpr=1",
+      "title": "University of london",
+      "degree": "Bachelor of Science in Computer Science",
+      "description": "#29 in Top Universities in the U.K. (The Times and Sunday Times Good University Guide, 2023),#1 Business School in Europe (Financial Times, 2022), Skills you'll gain: Networking, Security, Operating Systems, Troubleshooting, Customer Service",
+      "application": "Application due September 8, 2024"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/kOsUZSBCii9hlZDYYtejJ/22eca0f9c3c06b14892aafbf396f7f33/University_of_London_logo.svg__1_.png?auto=format%2Ccompress&dpr=1",
+      "title": "University of london",
+      "degree": "Bachelor of Science in Business Administration",
+      "description":"#29 in Top Universities in the U.K. (The Times and Sunday Times Good University Guide, 2023),#1 Business School in Europe (Financial Times, 2022), Skills you'll gain: Networking, Security, Operating Systems, Troubleshooting, Customer Service",
+      "application": "Beginner · Professional Certificate · 6 months"
+    },
+    {
+     "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/kOsUZSBCii9hlZDYYtejJ/22eca0f9c3c06b14892aafbf396f7f33/University_of_London_logo.svg__1_.png?auto=format%2Ccompress&dpr=1",
+      "title": "University of london",
+      "degree": "Bachelor of Science in Marketing",
+      "description":"#29 in Top Universities in the U.K. (The Times and Sunday Times Good University Guide, 2023),#1 Business School in Europe (Financial Times, 2022), Skills you'll gain: Networking, Security, Operating Systems, Troubleshooting, Customer Service",
+      "application": "Beginner · Professional Certificate · 6 months"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/249FlRfDx2yviQr9UUz57n/e25a8f5dd17ed44212698529e3e88760/Georgetown_SCS_MonotoneLogo.png?auto=format%2Ccompress&dpr=1",
+      "title": "Georgetown University",
+      "degree": "Bachelor of Arts in liberal studies",
+      "description":"Ranked in the Top 25 Best National Universities in the U.S.(U.S. News & World Report, 2023),Accredited by the National Assessment & Accreditation Council (NAAC) with 'A' grade",
+      "application": "Advanced · Degree · 24 months"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4r5JpFHQvXgmWvMtRMXbeb/8179cc039f4c5a1e2bfda3007d34de0d/UMGC-Logo.png?auto=format%2Ccompress&dpr=1",
+      "title": "University of Maryland Global Campus",
+      "degree": "Bachelor of Science in Cybersecurity Technology",
+      "description":"Ranked in the Top 25 Best National Universities in the U.S.(U.S. News & World Report, 2023),Accredited by the National Assessment & Accreditation Council (NAAC) with 'A' grade",
+      "duration": "Beginner · Degree · 36 months"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4r5JpFHQvXgmWvMtRMXbeb/8179cc039f4c5a1e2bfda3007d34de0d/UMGC-Logo.png?auto=format%2Ccompress&dpr=1",
+      "title": "University of Maryland Global Campus",
+      "degree": "Bachelor of Science in Cybersecurity Management and Policy",
+      "description":"Ranked in the Top 25 Best National Universities in the U.S.(U.S. News & World Report, 2023),Accredited by the National Assessment & Accreditation Council (NAAC) with 'A' grade",
+      "duration": "Beginner · Degree · 36 months"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/702oQRI5BJ9hihjIBGDsev/cadc7a224417a35959dbb0ba303efe73/UMG.png?auto=format%2Ccompress&dpr=1",
+      "title": "University of Massachusetts Global",
+      "description": "Skills you'll gain: Machine Learning, Python, Data Science, Artificial Intelligence, Algorithms",
+      "degree":"Bachelor of Arts in Psycology",
+      "duration": "Intermediate · Course · 6 months"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/HL1NahIE4QwHd9xvhxvtx/8293d49ce1609a5c858719fb183f6229/UNT_COURSERA_BAAS_Logo.png?auto=format%2Ccompress&dpr=1",
+      "title": "University of North Texas",
+      "degree":"Bachelor of Science in General Business",
+      "description": "Skills you'll gain: Python, Programming, Data Structures, Data Analysis, Software Development",
+      "duration": "Beginner · Course · 5 months"
+    },
+    {
+      
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/HL1NahIE4QwHd9xvhxvtx/8293d49ce1609a5c858719fb183f6229/UNT_COURSERA_BAAS_Logo.png?auto=format%2Ccompress&dpr=1",
+      "title": "University of North Texas",
+      "degree":"Bachelor of Applied Arts and Science",
+      "description": "Skills you'll gain: Python, Programming, Data Structures, Data Analysis, Software Development",
+      "duration": "Beginner · Course · 5 months"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5JUClhmEcjBngRNT8Jp4A8/718fded3686a7003bdd2aeb70a772c49/e52950db-1fef-454d-82a6-a40667359c0a.png?auto=format%2Ccompress&dpr=1",
+      "title": "Illinios Tech",
+      "description": "Skills you'll gain: Data Science, Python, Machine Learning, Data Visualization, Data Analysis",
+      "degree":"Bachelor of Information Technology",
+      "duration": "Intermediate · Specialization · 10 months"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5FsJACbyl7bFW4DjI2cZDE/181c290b91b2f801fdf09cc3d9bae75a/IIT_Roorkee__3___1_.png?auto=format%2Ccompress&dpr=1",
+      "title": "IIT Rookree",
+      "description": "Skills you'll gain: Python, Programming, Problem Solving, Algorithms, Software Development",
+      "degree":"Executive MBA",
+      "duration": "Beginner · Course · 6 months"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/QYnQLOD2XH1JdEAJt7zFY/982c1e09539e87e4cf637c57eb4142dd/CU-Boulder.jpg?auto=format%2Ccompress&dpr=1",
+      "title": "University of Corolardo Boulder",
+      "description": "Skills you'll gain: Machine Learning, Python, Data Science, Artificial Intelligence, Algorithms",
+      "degree":"Master of Science in Computer Science",
+      "duration": "Intermediate · Specialization · 12 months"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2Io1b5QQU4YcyVOuQTdjOO/e29485e582c8a543ca136e61d3ef78e8/OPJindal.jpg?auto=format%2Ccompress&dpr=1",
+      "title": "O.P. Jindal Global University",
+      "description": "Skills you'll gain: Artificial Intelligence, Machine Learning, Deep Learning, Data Science, Algorithms",
+      "degree":"MBA Business Analytics",
+      "duration": "Advanced · Specialization · 14 months"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/1Rp5a6TiZD2LO4n6MHsMtS/78e1f67bd7784a40ddae53db3389a054/IllinoisGies.jpg?auto=format%2Ccompress&dpr=1",
+      "title": "University of Illinois at Urbana-Champaign",
+      "description": "Skills you'll gain: Python, Data Science, Data Analysis, Machine Learning, Programming",
+      "degree":"Masters of Buisness Administration",
+      "duration": "Beginner · Course · 5 months"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/3p9ZNoXblmUIo6mCA64e8K/606acde0eea006e97b10079ccbdad90f/logo-color.png?auto=format%2Ccompress&dpr=1",
+      "title": "University of Illinois at Urbana-Champaign",
+      "description": "Skills you'll gain: Data Science, Machine Learning, Python, Data Analysis, Artificial Intelligence",
+      "degree":"Master of Science in Computer Science",
+      "duration": "Intermediate · Course · 7 months"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/QYnQLOD2XH1JdEAJt7zFY/982c1e09539e87e4cf637c57eb4142dd/CU-Boulder.jpg?auto=format%2Ccompress&dpr=1",
+      "title": "University of Corolardo Boulder",
+      "description": "Skills you'll gain: Machine Learning, Python, Data Science, Artificial Intelligence, Algorithms",
+      "degree":"Master of Science in Data Science",
+      "duration": "Intermediate · Specialization · 12 months"
+    },
+    {
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2UqKAdajxMiAKGLdOgYCrc/f09facd5960e7697c6398f672c7c14dc/Captura_de_pantalla_2023-08-30_a_la_s__11.29.07_a.m..png?auto=format%2Ccompress&dpr=1",
+      "title": "Northeaster University",
+      "description": "Skills you'll gain: Data Science, Data Analysis, Python, Data Visualization, Machine Learning",
+      "degree":"Master of Science in Data Analystics",
+      "duration": "Beginner · Course · 5 months"
+    },
+    {
+    "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/IHNuNEKZnmjtOs3g6uX9h/c0038feefd8e96515ab88ee67e1bb59f/Square_logo_for_partner_landing_page.png?auto=format%2Ccompress&amp;dpr=1",
+    "title": "Indian Institute of Technology Guwahati",
+    "degree": "Bachelor of Science in Data Science & AI",
+    "description": "Ranked 7th among India’s top engineering institutes, according to NIRF 2023 Application due June 19, 2024",
+    "application": "Application due June 19, 2024"
+  },
+  {
+    "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5WVyYON4icQJuoFQfLYBM5/2e5aa47d543e59637cb208563b9fb373/BITS_Emblem.png?auto=format%2Ccompress&dpr=1",
+    "title": "Birla Institute of Technology & Science, Pilani",
+    "degree":"Bachelor of Science in Computer Science",
+    "description": "Accredited by the National Assessment & Accreditation Council (NAAC) with 'A' grade"
+  },
+  {
+    "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/72PP9Froq0UViAjRjCa6mq/d303df6cdadd5dd9ea042da54787b012/HEC_Paris_logo_Monotone.png?auto=format%2Ccompress&dpr=1",
+    "title": "HEC Paris",
+    "degree": "Executive MSc & MSc in Innovation and Entrepreneurship",
+    "description": "#1 Business School in Europe (Financial Times, 2022), Skills you'll gain: Networking, Security, Operating Systems, Troubleshooting, Customer Service,",
+    "application": "Application due June 19, 2024"
+  },
+  {
+    "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2yj3zCXqTytZevxwT4h4xK/114973b81842684c450c6dfc67338276/London_Goldsmiths_logo_1000x200.png?auto=format%2Ccompress&dpr=1",
+    "title": "University of london",
+    "degree": "Bachelor of Science in Computer Science",
+    "description": "#29 in Top Universities in the U.K. (The Times and Sunday Times Good University Guide, 2023),#1 Business School in Europe (Financial Times, 2022), Skills you'll gain: Networking, Security, Operating Systems, Troubleshooting, Customer Service",
+    "application": "Application due September 8, 2024"
+  },
+  {
+    "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/kOsUZSBCii9hlZDYYtejJ/22eca0f9c3c06b14892aafbf396f7f33/University_of_London_logo.svg__1_.png?auto=format%2Ccompress&dpr=1",
+    "title": "University of london",
+    "degree": "Bachelor of Science in Business Administration",
+    "description":"#29 in Top Universities in the U.K. (The Times and Sunday Times Good University Guide, 2023),#1 Business School in Europe (Financial Times, 2022), Skills you'll gain: Networking, Security, Operating Systems, Troubleshooting, Customer Service",
+    "application": "Beginner · Professional Certificate · 6 months"
+  },
+  {
+   "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/kOsUZSBCii9hlZDYYtejJ/22eca0f9c3c06b14892aafbf396f7f33/University_of_London_logo.svg__1_.png?auto=format%2Ccompress&dpr=1",
+    "title": "University of london",
+    "degree": "Bachelor of Science in Marketing",
+    "description":"#29 in Top Universities in the U.K. (The Times and Sunday Times Good University Guide, 2023),#1 Business School in Europe (Financial Times, 2022), Skills you'll gain: Networking, Security, Operating Systems, Troubleshooting, Customer Service",
+    "application": "Beginner · Professional Certificate · 6 months"
+  },
+  {
+    "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/249FlRfDx2yviQr9UUz57n/e25a8f5dd17ed44212698529e3e88760/Georgetown_SCS_MonotoneLogo.png?auto=format%2Ccompress&dpr=1",
+    "title": "Georgetown University",
+    "degree": "Bachelor of Arts in liberal studies",
+    "description":"Ranked in the Top 25 Best National Universities in the U.S.(U.S. News & World Report, 2023),Accredited by the National Assessment & Accreditation Council (NAAC) with 'A' grade",
+    "application": "Advanced · Degree · 24 months"
+  },
+  {
+    "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4r5JpFHQvXgmWvMtRMXbeb/8179cc039f4c5a1e2bfda3007d34de0d/UMGC-Logo.png?auto=format%2Ccompress&dpr=1",
+    "title": "University of Maryland Global Campus",
+    "degree": "Bachelor of Science in Cybersecurity Technology",
+    "description":"Ranked in the Top 25 Best National Universities in the U.S.(U.S. News & World Report, 2023),Accredited by the National Assessment & Accreditation Council (NAAC) with 'A' grade",
+    "duration": "Beginner · Degree · 36 months"
+  },
+  {
+    "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4r5JpFHQvXgmWvMtRMXbeb/8179cc039f4c5a1e2bfda3007d34de0d/UMGC-Logo.png?auto=format%2Ccompress&dpr=1",
+    "title": "University of Maryland Global Campus",
+    "degree": "Bachelor of Science in Cybersecurity Management and Policy",
+    "description":"Ranked in the Top 25 Best National Universities in the U.S.(U.S. News & World Report, 2023),Accredited by the National Assessment & Accreditation Council (NAAC) with 'A' grade",
+    "duration": "Beginner · Degree · 36 months"
+  },
+  {
+    "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/702oQRI5BJ9hihjIBGDsev/cadc7a224417a35959dbb0ba303efe73/UMG.png?auto=format%2Ccompress&dpr=1",
+    "title": "University of Massachusetts Global",
+    "description": "Skills you'll gain: Machine Learning, Python, Data Science, Artificial Intelligence, Algorithms",
+    "degree":"Bachelor of Arts in Psycology",
+    "duration": "Intermediate · Course · 6 months"
+  },
+  {
+    "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/HL1NahIE4QwHd9xvhxvtx/8293d49ce1609a5c858719fb183f6229/UNT_COURSERA_BAAS_Logo.png?auto=format%2Ccompress&dpr=1",
+    "title": "University of North Texas",
+    "degree":"Bachelor of Science in General Business",
+    "description": "Skills you'll gain: Python, Programming, Data Structures, Data Analysis, Software Development",
+    "duration": "Beginner · Course · 5 months"
+  },
+  {
+    
+    "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/HL1NahIE4QwHd9xvhxvtx/8293d49ce1609a5c858719fb183f6229/UNT_COURSERA_BAAS_Logo.png?auto=format%2Ccompress&dpr=1",
+    "title": "University of North Texas",
+    "degree":"Bachelor of Applied Arts and Science",
+    "description": "Skills you'll gain: Python, Programming, Data Structures, Data Analysis, Software Development",
+    "duration": "Beginner · Course · 5 months"
+  },
+  {
+    "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5JUClhmEcjBngRNT8Jp4A8/718fded3686a7003bdd2aeb70a772c49/e52950db-1fef-454d-82a6-a40667359c0a.png?auto=format%2Ccompress&dpr=1",
+    "title": "Illinios Tech",
+    "description": "Skills you'll gain: Data Science, Python, Machine Learning, Data Visualization, Data Analysis",
+    "degree":"Bachelor of Information Technology",
+    "duration": "Intermediate · Specialization · 10 months"
+  },
+  {
+    "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5FsJACbyl7bFW4DjI2cZDE/181c290b91b2f801fdf09cc3d9bae75a/IIT_Roorkee__3___1_.png?auto=format%2Ccompress&dpr=1",
+    "title": "IIT Rookree",
+    "description": "Skills you'll gain: Python, Programming, Problem Solving, Algorithms, Software Development",
+    "degree":"Executive MBA",
+    "duration": "Beginner · Course · 6 months"
+  },
+  {
+    "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/QYnQLOD2XH1JdEAJt7zFY/982c1e09539e87e4cf637c57eb4142dd/CU-Boulder.jpg?auto=format%2Ccompress&dpr=1",
+    "title": "University of Corolardo Boulder",
+    "description": "Skills you'll gain: Machine Learning, Python, Data Science, Artificial Intelligence, Algorithms",
+    "degree":"Master of Science in Computer Science",
+    "duration": "Intermediate · Specialization · 12 months"
+  },
+  {
+    "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2Io1b5QQU4YcyVOuQTdjOO/e29485e582c8a543ca136e61d3ef78e8/OPJindal.jpg?auto=format%2Ccompress&dpr=1",
+    "title": "O.P. Jindal Global University",
+    "description": "Skills you'll gain: Artificial Intelligence, Machine Learning, Deep Learning, Data Science, Algorithms",
+    "degree":"MBA Business Analytics",
+    "duration": "Advanced · Specialization · 14 months"
+  },
+  {
+    "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/1Rp5a6TiZD2LO4n6MHsMtS/78e1f67bd7784a40ddae53db3389a054/IllinoisGies.jpg?auto=format%2Ccompress&dpr=1",
+    "title": "University of Illinois at Urbana-Champaign",
+    "description": "Skills you'll gain: Python, Data Science, Data Analysis, Machine Learning, Programming",
+    "degree":"Masters of Buisness Administration",
+    "duration": "Beginner · Course · 5 months"
+  },
+  {
+    "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/3p9ZNoXblmUIo6mCA64e8K/606acde0eea006e97b10079ccbdad90f/logo-color.png?auto=format%2Ccompress&dpr=1",
+    "title": "University of Illinois at Urbana-Champaign",
+    "description": "Skills you'll gain: Data Science, Machine Learning, Python, Data Analysis, Artificial Intelligence",
+    "degree":"Master of Science in Computer Science",
+    "duration": "Intermediate · Course · 7 months"
+  },
+  {
+    "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/QYnQLOD2XH1JdEAJt7zFY/982c1e09539e87e4cf637c57eb4142dd/CU-Boulder.jpg?auto=format%2Ccompress&dpr=1",
+    "title": "University of Corolardo Boulder",
+    "description": "Skills you'll gain: Machine Learning, Python, Data Science, Artificial Intelligence, Algorithms",
+    "degree":"Master of Science in Data Science",
+    "duration": "Intermediate · Specialization · 12 months"
+  },
+  {
+    "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2UqKAdajxMiAKGLdOgYCrc/f09facd5960e7697c6398f672c7c14dc/Captura_de_pantalla_2023-08-30_a_la_s__11.29.07_a.m..png?auto=format%2Ccompress&dpr=1",
+    "title": "Northeaster University",
+    "description": "Skills you'll gain: Data Science, Data Analysis, Python, Data Visualization, Machine Learning",
+    "degree":"Master of Science in Data Analystics",
+    "duration": "Beginner · Course · 5 months"
+  },
+  {
+  "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/IHNuNEKZnmjtOs3g6uX9h/c0038feefd8e96515ab88ee67e1bb59f/Square_logo_for_partner_landing_page.png?auto=format%2Ccompress&amp;dpr=1",
+  "title": "Indian Institute of Technology Guwahati",
+  "degree": "Bachelor of Science in Data Science & AI",
+  "description": "Ranked 7th among India’s top engineering institutes, according to NIRF 2023 Application due June 19, 2024",
+  "application": "Application due June 19, 2024"
+  },
+  {
+  "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5WVyYON4icQJuoFQfLYBM5/2e5aa47d543e59637cb208563b9fb373/BITS_Emblem.png?auto=format%2Ccompress&dpr=1",
+  "title": "Birla Institute of Technology & Science, Pilani",
+  "degree":"Bachelor of Science in Computer Science",
+  "description": "Accredited by the National Assessment & Accreditation Council (NAAC) with 'A' grade"
+  },
+  {
+  "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/72PP9Froq0UViAjRjCa6mq/d303df6cdadd5dd9ea042da54787b012/HEC_Paris_logo_Monotone.png?auto=format%2Ccompress&dpr=1",
+  "title": "HEC Paris",
+  "degree": "Executive MSc & MSc in Innovation and Entrepreneurship",
+  "description": "#1 Business School in Europe (Financial Times, 2022), Skills you'll gain: Networking, Security, Operating Systems, Troubleshooting, Customer Service,",
+  "application": "Application due June 19, 2024"
+  },
+  {
+  "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2yj3zCXqTytZevxwT4h4xK/114973b81842684c450c6dfc67338276/London_Goldsmiths_logo_1000x200.png?auto=format%2Ccompress&dpr=1",
+  "title": "University of london",
+  "degree": "Bachelor of Science in Computer Science",
+  "description": "#29 in Top Universities in the U.K. (The Times and Sunday Times Good University Guide, 2023),#1 Business School in Europe (Financial Times, 2022), Skills you'll gain: Networking, Security, Operating Systems, Troubleshooting, Customer Service",
+  "application": "Application due September 8, 2024"
+  },
+  {
+  "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/kOsUZSBCii9hlZDYYtejJ/22eca0f9c3c06b14892aafbf396f7f33/University_of_London_logo.svg__1_.png?auto=format%2Ccompress&dpr=1",
+  "title": "University of london",
+  "degree": "Bachelor of Science in Business Administration",
+  "description":"#29 in Top Universities in the U.K. (The Times and Sunday Times Good University Guide, 2023),#1 Business School in Europe (Financial Times, 2022), Skills you'll gain: Networking, Security, Operating Systems, Troubleshooting, Customer Service",
+  "application": "Beginner · Professional Certificate · 6 months"
+  },
+  {
+  "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/kOsUZSBCii9hlZDYYtejJ/22eca0f9c3c06b14892aafbf396f7f33/University_of_London_logo.svg__1_.png?auto=format%2Ccompress&dpr=1",
+  "title": "University of london",
+  "degree": "Bachelor of Science in Marketing",
+  "description":"#29 in Top Universities in the U.K. (The Times and Sunday Times Good University Guide, 2023),#1 Business School in Europe (Financial Times, 2022), Skills you'll gain: Networking, Security, Operating Systems, Troubleshooting, Customer Service",
+  "application": "Beginner · Professional Certificate · 6 months"
+  },
+  {
+  "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/249FlRfDx2yviQr9UUz57n/e25a8f5dd17ed44212698529e3e88760/Georgetown_SCS_MonotoneLogo.png?auto=format%2Ccompress&dpr=1",
+  "title": "Georgetown University",
+  "degree": "Bachelor of Arts in liberal studies",
+  "description":"Ranked in the Top 25 Best National Universities in the U.S.(U.S. News & World Report, 2023),Accredited by the National Assessment & Accreditation Council (NAAC) with 'A' grade",
+  "application": "Advanced · Degree · 24 months"
+  },
+  {
+  "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4r5JpFHQvXgmWvMtRMXbeb/8179cc039f4c5a1e2bfda3007d34de0d/UMGC-Logo.png?auto=format%2Ccompress&dpr=1",
+  "title": "University of Maryland Global Campus",
+  "degree": "Bachelor of Science in Cybersecurity Technology",
+  "description":"Ranked in the Top 25 Best National Universities in the U.S.(U.S. News & World Report, 2023),Accredited by the National Assessment & Accreditation Council (NAAC) with 'A' grade",
+  "duration": "Beginner · Degree · 36 months"
+  },
+  {
+  "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4r5JpFHQvXgmWvMtRMXbeb/8179cc039f4c5a1e2bfda3007d34de0d/UMGC-Logo.png?auto=format%2Ccompress&dpr=1",
+  "title": "University of Maryland Global Campus",
+  "degree": "Bachelor of Science in Cybersecurity Management and Policy",
+  "description":"Ranked in the Top 25 Best National Universities in the U.S.(U.S. News & World Report, 2023),Accredited by the National Assessment & Accreditation Council (NAAC) with 'A' grade",
+  "duration": "Beginner · Degree · 36 months"
+  },
+  {
+  "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/702oQRI5BJ9hihjIBGDsev/cadc7a224417a35959dbb0ba303efe73/UMG.png?auto=format%2Ccompress&dpr=1",
+  "title": "University of Massachusetts Global",
+  "description": "Skills you'll gain: Machine Learning, Python, Data Science, Artificial Intelligence, Algorithms",
+  "degree":"Bachelor of Arts in Psycology",
+  "duration": "Intermediate · Course · 6 months"
+  },
+  {
+  "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/HL1NahIE4QwHd9xvhxvtx/8293d49ce1609a5c858719fb183f6229/UNT_COURSERA_BAAS_Logo.png?auto=format%2Ccompress&dpr=1",
+  "title": "University of North Texas",
+  "degree":"Bachelor of Science in General Business",
+  "description": "Skills you'll gain: Python, Programming, Data Structures, Data Analysis, Software Development",
+  "duration": "Beginner · Course · 5 months"
+  },
+  {
+  
+  "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/HL1NahIE4QwHd9xvhxvtx/8293d49ce1609a5c858719fb183f6229/UNT_COURSERA_BAAS_Logo.png?auto=format%2Ccompress&dpr=1",
+  "title": "University of North Texas",
+  "degree":"Bachelor of Applied Arts and Science",
+  "description": "Skills you'll gain: Python, Programming, Data Structures, Data Analysis, Software Development",
+  "duration": "Beginner · Course · 5 months"
+  },
+  {
+  "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5JUClhmEcjBngRNT8Jp4A8/718fded3686a7003bdd2aeb70a772c49/e52950db-1fef-454d-82a6-a40667359c0a.png?auto=format%2Ccompress&dpr=1",
+  "title": "Illinios Tech",
+  "description": "Skills you'll gain: Data Science, Python, Machine Learning, Data Visualization, Data Analysis",
+  "degree":"Bachelor of Information Technology",
+  "duration": "Intermediate · Specialization · 10 months"
+  },
+  {
+  "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5FsJACbyl7bFW4DjI2cZDE/181c290b91b2f801fdf09cc3d9bae75a/IIT_Roorkee__3___1_.png?auto=format%2Ccompress&dpr=1",
+  "title": "IIT Rookree",
+  "description": "Skills you'll gain: Python, Programming, Problem Solving, Algorithms, Software Development",
+  "degree":"Executive MBA",
+  "duration": "Beginner · Course · 6 months"
+  },
+  {
+  "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/QYnQLOD2XH1JdEAJt7zFY/982c1e09539e87e4cf637c57eb4142dd/CU-Boulder.jpg?auto=format%2Ccompress&dpr=1",
+  "title": "University of Corolardo Boulder",
+  "description": "Skills you'll gain: Machine Learning, Python, Data Science, Artificial Intelligence, Algorithms",
+  "degree":"Master of Science in Computer Science",
+  "duration": "Intermediate · Specialization · 12 months"
+  },
+  {
+  "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2Io1b5QQU4YcyVOuQTdjOO/e29485e582c8a543ca136e61d3ef78e8/OPJindal.jpg?auto=format%2Ccompress&dpr=1",
+  "title": "O.P. Jindal Global University",
+  "description": "Skills you'll gain: Artificial Intelligence, Machine Learning, Deep Learning, Data Science, Algorithms",
+  "degree":"MBA Business Analytics",
+  "duration": "Advanced · Specialization · 14 months"
+  },
+  {
+  "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/1Rp5a6TiZD2LO4n6MHsMtS/78e1f67bd7784a40ddae53db3389a054/IllinoisGies.jpg?auto=format%2Ccompress&dpr=1",
+  "title": "University of Illinois at Urbana-Champaign",
+  "description": "Skills you'll gain: Python, Data Science, Data Analysis, Machine Learning, Programming",
+  "degree":"Masters of Buisness Administration",
+  "duration": "Beginner · Course · 5 months"
+  },
+  {
+  "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/3p9ZNoXblmUIo6mCA64e8K/606acde0eea006e97b10079ccbdad90f/logo-color.png?auto=format%2Ccompress&dpr=1",
+  "title": "University of Illinois at Urbana-Champaign",
+  "description": "Skills you'll gain: Data Science, Machine Learning, Python, Data Analysis, Artificial Intelligence",
+  "degree":"Master of Science in Computer Science",
+  "duration": "Intermediate · Course · 7 months"
+  },
+  {
+  "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/QYnQLOD2XH1JdEAJt7zFY/982c1e09539e87e4cf637c57eb4142dd/CU-Boulder.jpg?auto=format%2Ccompress&dpr=1",
+  "title": "University of Corolardo Boulder",
+  "description": "Skills you'll gain: Machine Learning, Python, Data Science, Artificial Intelligence, Algorithms",
+  "degree":"Master of Science in Data Science",
+  "duration": "Intermediate · Specialization · 12 months"
+  },
+  {
+  "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2UqKAdajxMiAKGLdOgYCrc/f09facd5960e7697c6398f672c7c14dc/Captura_de_pantalla_2023-08-30_a_la_s__11.29.07_a.m..png?auto=format%2Ccompress&dpr=1",
+  "title": "Northeaster University",
+  "description": "Skills you'll gain: Data Science, Data Analysis, Python, Data Visualization, Machine Learning",
+  "degree":"Master of Science in Data Analystics",
+  "duration": "Beginner · Course · 5 months"
+  }
+    ],
+    "Universities2": [
     {
       "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/ddp/branding/ms-management-illinois/thumbnail.jpg?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&fit=crop&q=50",
       "uniLogo": "http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png",

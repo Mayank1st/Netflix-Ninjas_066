@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.js"></script>
+    <script src="https://kit.fontawesome.com/a89a1bd747.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Container for the fetched content -->
+    <div id="mainContent"></div>
+
+    <script>
+        window.onload = function () {
+            // First AJAX request
+            var xhr1 = new XMLHttpRequest();
+            xhr1.open('GET', 'main_page.html', true);
+            xhr1.onreadystatechange = function () {
+                if (xhr1.readyState == 4 && xhr1.status == 200) {
+                    var content1 = xhr1.responseText;
+                    document.getElementById('mainContent').innerHTML = content1;
+                }
+            };
+            xhr1.send();
+
+            // Second AJAX request
+            var xhr2 = new XMLHttpRequest();
+            xhr2.open('GET', 'coursera_plus_profile_page.html', true);
+            xhr2.onreadystatechange = function () {
+                if (xhr2.readyState == 4 && xhr2.status == 200) {
+                    var content2 = xhr2.responseText;
+                    document.getElementById('mainContent').innerHTML += content2;
+                }
+            };
+            xhr2.send();
+
+            // Third AJAX request
+            var xhr3 = new XMLHttpRequest();
+            xhr3.open('GET', 'footer.html', true);
+            xhr3.onreadystatechange = function () {
+                if (xhr3.readyState == 4 && xhr3.status == 200) {
+                    var content2 = xhr3.responseText;
+                    document.getElementById('mainContent').innerHTML += content2;
+                }
+            };
+            xhr3.send();
+        };
+    </script>
+
+</body>
+
+</html>

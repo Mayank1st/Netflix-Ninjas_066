@@ -1,0 +1,6 @@
+.nav-profile_pic {
+    width: 40px;  /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    border-radius: 50%;
+    object-fit: cover;
+}
