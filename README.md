@@ -1,7 +1,3 @@
-# Netflix-Ninjas_066
-Coursera Clone Project.
-
-
 # Netflix Ninjas_066
 Construct week project work
 # Project Title
