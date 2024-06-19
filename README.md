@@ -65,7 +65,7 @@ Added Features: We use JavaScript to add following features:-
 2. User SignUp and Login
 3. Admin Page
 4. json-server
-5. Encription
+5. Encryption
 6. Pagination 
 ## Installation & Getting started
 Detailed instructions on how to install, configure, and get the project running.
